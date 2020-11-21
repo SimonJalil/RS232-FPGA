@@ -1,0 +1,244 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/simulation/modelsim
+Econt_bin
+Z1 w1587851264
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/cont_bin/cont_bin.vhd
+Z5 F/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/cont_bin/cont_bin.vhd
+l0
+L4
+Vn0IT=0dTR6Oz4e9K_zC0R3
+!s100 S=lg3R_d5QA?QElc0U8Bf1
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1588783853
+!i10b 1
+Z8 !s108 1588783853.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/cont_bin/cont_bin.vhd|
+Z10 !s107 /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/cont_bin/cont_bin.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 8 cont_bin 0 22 n0IT=0dTR6Oz4e9K_zC0R3
+l22
+L13
+Vb`ANL8odAdT:LXe1cLbRQ0
+!s100 96Gc[_X1inb6on14P`Gbk1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Effd
+Z13 w1588713081
+R2
+R3
+R0
+Z14 8/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FFD/FFD.vhd
+Z15 F/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FFD/FFD.vhd
+l0
+L4
+VPl86IXY@VLoBUjbhVOD]I0
+!s100 O`bh`Z:FH<VMFd[3bCb192
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FFD/FFD.vhd|
+Z17 !s107 /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FFD/FFD.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 3 ffd 0 22 Pl86IXY@VLoBUjbhVOD]I0
+l18
+L16
+Vh0mTW9R2Zg6_JPiaBZ?mf3
+!s100 V2F9KME7PS1dV;cH]7`WZ1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Efsm_reg_despl
+Z18 w1587851513
+R2
+R3
+R0
+Z19 8/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
+Z20 F/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
+l0
+L4
+Vb4eZ6zR[em^:27Ke_DNkR1
+!s100 @>n@_QbYQdlVmVK0X:1Sa0
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd|
+Z22 !s107 /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 13 fsm_reg_despl 0 22 b4eZ6zR[em^:27Ke_DNkR1
+l29
+L17
+VTYjaTjD?`3^he7eURX6g71
+!s100 J;:L0IgX<jkaD0I6ThQlT0
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Epunto_a
+Z23 w1588713232
+R2
+R3
+R0
+Z24 8/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/Punto_A.vhd
+Z25 F/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/Punto_A.vhd
+l0
+L4
+V`kaVgg4acQDZ2m<DQP^ij2
+!s100 6RQ4=iEY=Z;4J5LKPf5YG1
+R6
+31
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/Punto_A.vhd|
+Z27 !s107 /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/Punto_A.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 7 punto_a 0 22 `kaVgg4acQDZ2m<DQP^ij2
+l66
+L18
+V1CS3eAH][^KDz447aAOX42
+!s100 A<JPdzYiUf8cjfe_jbm=_0
+R6
+31
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Ereg_despl
+Z28 w1588711720
+R2
+R3
+R0
+Z29 8/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Reg_despl/Reg_Despl.vhd
+Z30 F/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Reg_despl/Reg_Despl.vhd
+l0
+L4
+V[LQ=]RKNXgm<89G[Em8bA3
+!s100 ;O?CdH_>?JnAJ6LZgm7fW1
+R6
+31
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Reg_despl/Reg_Despl.vhd|
+Z32 !s107 /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Reg_despl/Reg_Despl.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 9 reg_despl 0 22 [LQ=]RKNXgm<89G[Em8bA3
+l38
+L17
+V7ILgcgY5oATWZczX?Q8SS3
+!s100 O1Y]6N4MODoJz[HS<ajoi3
+R6
+31
+R7
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Etb_punto_a
+Z33 w1588783844
+R2
+R3
+R0
+Z34 8/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/tb_Punto_A.vhd
+Z35 F/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/tb_Punto_A.vhd
+l0
+L5
+VRY^dhK2n2W<]R0LdL2iWz2
+!s100 BzTIB>VefR8?1@>=]0ReT3
+R6
+31
+R7
+!i10b 1
+R8
+Z36 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/tb_Punto_A.vhd|
+Z37 !s107 /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_A/Punto_A/tb_Punto_A.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 10 tb_punto_a 0 22 RY^dhK2n2W<]R0LdL2iWz2
+l41
+L8
+V?LGlEM]R5j0mQnzokMf=g2
+!s100 WSFgB`@>dh=PcO6CZRYe03
+R6
+31
+R7
+!i10b 1
+R8
+R36
+R37
+!i113 1
+R11
+R12

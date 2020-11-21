@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Punto_A is
+	port (
+			start_tx		:in std_logic;
+			
+			);
+end Puno_A;
+
+architecture behav of Punto_A is
+
+	--Declaro componentes.
+	component Reg_Despl is
+		port(
+				serin			:in std_logic;
+				clk			:in std_logic;
+				reset_low 	:in std_logic;
+				data 			:in std_logic_vector(0 to ancho-1);
+				load_shift	:in std_logic;
+				serout		:out std_logic
+				);
+	end component;
+	
+	component cont_bin is
+		port(
+				start			:in std_logic;
+				clk			:in std_logic;
+				reset_low	:in std_logic;
+				ok				:out std_logic
+				);
+	end component;
+	
+	
+begin
+
+
+end behav;

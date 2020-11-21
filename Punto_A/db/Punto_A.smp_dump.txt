@@ -1,0 +1,7 @@
+
+State Machine - |Punto_A|FSM_Reg_Despl:FSM|current_state
+Name current_state.finished current_state.cont_down current_state.load_shift current_state.idle 
+current_state.idle 0 0 0 0 
+current_state.load_shift 0 0 1 1 
+current_state.cont_down 0 1 0 1 
+current_state.finished 1 0 0 1 
