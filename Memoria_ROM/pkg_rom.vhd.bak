@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+package pkg_rom is
+	constant data_length : natural := 16;
+	constant addr_length : natural := 10;
+	constant mem_size : natural := 2**addr_length;
+	subtype rom_word is std_logic_vector(data_length-1 downto 0);
+	type mem_type is array (mem_size-1 downto 0) of rom_word;
+	constant mem : mem_type :=
+		(0 => x"abcd",1 => x"beef",2 => x"5555",3 => x"1010",
+		4 => x"5a6b",5 => x"f0f0",6 => x"1234",7 => x"fabc",
+		8 => x"2345",9 => x"9876",10=> x"5432",11=> x"6666",
+		12 => x"0101",
+		13 => std_logic_vector(to_unsigned (1234,16)),
+		others => x"4247");
+end package pkg_rom;

@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "send_ready",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "address_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_low",
+					"strict" : false
+				},
+				{
+					"name" : "entradas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entradas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entradas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entradas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "entradas[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
