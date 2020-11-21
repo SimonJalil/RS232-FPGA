@@ -12,7 +12,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "rst_low",
+					"name" : "reset_low",
 					"strict" : false
 				},
 				{

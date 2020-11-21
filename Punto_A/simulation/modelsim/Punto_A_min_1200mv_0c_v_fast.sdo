@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "Punto_A")
-  (DATE "11/21/2020 01:40:42")
+  (DATE "11/21/2020 01:48:15")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition")
@@ -60,7 +60,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE rst_low\~input)
+    (INSTANCE reset_low\~input)
     (DELAY
       (ABSOLUTE
         (IOPATH i o (358:358:358) (738:738:738))
@@ -322,7 +322,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_clkctrl")
-    (INSTANCE rst_low\~inputclkctrl)
+    (INSTANCE reset_low\~inputclkctrl)
     (DELAY
       (ABSOLUTE
         (PORT inclk[0] (99:99:99) (85:85:85))

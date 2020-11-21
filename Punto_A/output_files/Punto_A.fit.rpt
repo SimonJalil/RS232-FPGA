@@ -1,5 +1,5 @@
 Fitter report for Punto_A
-Sat Nov 21 01:40:31 2020
+Sat Nov 21 01:48:05 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sat Nov 21 01:40:31 2020       ;
+; Fitter Status                      ; Successful - Sat Nov 21 01:48:05 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Punto_A                                     ;
 ; Top-level Entity Name              ; Punto_A                                     ;
@@ -343,7 +343,7 @@ The pin-out file can be found in /home/simon/Documentos/FACULTAD/Sistemas Digita
 ; data[8]   ; H8    ; 8        ; 11           ; 73           ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; data[9]   ; G8    ; 8        ; 11           ; 73           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; preset    ; D5    ; 8        ; 3            ; 73           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
-; rst_low   ; Y2    ; 2        ; 0            ; 36           ; 14           ; 18                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
+; reset_low ; Y2    ; 2        ; 0            ; 36           ; 14           ; 18                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; start_tx  ; G7    ; 8        ; 9            ; 73           ; 0            ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 ; tri_state ; H7    ; 1        ; 0            ; 68           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; Fitter               ; no        ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+-----------+
@@ -1155,7 +1155,7 @@ The pin-out file can be found in /home/simon/Documentos/FACULTAD/Sistemas Digita
 ; W27      ; 301        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; W28      ; 302        ; 5        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y1       ; 66         ; 2        ; GND+                                                      ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; Y2       ; 65         ; 2        ; rst_low                                                   ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; Y2       ; 65         ; 2        ; reset_low                                                 ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y3       ; 92         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y4       ; 91         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; Y5       ; 114        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1193,7 +1193,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-----------+-------------------------------+
 ; serout    ; Incomplete set of assignments ;
 ; finished  ; Incomplete set of assignments ;
-; rst_low   ; Incomplete set of assignments ;
+; reset_low ; Incomplete set of assignments ;
 ; tri_state ; Incomplete set of assignments ;
 ; clk       ; Incomplete set of assignments ;
 ; data[10]  ; Incomplete set of assignments ;
@@ -1211,7 +1211,7 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; data[0]   ; Incomplete set of assignments ;
 ; serout    ; Missing location assignment   ;
 ; finished  ; Missing location assignment   ;
-; rst_low   ; Missing location assignment   ;
+; reset_low ; Missing location assignment   ;
 ; tri_state ; Missing location assignment   ;
 ; clk       ; Missing location assignment   ;
 ; data[10]  ; Missing location assignment   ;
@@ -1261,7 +1261,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------------+---------------+-----------------------+-----+------+
 ; serout    ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; finished  ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; rst_low   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; reset_low ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; tri_state ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
 ; clk       ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
 ; data[10]  ; Input    ; --            ; (6) 1314 ps   ; --                    ; --  ; --   ;
@@ -1285,7 +1285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------+-------------------+---------+
 ; Source Pin / Fanout                                     ; Pad To Core Index ; Setting ;
 +---------------------------------------------------------+-------------------+---------+
-; rst_low                                                 ;                   ;         ;
+; reset_low                                               ;                   ;         ;
 ; tri_state                                               ;                   ;         ;
 ;      - serout~output                                    ; 1                 ; 6       ;
 ; clk                                                     ;                   ;         ;
@@ -1328,7 +1328,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; FSM_Reg_Despl:FSM|current_state.idle             ; FF_X9_Y70_N9      ; 7       ; Async. clear  ; no     ; --                   ; --               ; --                        ;
 ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~0 ; LCCOMB_X7_Y70_N30 ; 11      ; Async. clear  ; yes    ; Global Clock         ; GCLK0            ; --                        ;
 ; clk                                              ; PIN_J1            ; 20      ; Clock         ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; rst_low                                          ; PIN_Y2            ; 4       ; Async. clear  ; yes    ; Global Clock         ; GCLK4            ; --                        ;
+; reset_low                                        ; PIN_Y2            ; 4       ; Async. clear  ; yes    ; Global Clock         ; GCLK4            ; --                        ;
 ; tri_state                                        ; PIN_H7            ; 1       ; Output enable ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------------------+-------------------+---------+---------------+--------+----------------------+------------------+---------------------------+
 
@@ -1340,7 +1340,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~0 ; LCCOMB_X7_Y70_N30 ; 11      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ;
 ; clk                                              ; PIN_J1            ; 20      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
-; rst_low                                          ; PIN_Y2            ; 4       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
+; reset_low                                        ; PIN_Y2            ; 4       ; 0                                    ; Global Clock         ; GCLK4            ; --                        ;
 +--------------------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
@@ -1523,7 +1523,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0         ; 0         ; 0            ; 0            ;
 ; serout             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Pass         ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; finished           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
-; rst_low            ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
+; reset_low          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; tri_state          ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; clk                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
 ; data[10]           ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1614,7 +1614,7 @@ Info (332154): The derive_clock_uncertainty command did not apply clock uncertai
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node clk~input (placed in PIN J1 (CLK1, DIFFCLK_0n)) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Punto_A/Punto_A.vhd Line: 8
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
-Info (176353): Automatically promoted node rst_low~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Punto_A/Punto_A.vhd Line: 9
+Info (176353): Automatically promoted node reset_low~input (placed in PIN Y2 (CLK2, DIFFCLK_1p)) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Punto_A/Punto_A.vhd Line: 9
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G4
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
         Info (176357): Destination node Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~2 File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
@@ -1646,7 +1646,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  57 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  71 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1667,9 +1667,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Punto_A/output_files/Punto_A.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1412 megabytes
-    Info: Processing ended: Sat Nov 21 01:40:32 2020
-    Info: Elapsed time: 00:00:17
+    Info: Peak virtual memory: 1408 megabytes
+    Info: Processing ended: Sat Nov 21 01:48:05 2020
+    Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:21
 
 

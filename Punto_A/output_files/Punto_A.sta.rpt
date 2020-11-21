@@ -1,5 +1,5 @@
 Timing Analyzer report for Punto_A
-Sat Nov 21 01:40:39 2020
+Sat Nov 21 01:48:13 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -111,7 +111,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
 +----------------------------+-------------+
 
 
@@ -764,7 +764,7 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; rst_low                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; reset_low               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; tri_state               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; data[10]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -914,7 +914,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; data[9]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data[10]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; preset     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_low    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_low  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; start_tx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; tri_state  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
@@ -947,7 +947,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; data[9]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; data[10]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; preset     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; rst_low    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_low  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; start_tx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; tri_state  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
@@ -969,7 +969,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 01:40:37 2020
+    Info: Processing started: Sat Nov 21 01:48:11 2020
 Info: Command: quartus_sta Punto_A -c Punto_A
 Info: qsta_default_script.tcl version: #2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1060,8 +1060,8 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 868 megabytes
-    Info: Processing ended: Sat Nov 21 01:40:39 2020
+    Info: Peak virtual memory: 863 megabytes
+    Info: Processing ended: Sat Nov 21 01:48:13 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

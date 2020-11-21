@@ -6,7 +6,7 @@ entity Punto_A is
 	port (
 			start_tx		:in std_logic;										--Señal de comienzo de Tx.
 			clk 			:in std_logic; 									--Señal de clock.
-			rst_low	 	:in std_logic;										--Señal de reset asincronico.
+			reset_low	 	:in std_logic;										--Señal de reset asincronico.
 			preset 		:in std_logic;										--Entrada asicronica de seteo de FFD's.
 			data			:in std_logic_vector (ancho-1 downto 0);	--Dato completo, 11 bits: paridad,start,stop,ASCII.
 			tri_state 	:in std_logic;										--Buffer tri-state a la salida.	
@@ -67,9 +67,9 @@ begin
 		
 	Cont: cont_bin port map (start_cont => start_cont_bus, clk => clk, rst_low => reset_cont, cont_ok => cont_ok_bus);
 	
-	Reg: Reg_Despl port map (preset => preset, serin => '1' , clk => clk, rst_low => rst_low, data => data, load_shift => l_s_bus, serout => serout_bus );
+	Reg: Reg_Despl port map (preset => preset, serin => '1' , clk => clk, rst_low => reset_low, data => data, load_shift => l_s_bus, serout => serout_bus );
 	
-	FSM: FSM_Reg_Despl port map (start_tx => start_tx, cont_ok => cont_ok_bus, clk => clk, rst_low => rst_low, l_s => l_s_bus, start_cont => start_cont_bus,
+	FSM: FSM_Reg_Despl port map (start_tx => start_tx, cont_ok => cont_ok_bus, clk => clk, rst_low => reset_low, l_s => l_s_bus, start_cont => start_cont_bus,
 											rst_cont => reset_cont,finished_tx => finished);
 	
 	serout <= serout_bus when tri_state = '0' else 'Z';
