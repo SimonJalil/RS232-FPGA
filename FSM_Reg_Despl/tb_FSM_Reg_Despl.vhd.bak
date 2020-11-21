@@ -1,0 +1,13 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_FSM_Reg_Despl is
+end tb_FSM_Reg_Despl;
+
+architecture behav of tb_FSM_Reg_Despl is 
+
+
+begin 
+
+
+end behav;
