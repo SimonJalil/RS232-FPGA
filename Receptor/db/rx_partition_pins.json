@@ -1,0 +1,57 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "rx_byte[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[1]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[2]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_byte[7]",
+					"strict" : false
+				},
+				{
+					"name" : "led",
+					"strict" : false
+				},
+				{
+					"name" : "rxd",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset_low",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
