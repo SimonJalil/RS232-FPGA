@@ -1,5 +1,5 @@
 Flow report for Punto_B
-Thu May  7 17:01:08 2020
+Sat Nov 21 02:55:38 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,13 +40,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May  7 17:01:08 2020       ;
+; Flow Status                        ; Successful - Sat Nov 21 02:55:38 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Punto_B                                     ;
 ; Top-level Entity Name              ; Punto_B                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 116 / 6,272 ( 2 % )                         ;
-;     Total combinational functions  ; 115 / 6,272 ( 2 % )                         ;
+; Total logic elements               ; 121 / 6,272 ( 2 % )                         ;
+;     Total combinational functions  ; 114 / 6,272 ( 2 % )                         ;
 ;     Dedicated logic registers      ; 33 / 6,272 ( < 1 % )                        ;
 ; Total registers                    ; 33                                          ;
 ; Total pins                         ; 29 / 92 ( 32 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/07/2020 17:00:47 ;
+; Start date & time ; 11/21/2020 02:55:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Punto_B             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 190135456950301.158888164704713        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 93328249748543.160593811112860         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_Punto_B     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Punto_B                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -97,12 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 963 MB              ; 00:00:26                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 1249 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 816 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 817 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1053 MB             ; 00:00:01                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:34                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 932 MB              ; 00:00:29                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 1220 MB             ; 00:00:07                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 784 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1024 MB             ; 00:00:01                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:40                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +111,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; simon-PC         ; Ubuntu 18.04.4 ; 18         ; x86_64         ;
-; Fitter               ; simon-PC         ; Ubuntu 18.04.4 ; 18         ; x86_64         ;
-; Assembler            ; simon-PC         ; Ubuntu 18.04.4 ; 18         ; x86_64         ;
-; Timing Analyzer      ; simon-PC         ; Ubuntu 18.04.4 ; 18         ; x86_64         ;
-; EDA Netlist Writer   ; simon-PC         ; Ubuntu 18.04.4 ; 18         ; x86_64         ;
+; Analysis & Synthesis ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Fitter               ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Assembler            ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Timing Analyzer      ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
