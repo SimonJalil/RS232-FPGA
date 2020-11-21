@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/simulation/modelsim
+Econt_bin_lcd
+Z1 w1605939458
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd
+Z5 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd
+l0
+L4
+V3PXITS]bYzdJQD`a:OLin3
+!s100 g5DB7]i;0iAXB`O_k>JMm3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1605939525
+!i10b 1
+Z8 !s108 1605939525.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd|
+Z10 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 12 cont_bin_lcd 0 22 3PXITS]bYzdJQD`a:OLin3
+l21
+L12
+VP;5c__R8zf^6NkYF?TnJH1
+!s100 BSDcz[SDkzkE;lTa^LO_X1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Efsm_lcd
+R1
+R2
+R3
+R0
+Z13 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
+Z14 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
+l0
+L4
+VLjK9<HmbCj=Y`SGb8zFe:0
+!s100 UcEVE9n^=dZ`Q8WMS]>8k0
+R6
+31
+R7
+!i10b 1
+R8
+Z15 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd|
+Z16 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 7 fsm_lcd 0 22 LjK9<HmbCj=Y`SGb8zFe:0
+l35
+L19
+VQJj:==1`JNe_OR@^2iTn=1
+!s100 XVkdN@=XKffNJi[[>Dh<o2
+R6
+31
+R7
+!i10b 1
+R8
+R15
+R16
+!i113 1
+R11
+R12
+Elcd
+R1
+R2
+R3
+R0
+Z17 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
+Z18 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
+l0
+L4
+V1X<j;9Y7mjej?444N4BYH3
+!s100 K6Rf];jTk@Fo`A1NEU73A2
+R6
+31
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd|
+Z20 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 3 lcd 0 22 1X<j;9Y7mjej?444N4BYH3
+l43
+L16
+Vf>f^Li88NG;m]=8S:UjFb2
+!s100 RcZ`HgSd_>ieBzLZJDmO02
+R6
+31
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Etb_lcd
+R1
+R2
+R3
+R0
+Z21 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/tb_LCD.vhd
+Z22 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/tb_LCD.vhd
+l0
+L4
+VllMD<<kO>Mf:zj:MS83RI1
+!s100 IG>;U9[VfUnMK0McBY4;C0
+R6
+31
+Z23 !s110 1605939526
+!i10b 1
+Z24 !s108 1605939526.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/tb_LCD.vhd|
+Z26 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/tb_LCD.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 6 tb_lcd 0 22 llMD<<kO>Mf:zj:MS83RI1
+l30
+L7
+V2;l4K0:U<AAj=:KnNk?mY2
+!s100 ;bBLGo3f@D2XD44E0a9Bj2
+R6
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
