@@ -1,0 +1,161 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "salida",
+					"strict" : false
+				},
+				{
+					"name" : "rs",
+					"strict" : false
+				},
+				{
+					"name" : "e",
+					"strict" : false
+				},
+				{
+					"name" : "db[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db[2]",
+					"strict" : false
+				},
+				{
+					"name" : "db[3]",
+					"strict" : false
+				},
+				{
+					"name" : "db[4]",
+					"strict" : false
+				},
+				{
+					"name" : "db[5]",
+					"strict" : false
+				},
+				{
+					"name" : "db[6]",
+					"strict" : false
+				},
+				{
+					"name" : "db[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_en_uso",
+					"strict" : false
+				},
+				{
+					"name" : "address[0]",
+					"strict" : false
+				},
+				{
+					"name" : "address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cont_finished",
+					"strict" : false
+				},
+				{
+					"name" : "enviado_MEF1",
+					"strict" : false
+				},
+				{
+					"name" : "enviar",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[8]",
+					"strict" : false
+				},
+				{
+					"name" : "reset_low",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "clk_select[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_select[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entry[0]",
+					"strict" : false
+				},
+				{
+					"name" : "entry[1]",
+					"strict" : false
+				},
+				{
+					"name" : "entry[2]",
+					"strict" : false
+				},
+				{
+					"name" : "entry[3]",
+					"strict" : false
+				},
+				{
+					"name" : "entry[4]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

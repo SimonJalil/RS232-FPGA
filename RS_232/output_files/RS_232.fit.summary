@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Nov 21 13:08:09 2020
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : RS_232
+Top-level Entity Name : RS_232
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 406 / 6,272 ( 6 % )
+    Total combinational functions : 380 / 6,272 ( 6 % )
+    Dedicated logic registers : 233 / 6,272 ( 4 % )
+Total registers : 233
+Total pins : 42 / 92 ( 46 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

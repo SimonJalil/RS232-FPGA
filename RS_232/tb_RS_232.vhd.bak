@@ -1,0 +1,39 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_RS_232 is
+end tb_RS_232;
+
+architecture behav of tb_RS_232 is 
+	
+	--Declaro componente a testear.
+	component RS_232 is
+		port (  
+				entry			:in std_logic_vector(4 downto 0);
+				reset_low	:in std_logic;
+				clk			:in std_logic;
+				salida 		:out std_logic
+				);
+	end component;
+
+	--Declaro señales auxiliares de test bench.
+	signal tb_entry 		:std_logic_vector(4 downto 0) := "00001";
+	signal tb_reset_low 	:std_logic := '0';
+	signal tb_clk 			:std_logic := '0';
+	
+	signal tb_salida 		:std_logic;
+	
+	constant semiperiod : time :=50us;
+	
+begin 
+
+	clk_gen: tb_clk <= not tb_clk after semiperiod;
+
+	uut: RS_232 port map(entry => tb_entry, reset_low => tb_reset_low, clk => tb_clk, salida => tb_salida);
+	
+	data_gen: process 
+		begin 
+			tb_entry <= "00001"
+		
+		end process;
+end behav;

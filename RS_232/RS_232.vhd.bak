@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164;
+
+entity RS_232 is
+	port (
+	
+			);
+end RS_232;
+
+architecture behav of RS_232 is
+
+	component Punto_A is
+		port (
+				start_tx		:in std_logic;	--Señal de comienzo de Tx.
+				clk 			:in std_logic; --Señal de clock.
+				reset_low 	:in std_logic;	--Señal de reset asincronico.
+				data			:in std_logic_vector (ancho-1 downto 0);	--Dato completo, 11 bits: paridad,start,stop,ASCII.
+				serout 		:out std_logic;	--Señal de salida serie.
+				finished 	:out std_logic
+				);
+	end component;
+	
+	component Punto_B is 
+		port (
+				entradas 	:in std_logic_vector(4 downto 0);
+				clk			:in std_logic;
+				reset_low	:in std_logic;
+				send_MEF1	:in std_logic;
+				datos_out 	:out std_logic_vector(10 downto 0);
+				send 			:out std_logic		
+				);
+	end component;
+
+
+begin 
+
+
+end behav;

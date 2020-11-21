@@ -1,0 +1,830 @@
+|RS_232
+entry[0] => antirrebote:antirrebotes:0:antirreb.x
+entry[1] => antirrebote:antirrebotes:1:antirreb.x
+entry[2] => antirrebote:antirrebotes:2:antirreb.x
+entry[3] => antirrebote:antirrebotes:3:antirreb.x
+entry[4] => antirrebote:antirrebotes:4:antirreb.x
+reset_low => sincronizador:sincronizadores:0:sinc.reset
+reset_low => sincronizador:sincronizadores:1:sinc.reset
+reset_low => sincronizador:sincronizadores:2:sinc.reset
+reset_low => sincronizador:sincronizadores:3:sinc.reset
+reset_low => sincronizador:sincronizadores:4:sinc.reset
+reset_low => Punto_A:Parte_A.reset_low
+reset_low => Punto_B:Parte_B.reset_low
+reset_low => LCD:mod_lcd.reset_low
+clk => divisores:Clock.clk
+clk => LCD:mod_lcd.clk
+clk_select[0] => Mux:Multiplexer.mux_sel[0]
+clk_select[1] => Mux:Multiplexer.mux_sel[1]
+salida <= Punto_A:Parte_A.serout
+rw <= LCD:mod_lcd.rw
+rs <= LCD:mod_lcd.rs
+e << LCD:mod_lcd.e
+db[0] <= LCD:mod_lcd.db[0]
+db[1] <= LCD:mod_lcd.db[1]
+db[2] <= LCD:mod_lcd.db[2]
+db[3] <= LCD:mod_lcd.db[3]
+db[4] <= LCD:mod_lcd.db[4]
+db[5] <= LCD:mod_lcd.db[5]
+db[6] <= LCD:mod_lcd.db[6]
+db[7] <= LCD:mod_lcd.db[7]
+clk_en_uso <= Mux:Multiplexer.mux_out
+address[0] <= Punto_B:Parte_B.direccion[0]
+address[1] <= Punto_B:Parte_B.direccion[1]
+address[2] <= Punto_B:Parte_B.direccion[2]
+address[3] <= Punto_B:Parte_B.direccion[3]
+address[4] <= Punto_B:Parte_B.direccion[4]
+address[5] <= Punto_B:Parte_B.direccion[5]
+cont_finished <= Punto_B:Parte_B.enviado_cont
+enviado_MEF1 <= Punto_A:Parte_A.finished
+enviar <= Punto_B:Parte_B.enviar
+ASCII[0] <= Punto_B:Parte_B.datos_out[0]
+ASCII[1] <= Punto_B:Parte_B.datos_out[1]
+ASCII[2] <= Punto_B:Parte_B.datos_out[2]
+ASCII[3] <= Punto_B:Parte_B.datos_out[3]
+ASCII[4] <= Punto_B:Parte_B.datos_out[4]
+ASCII[5] <= Punto_B:Parte_B.datos_out[5]
+ASCII[6] <= Punto_B:Parte_B.datos_out[6]
+ASCII[7] <= Punto_B:Parte_B.datos_out[7]
+ASCII[8] <= Punto_B:Parte_B.datos_out[8]
+ASCII[9] <= Punto_B:Parte_B.datos_out[9]
+ASCII[10] <= Punto_B:Parte_B.datos_out[10]
+
+
+|RS_232|antirrebote:\antirrebotes:0:antirreb
+x => process_0.IN1
+x => y.DATAB
+clk => y~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|antirrebote:\antirrebotes:1:antirreb
+x => process_0.IN1
+x => y.DATAB
+clk => y~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|antirrebote:\antirrebotes:2:antirreb
+x => process_0.IN1
+x => y.DATAB
+clk => y~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|antirrebote:\antirrebotes:3:antirreb
+x => process_0.IN1
+x => y.DATAB
+clk => y~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|antirrebote:\antirrebotes:4:antirreb
+x => process_0.IN1
+x => y.DATAB
+clk => y~reg0.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+y <= y~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|sincronizador:\sincronizadores:0:sinc
+asyncin => meta.DATAIN
+clock => syncin~reg0.CLK
+clock => meta.CLK
+reset => syncin~reg0.ACLR
+reset => meta.ACLR
+syncin <= syncin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|sincronizador:\sincronizadores:1:sinc
+asyncin => meta.DATAIN
+clock => syncin~reg0.CLK
+clock => meta.CLK
+reset => syncin~reg0.ACLR
+reset => meta.ACLR
+syncin <= syncin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|sincronizador:\sincronizadores:2:sinc
+asyncin => meta.DATAIN
+clock => syncin~reg0.CLK
+clock => meta.CLK
+reset => syncin~reg0.ACLR
+reset => meta.ACLR
+syncin <= syncin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|sincronizador:\sincronizadores:3:sinc
+asyncin => meta.DATAIN
+clock => syncin~reg0.CLK
+clock => meta.CLK
+reset => syncin~reg0.ACLR
+reset => meta.ACLR
+syncin <= syncin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|sincronizador:\sincronizadores:4:sinc
+asyncin => meta.DATAIN
+clock => syncin~reg0.CLK
+clock => meta.CLK
+reset => syncin~reg0.ACLR
+reset => meta.ACLR
+syncin <= syncin~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A
+start_tx => FSM_Reg_Despl:FSM.start_tx
+clk => cont_bin:Cont.clk
+clk => Reg_Despl:Reg.clk
+clk => FSM_Reg_Despl:FSM.clk
+reset_low => Reg_Despl:Reg.rst_low
+reset_low => FSM_Reg_Despl:FSM.rst_low
+preset => Reg_Despl:Reg.preset
+data[0] => Reg_Despl:Reg.data[0]
+data[1] => Reg_Despl:Reg.data[1]
+data[2] => Reg_Despl:Reg.data[2]
+data[3] => Reg_Despl:Reg.data[3]
+data[4] => Reg_Despl:Reg.data[4]
+data[5] => Reg_Despl:Reg.data[5]
+data[6] => Reg_Despl:Reg.data[6]
+data[7] => Reg_Despl:Reg.data[7]
+data[8] => Reg_Despl:Reg.data[8]
+data[9] => Reg_Despl:Reg.data[9]
+data[10] => Reg_Despl:Reg.data[10]
+tri_state => serout.OE
+serout <= serout.DB_MAX_OUTPUT_PORT_TYPE
+finished <= FSM_Reg_Despl:FSM.finished_tx
+
+
+|RS_232|Punto_A:Parte_A|cont_bin:Cont
+start_cont => bus_out.ENA
+start_cont => cont[0].ENA
+start_cont => cont[1].ENA
+start_cont => cont[2].ENA
+start_cont => cont[3].ENA
+clk => bus_out.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+rst_low => bus_out.ACLR
+rst_low => cont[0].ACLR
+rst_low => cont[1].ACLR
+rst_low => cont[2].ACLR
+rst_low => cont[3].ACLR
+cont_ok <= bus_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg
+serin => FFD:reg_despl:0:primero:priff.d
+clk => FFD:reg_despl:0:primero:priff.clk
+clk => FFD:reg_despl:1:medios:medff.clk
+clk => FFD:reg_despl:2:medios:medff.clk
+clk => FFD:reg_despl:3:medios:medff.clk
+clk => FFD:reg_despl:4:medios:medff.clk
+clk => FFD:reg_despl:5:medios:medff.clk
+clk => FFD:reg_despl:6:medios:medff.clk
+clk => FFD:reg_despl:7:medios:medff.clk
+clk => FFD:reg_despl:8:medios:medff.clk
+clk => FFD:reg_despl:9:medios:medff.clk
+clk => FFD:reg_despl:10:ultimo:ultff.clk
+rst_low => FFD:reg_despl:0:primero:priff.reset_low
+rst_low => FFD:reg_despl:1:medios:medff.reset_low
+rst_low => FFD:reg_despl:2:medios:medff.reset_low
+rst_low => FFD:reg_despl:3:medios:medff.reset_low
+rst_low => FFD:reg_despl:4:medios:medff.reset_low
+rst_low => FFD:reg_despl:5:medios:medff.reset_low
+rst_low => FFD:reg_despl:6:medios:medff.reset_low
+rst_low => FFD:reg_despl:7:medios:medff.reset_low
+rst_low => FFD:reg_despl:8:medios:medff.reset_low
+rst_low => FFD:reg_despl:9:medios:medff.reset_low
+rst_low => FFD:reg_despl:10:ultimo:ultff.reset_low
+preset => FFD:reg_despl:0:primero:priff.preset
+preset => FFD:reg_despl:1:medios:medff.preset
+preset => FFD:reg_despl:2:medios:medff.preset
+preset => FFD:reg_despl:3:medios:medff.preset
+preset => FFD:reg_despl:4:medios:medff.preset
+preset => FFD:reg_despl:5:medios:medff.preset
+preset => FFD:reg_despl:6:medios:medff.preset
+preset => FFD:reg_despl:7:medios:medff.preset
+preset => FFD:reg_despl:8:medios:medff.preset
+preset => FFD:reg_despl:9:medios:medff.preset
+preset => FFD:reg_despl:10:ultimo:ultff.preset
+data[0] => FFD:reg_despl:0:primero:priff.data
+data[1] => FFD:reg_despl:1:medios:medff.data
+data[2] => FFD:reg_despl:2:medios:medff.data
+data[3] => FFD:reg_despl:3:medios:medff.data
+data[4] => FFD:reg_despl:4:medios:medff.data
+data[5] => FFD:reg_despl:5:medios:medff.data
+data[6] => FFD:reg_despl:6:medios:medff.data
+data[7] => FFD:reg_despl:7:medios:medff.data
+data[8] => FFD:reg_despl:8:medios:medff.data
+data[9] => FFD:reg_despl:9:medios:medff.data
+data[10] => FFD:reg_despl:10:ultimo:ultff.data
+load_shift => FFD:reg_despl:0:primero:priff.load_shift
+load_shift => FFD:reg_despl:1:medios:medff.load_shift
+load_shift => FFD:reg_despl:2:medios:medff.load_shift
+load_shift => FFD:reg_despl:3:medios:medff.load_shift
+load_shift => FFD:reg_despl:4:medios:medff.load_shift
+load_shift => FFD:reg_despl:5:medios:medff.load_shift
+load_shift => FFD:reg_despl:6:medios:medff.load_shift
+load_shift => FFD:reg_despl:7:medios:medff.load_shift
+load_shift => FFD:reg_despl:8:medios:medff.load_shift
+load_shift => FFD:reg_despl:9:medios:medff.load_shift
+load_shift => FFD:reg_despl:10:ultimo:ultff.load_shift
+serout <= FFD:reg_despl:10:ultimo:ultff.q
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_A:Parte_A|FSM_Reg_Despl:FSM
+start_tx => next_state.load_shift.DATAB
+start_tx => Selector0.IN2
+cont_ok => next_state.finished.DATAB
+cont_ok => Selector1.IN2
+clk => current_state~1.DATAIN
+rst_low => current_state~3.DATAIN
+l_s <= l_s.DB_MAX_OUTPUT_PORT_TYPE
+start_cont <= start_cont.DB_MAX_OUTPUT_PORT_TYPE
+rst_cont <= rst_cont.DB_MAX_OUTPUT_PORT_TYPE
+finished_tx <= finished_tx.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_B:Parte_B
+entradas[0] => FSM_Memoria:FSM.botones[0]
+entradas[1] => FSM_Memoria:FSM.botones[1]
+entradas[2] => FSM_Memoria:FSM.botones[2]
+entradas[3] => FSM_Memoria:FSM.botones[3]
+entradas[4] => FSM_Memoria:FSM.botones[4]
+clk => FSM_Memoria:FSM.clk
+reset_low => FSM_Memoria:FSM.reset_low
+send_MEF1 => FSM_Memoria:FSM.send_MEF1
+datos_out[0] <= Memoria_ROM:Memoria.data_out[0]
+datos_out[1] <= Memoria_ROM:Memoria.data_out[1]
+datos_out[2] <= Memoria_ROM:Memoria.data_out[2]
+datos_out[3] <= Memoria_ROM:Memoria.data_out[3]
+datos_out[4] <= Memoria_ROM:Memoria.data_out[4]
+datos_out[5] <= Memoria_ROM:Memoria.data_out[5]
+datos_out[6] <= Memoria_ROM:Memoria.data_out[6]
+datos_out[7] <= Memoria_ROM:Memoria.data_out[7]
+datos_out[8] <= Memoria_ROM:Memoria.data_out[8]
+datos_out[9] <= Memoria_ROM:Memoria.data_out[9]
+datos_out[10] <= Memoria_ROM:Memoria.data_out[10]
+preset <= FSM_Memoria:FSM.preset
+tri_state <= FSM_Memoria:FSM.tri_state
+enviado_cont <= Contador_Memoria:Contador.send_ready
+enviar <= FSM_Memoria:FSM.start_tx
+direccion[0] <= Contador_Memoria:Contador.address_out[0]
+direccion[1] <= Contador_Memoria:Contador.address_out[1]
+direccion[2] <= Contador_Memoria:Contador.address_out[2]
+direccion[3] <= Contador_Memoria:Contador.address_out[3]
+direccion[4] <= Contador_Memoria:Contador.address_out[4]
+direccion[5] <= Contador_Memoria:Contador.address_out[5]
+
+
+|RS_232|Punto_B:Parte_B|Memoria_ROM:Memoria
+clk => dato_ok[0].CLK
+clk => dato_ok[1].CLK
+clk => dato_ok[2].CLK
+clk => dato_ok[3].CLK
+clk => dato_ok[4].CLK
+clk => dato_ok[5].CLK
+clk => dato_ok[6].CLK
+clk => dato_ok[7].CLK
+clk => dato_ok[8].CLK
+clk => dato_ok[9].CLK
+clk => dato_ok[10].CLK
+address[0] => Mux0.IN69
+address[0] => Mux1.IN69
+address[0] => Mux2.IN69
+address[0] => Mux3.IN69
+address[0] => Mux4.IN69
+address[0] => Mux5.IN69
+address[0] => Mux6.IN69
+address[1] => Mux0.IN68
+address[1] => Mux1.IN68
+address[1] => Mux2.IN68
+address[1] => Mux3.IN68
+address[1] => Mux4.IN68
+address[1] => Mux5.IN68
+address[1] => Mux6.IN68
+address[2] => Mux0.IN67
+address[2] => Mux1.IN67
+address[2] => Mux2.IN67
+address[2] => Mux3.IN67
+address[2] => Mux4.IN67
+address[2] => Mux5.IN67
+address[2] => Mux6.IN67
+address[3] => Mux0.IN66
+address[3] => Mux1.IN66
+address[3] => Mux2.IN66
+address[3] => Mux3.IN66
+address[3] => Mux4.IN66
+address[3] => Mux5.IN66
+address[3] => Mux6.IN66
+address[4] => Mux0.IN65
+address[4] => Mux1.IN65
+address[4] => Mux2.IN65
+address[4] => Mux3.IN65
+address[4] => Mux4.IN65
+address[4] => Mux5.IN65
+address[4] => Mux6.IN65
+address[5] => Mux0.IN64
+address[5] => Mux1.IN64
+address[5] => Mux2.IN64
+address[5] => Mux3.IN64
+address[5] => Mux4.IN64
+address[5] => Mux5.IN64
+address[5] => Mux6.IN64
+data_out[0] <= dato_ok[0].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= dato_ok[1].DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= dato_ok[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= dato_ok[3].DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= dato_ok[4].DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= dato_ok[5].DB_MAX_OUTPUT_PORT_TYPE
+data_out[6] <= dato_ok[6].DB_MAX_OUTPUT_PORT_TYPE
+data_out[7] <= dato_ok[7].DB_MAX_OUTPUT_PORT_TYPE
+data_out[8] <= dato_ok[8].DB_MAX_OUTPUT_PORT_TYPE
+data_out[9] <= dato_ok[9].DB_MAX_OUTPUT_PORT_TYPE
+data_out[10] <= dato_ok[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_B:Parte_B|FSM_Memoria:FSM
+botones[0] => Mux0.IN36
+botones[0] => Mux1.IN36
+botones[0] => Mux2.IN36
+botones[0] => Mux3.IN36
+botones[0] => Mux4.IN36
+botones[0] => Mux5.IN36
+botones[1] => Mux0.IN35
+botones[1] => Mux1.IN35
+botones[1] => Mux2.IN35
+botones[1] => Mux3.IN35
+botones[1] => Mux4.IN35
+botones[1] => Mux5.IN35
+botones[2] => Mux0.IN34
+botones[2] => Mux1.IN34
+botones[2] => Mux2.IN34
+botones[2] => Mux3.IN34
+botones[2] => Mux4.IN34
+botones[2] => Mux5.IN34
+botones[3] => Mux0.IN33
+botones[3] => Mux1.IN33
+botones[3] => Mux2.IN33
+botones[3] => Mux3.IN33
+botones[3] => Mux4.IN33
+botones[3] => Mux5.IN33
+botones[4] => Mux0.IN32
+botones[4] => Mux1.IN32
+botones[4] => Mux2.IN32
+botones[4] => Mux3.IN32
+botones[4] => Mux4.IN32
+botones[4] => Mux5.IN32
+clk => current_state~1.DATAIN
+send_MEF1 => next_state.OUTPUTSELECT
+send_MEF1 => next_state.OUTPUTSELECT
+send_MEF1 => Selector2.IN1
+send_OK => next_state.DATAA
+send_OK => next_state.DATAA
+reset_low => current_state~3.DATAIN
+opciones[0] <= opciones[0].DB_MAX_OUTPUT_PORT_TYPE
+opciones[1] <= opciones[1].DB_MAX_OUTPUT_PORT_TYPE
+opciones[2] <= opciones[2].DB_MAX_OUTPUT_PORT_TYPE
+opciones[3] <= opciones[3].DB_MAX_OUTPUT_PORT_TYPE
+opciones[4] <= opciones[4].DB_MAX_OUTPUT_PORT_TYPE
+clk_cont <= clk_cont.DB_MAX_OUTPUT_PORT_TYPE
+clk_mem <= clk_mem.DB_MAX_OUTPUT_PORT_TYPE
+start_tx <= start_tx.DB_MAX_OUTPUT_PORT_TYPE
+reset_cont <= reset_cont.DB_MAX_OUTPUT_PORT_TYPE
+preset <= preset.DB_MAX_OUTPUT_PORT_TYPE
+tri_state <= tri_state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Punto_B:Parte_B|Contador_memoria:Contador
+entradas[0] => opcion[0].IN0
+entradas[0] => comb.IN1
+entradas[0] => comb.IN1
+entradas[1] => opcion[1].IN0
+entradas[1] => comb.IN1
+entradas[1] => comb.IN1
+entradas[2] => opcion[2].IN0
+entradas[2] => comb.IN1
+entradas[2] => comb.IN1
+entradas[3] => opcion[3].IN0
+entradas[3] => comb.IN1
+entradas[3] => comb.IN1
+entradas[4] => opcion[4].IN0
+entradas[4] => comb.IN1
+entradas[4] => comb.IN1
+clk => contToaddress_out[0].CLK
+clk => contToaddress_out[0]~en.CLK
+clk => contToaddress_out[1].CLK
+clk => contToaddress_out[1]~en.CLK
+clk => contToaddress_out[2].CLK
+clk => contToaddress_out[2]~en.CLK
+clk => contToaddress_out[3].CLK
+clk => contToaddress_out[3]~en.CLK
+clk => contToaddress_out[4].CLK
+clk => contToaddress_out[4]~en.CLK
+clk => contToaddress_out[5].CLK
+clk => contToaddress_out[5]~en.CLK
+clk => contTosend_ready.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+clk => cont[4].CLK
+clk => cont[5].CLK
+reset_low => contToaddress_out[0].PRESET
+reset_low => contToaddress_out[1].PRESET
+reset_low => contToaddress_out[2].PRESET
+reset_low => contToaddress_out[3].PRESET
+reset_low => contToaddress_out[4].PRESET
+reset_low => contToaddress_out[5].PRESET
+reset_low => contTosend_ready.ACLR
+reset_low => cont[0].ACLR
+reset_low => cont[1].ACLR
+reset_low => cont[2].ACLR
+reset_low => cont[3].ACLR
+reset_low => cont[4].ACLR
+reset_low => cont[5].ACLR
+reset_low => opcion[0].IN1
+reset_low => opcion[1].IN1
+reset_low => opcion[2].IN1
+reset_low => opcion[3].IN1
+reset_low => opcion[4].IN1
+reset_low => contToaddress_out[0]~en.PRESET
+reset_low => contToaddress_out[1]~en.PRESET
+reset_low => contToaddress_out[2]~en.PRESET
+reset_low => contToaddress_out[3]~en.PRESET
+reset_low => contToaddress_out[4]~en.PRESET
+reset_low => contToaddress_out[5]~en.PRESET
+send_ready <= contTosend_ready.DB_MAX_OUTPUT_PORT_TYPE
+address_out[0] <= contToaddress_out[0].DB_MAX_OUTPUT_PORT_TYPE
+address_out[1] <= contToaddress_out[1].DB_MAX_OUTPUT_PORT_TYPE
+address_out[2] <= contToaddress_out[2].DB_MAX_OUTPUT_PORT_TYPE
+address_out[3] <= contToaddress_out[3].DB_MAX_OUTPUT_PORT_TYPE
+address_out[4] <= contToaddress_out[4].DB_MAX_OUTPUT_PORT_TYPE
+address_out[5] <= contToaddress_out[5].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|divisores:Clock
+clk => clk_state_3.CLK
+clk => count_3[0].CLK
+clk => count_3[1].CLK
+clk => count_3[2].CLK
+clk => count_3[3].CLK
+clk => count_3[4].CLK
+clk => count_3[5].CLK
+clk => count_3[6].CLK
+clk => count_3[7].CLK
+clk => clk_state_2.CLK
+clk => count_2[0].CLK
+clk => count_2[1].CLK
+clk => count_2[2].CLK
+clk => count_2[3].CLK
+clk => count_2[4].CLK
+clk => count_2[5].CLK
+clk => count_2[6].CLK
+clk => count_2[7].CLK
+clk => count_2[8].CLK
+clk => count_2[9].CLK
+clk => clk_state_1.CLK
+clk => count_1[0].CLK
+clk => count_1[1].CLK
+clk => count_1[2].CLK
+clk => count_1[3].CLK
+clk => count_1[4].CLK
+clk => count_1[5].CLK
+clk => count_1[6].CLK
+clk => count_1[7].CLK
+clk => count_1[8].CLK
+clk => count_1[9].CLK
+clk => count_1[10].CLK
+clk => count_1[11].CLK
+clk => clk_state_0.CLK
+clk => count_0[0].CLK
+clk => count_0[1].CLK
+clk => count_0[2].CLK
+clk => count_0[3].CLK
+clk => count_0[4].CLK
+clk => count_0[5].CLK
+clk => count_0[6].CLK
+clk => count_0[7].CLK
+clk => count_0[8].CLK
+clk => count_0[9].CLK
+clk => count_0[10].CLK
+clk => count_0[11].CLK
+clk => count_0[12].CLK
+clk_out_0 <= clk_state_0.DB_MAX_OUTPUT_PORT_TYPE
+clk_out_1 <= clk_state_1.DB_MAX_OUTPUT_PORT_TYPE
+clk_out_2 <= clk_state_2.DB_MAX_OUTPUT_PORT_TYPE
+clk_out_3 <= clk_state_3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|Mux:Multiplexer
+mux_input[0] => Mux0.IN3
+mux_input[1] => Mux0.IN2
+mux_input[2] => Mux0.IN1
+mux_input[3] => Mux0.IN0
+mux_sel[0] => Mux0.IN5
+mux_sel[1] => Mux0.IN4
+mux_out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|LCD:mod_lcd
+clk => FSM_LCD:fsm.clk
+clk => cont_bin_lcd:cont.clk
+reset_low => FSM_LCD:fsm.reset_low
+entradas[0] => FSM_LCD:fsm.entradas[0]
+entradas[1] => FSM_LCD:fsm.entradas[1]
+entradas[2] => FSM_LCD:fsm.entradas[2]
+entradas[3] => FSM_LCD:fsm.entradas[3]
+entradas[4] => FSM_LCD:fsm.entradas[4]
+rw <= FSM_LCD:fsm.rw
+rs <= FSM_LCD:fsm.rs
+e <= FSM_LCD:fsm.e
+db[0] <= FSM_LCD:fsm.db[0]
+db[1] <= FSM_LCD:fsm.db[1]
+db[2] <= FSM_LCD:fsm.db[2]
+db[3] <= FSM_LCD:fsm.db[3]
+db[4] <= FSM_LCD:fsm.db[4]
+db[5] <= FSM_LCD:fsm.db[5]
+db[6] <= FSM_LCD:fsm.db[6]
+db[7] <= FSM_LCD:fsm.db[7]
+
+
+|RS_232|LCD:mod_lcd|FSM_LCD:fsm
+clk => e~reg0.CLK
+clk => \clock:cont[0].CLK
+clk => \clock:cont[1].CLK
+clk => \clock:cont[2].CLK
+clk => \clock:cont[3].CLK
+clk => \clock:cont[4].CLK
+clk => \clock:cont[5].CLK
+clk => \clock:cont[6].CLK
+clk => \clock:cont[7].CLK
+clk => \clock:cont[8].CLK
+clk => \clock:cont[9].CLK
+clk => \clock:cont[10].CLK
+clk => \clock:cont[11].CLK
+clk => \clock:cont[12].CLK
+clk => \clock:cont[13].CLK
+clk => \clock:cont[14].CLK
+clk => \clock:cont[15].CLK
+clk => \clock:cont[16].CLK
+reset_low => current_state~3.DATAIN
+cont_ok => next_state.OUTPUTSELECT
+cont_ok => next_state.OUTPUTSELECT
+cont_ok => Selector0.IN7
+cont_ok => Selector1.IN2
+cont_ok => Selector2.IN2
+cont_ok => Selector3.IN2
+cont_ok => Selector4.IN2
+entradas[0] => Mux0.IN36
+entradas[0] => Mux1.IN36
+entradas[0] => Mux2.IN36
+entradas[0] => Mux3.IN36
+entradas[0] => Mux4.IN36
+entradas[0] => Mux6.IN36
+entradas[0] => Mux5.IN36
+entradas[1] => Mux0.IN35
+entradas[1] => Mux1.IN35
+entradas[1] => Mux2.IN35
+entradas[1] => Mux3.IN35
+entradas[1] => Mux4.IN35
+entradas[1] => Mux6.IN35
+entradas[1] => Mux5.IN35
+entradas[2] => Mux0.IN34
+entradas[2] => Mux1.IN34
+entradas[2] => Mux2.IN34
+entradas[2] => Mux3.IN34
+entradas[2] => Mux4.IN34
+entradas[2] => Mux6.IN34
+entradas[2] => Mux5.IN34
+entradas[3] => Mux0.IN33
+entradas[3] => Mux1.IN33
+entradas[3] => Mux2.IN33
+entradas[3] => Mux3.IN33
+entradas[3] => Mux4.IN33
+entradas[3] => Mux6.IN33
+entradas[3] => Mux5.IN33
+entradas[4] => Mux0.IN32
+entradas[4] => Mux1.IN32
+entradas[4] => Mux2.IN32
+entradas[4] => Mux3.IN32
+entradas[4] => Mux4.IN32
+entradas[4] => Mux6.IN32
+entradas[4] => Mux5.IN32
+rw <= <GND>
+rs <= WideOr17.DB_MAX_OUTPUT_PORT_TYPE
+reset_cont <= WideOr18.DB_MAX_OUTPUT_PORT_TYPE
+e <= e~reg0.DB_MAX_OUTPUT_PORT_TYPE
+db[0] <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
+db[1] <= WideOr15.DB_MAX_OUTPUT_PORT_TYPE
+db[2] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
+db[3] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+db[4] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+db[5] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+db[6] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+db[7] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RS_232|LCD:mod_lcd|cont_bin_lcd:cont
+clk => bus_out.CLK
+clk => cont[0].CLK
+clk => cont[1].CLK
+clk => cont[2].CLK
+clk => cont[3].CLK
+clk => cont[4].CLK
+clk => cont[5].CLK
+clk => cont[6].CLK
+clk => cont[7].CLK
+clk => cont[8].CLK
+clk => cont[9].CLK
+clk => cont[10].CLK
+clk => cont[11].CLK
+clk => cont[12].CLK
+clk => cont[13].CLK
+clk => cont[14].CLK
+clk => cont[15].CLK
+clk => cont[16].CLK
+clk => cont[17].CLK
+clk => cont[18].CLK
+clk => cont[19].CLK
+clk => cont[20].CLK
+clk => cont[21].CLK
+clk => cont[22].CLK
+clk => cont[23].CLK
+clk => cont[24].CLK
+clk => cont[25].CLK
+clk => cont[26].CLK
+reset_low => bus_out.ACLR
+reset_low => cont[0].ACLR
+reset_low => cont[1].ACLR
+reset_low => cont[2].ACLR
+reset_low => cont[3].ACLR
+reset_low => cont[4].ACLR
+reset_low => cont[5].ACLR
+reset_low => cont[6].ACLR
+reset_low => cont[7].ACLR
+reset_low => cont[8].ACLR
+reset_low => cont[9].ACLR
+reset_low => cont[10].ACLR
+reset_low => cont[11].ACLR
+reset_low => cont[12].ACLR
+reset_low => cont[13].ACLR
+reset_low => cont[14].ACLR
+reset_low => cont[15].ACLR
+reset_low => cont[16].ACLR
+reset_low => cont[17].ACLR
+reset_low => cont[18].ACLR
+reset_low => cont[19].ACLR
+reset_low => cont[20].ACLR
+reset_low => cont[21].ACLR
+reset_low => cont[22].ACLR
+reset_low => cont[23].ACLR
+reset_low => cont[24].ACLR
+reset_low => cont[25].ACLR
+reset_low => cont[26].ACLR
+ok <= bus_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
