@@ -1,0 +1,15 @@
+
+State Machine - |FSM_Memoria|current_state
+Name current_state.espera_OK current_state.espera current_state.start current_state.memoria current_state.contador current_state.entrada_4 current_state.entrada_3 current_state.entrada_2 current_state.entrada_1 current_state.entrada_0 current_state.ready current_state.idle 
+current_state.idle 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.ready 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.entrada_0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.entrada_1 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.entrada_2 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.entrada_3 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.entrada_4 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.contador 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.memoria 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.start 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.espera 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.espera_OK 1 0 0 0 0 0 0 0 0 0 0 1 

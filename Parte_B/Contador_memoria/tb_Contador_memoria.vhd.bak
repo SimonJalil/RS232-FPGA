@@ -1,0 +1,52 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity tb_Contador_memoria is
+end tb_Contador_memoria;
+
+architecture bahav of tb_Contador_memoria is 
+
+	--Componente a testear.
+	component Contador_memoria is 
+		port (
+				entradas		:in std_logic_vector(4 downto 0);
+				clk 			:in std_logic;
+				reset_low	:in std_logic;
+				send_ok		:out std_logic;
+				address_out	:out std_logic_vector (5 downto 0)
+				);
+	end component;
+	
+	--Señales auxiliares de testeo.
+	signal tb_entradas		:std_logic_vector(4 downto 0);
+	signal tb_clk				:std_logic	:= '0';
+	signal tb_reset_low 		:std_logic	:= '0';
+	signal tb_send_ok 		:std_logic;
+	signal tb_address_out	:std_logic_vector(5 downto 0);  
+
+	--Constantes
+	constant semiperiod	:time	:= 50us;
+	
+begin 
+	
+	clock_gen: tb_clk <= not tb_clk after semiperiod;
+	
+	uut: Contador_memoria (entradas => tb_entradas, clk => tb_clk, reset_low => tb_reset_low, send_ok => tb_send_ok, address_out => tb_address_out);
+	
+	data_gen: process 
+		begin 
+			
+			tb_entradas <= "00001";
+			wait until clk = '1';
+			
+			reset <= '1';
+			wait until clk = '1';
+			
+			for i in range 0 to 25 loop
+				wait until clk = '1';
+			end loop;
+			
+		
+		end process;
+
+end behav;
