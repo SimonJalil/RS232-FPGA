@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
 
-// DATE "05/06/2020 13:10:13"
+// DATE "11/21/2020 01:26:16"
 
 // 
 // Device: Altera EP4CE115F29C7 Package FBGA780
@@ -31,14 +31,14 @@
 module Reg_Despl (
 	serin,
 	clk,
-	reset_low,
+	rst_low,
 	preset,
 	data,
 	load_shift,
 	serout);
 input 	serin;
 input 	clk;
-input 	reset_low;
+input 	rst_low;
 input 	preset;
 input 	[10:0] data;
 input 	load_shift;
@@ -46,7 +46,7 @@ output 	serout;
 
 // Design Ports Information
 // serout	=>  Location: PIN_D1,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// reset_low	=>  Location: PIN_G4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// rst_low	=>  Location: PIN_G4,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // load_shift	=>  Location: PIN_G3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // data[10]	=>  Location: PIN_H4,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk	=>  Location: PIN_J1,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -80,7 +80,7 @@ initial $sdf_annotate("Reg_Despl_7_1200mv_85c_v_slow.sdo");
 // synopsys translate_on
 
 wire \serout~output_o ;
-wire \reset_low~input_o ;
+wire \rst_low~input_o ;
 wire \preset~input_o ;
 wire \reg_despl:10:ultimo:ultff|q~5_combout ;
 wire \reg_despl:10:ultimo:ultff|q~1_combout ;
@@ -155,13 +155,13 @@ defparam \serout~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOIBUF_X0_Y63_N15
-cycloneive_io_ibuf \reset_low~input (
-	.i(reset_low),
+cycloneive_io_ibuf \rst_low~input (
+	.i(rst_low),
 	.ibar(gnd),
-	.o(\reset_low~input_o ));
+	.o(\rst_low~input_o ));
 // synopsys translate_off
-defparam \reset_low~input .bus_hold = "false";
-defparam \reset_low~input .simulate_z_as = "z";
+defparam \rst_low~input .bus_hold = "false";
+defparam \rst_low~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: IOIBUF_X0_Y60_N15
@@ -177,9 +177,9 @@ defparam \preset~input .simulate_z_as = "z";
 // Location: LCCOMB_X1_Y63_N8
 cycloneive_lcell_comb \reg_despl:10:ultimo:ultff|q~5 (
 // Equation(s):
-// \reg_despl:10:ultimo:ultff|q~5_combout  = (\reset_low~input_o  & \preset~input_o )
+// \reg_despl:10:ultimo:ultff|q~5_combout  = (\rst_low~input_o  & \preset~input_o )
 
-	.dataa(\reset_low~input_o ),
+	.dataa(\rst_low~input_o ),
 	.datab(gnd),
 	.datac(\preset~input_o ),
 	.datad(gnd),
@@ -194,11 +194,11 @@ defparam \reg_despl:10:ultimo:ultff|q~5 .sum_lutc_input = "datac";
 // Location: LCCOMB_X2_Y63_N24
 cycloneive_lcell_comb \reg_despl:10:ultimo:ultff|q~1 (
 // Equation(s):
-// \reg_despl:10:ultimo:ultff|q~1_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout )))
+// \reg_despl:10:ultimo:ultff|q~1_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout )))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(gnd),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:10:ultimo:ultff|q~1_combout ),
 	.cin(gnd),
 	.combout(\reg_despl:10:ultimo:ultff|q~1_combout ),
@@ -381,11 +381,11 @@ defparam \reg_despl:0:primero:priff|q~1 .sum_lutc_input = "datac";
 // Location: LCCOMB_X2_Y63_N28
 cycloneive_lcell_comb \reg_despl:10:ultimo:ultff|q~0 (
 // Equation(s):
-// \reg_despl:10:ultimo:ultff|q~0_combout  = (\reg_despl:10:ultimo:ultff|q~5_combout ) # (!\reset_low~input_o )
+// \reg_despl:10:ultimo:ultff|q~0_combout  = (\reg_despl:10:ultimo:ultff|q~5_combout ) # (!\rst_low~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.cin(gnd),
 	.combout(\reg_despl:10:ultimo:ultff|q~0_combout ),
@@ -430,9 +430,9 @@ defparam \reg_despl:0:primero:priff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X2_Y63_N6
 cycloneive_lcell_comb \reg_despl:0:primero:priff|q~0 (
 // Equation(s):
-// \reg_despl:0:primero:priff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:0:primero:priff|q~_emulated_q ))))
+// \reg_despl:0:primero:priff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:0:primero:priff|q~_emulated_q ))))
 
-	.dataa(\reset_low~input_o ),
+	.dataa(\rst_low~input_o ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
 	.datac(\reg_despl:0:primero:priff|q~_emulated_q ),
 	.datad(\reg_despl:10:ultimo:ultff|q~5_combout ),
@@ -483,11 +483,11 @@ defparam \reg_despl:1:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X2_Y63_N12
 cycloneive_lcell_comb \reg_despl:1:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:1:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:1:medios:medff|q~_emulated_q ))))
+// \reg_despl:1:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:1:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:1:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:1:medios:medff|q~0_combout ),
@@ -536,11 +536,11 @@ defparam \reg_despl:2:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X2_Y63_N20
 cycloneive_lcell_comb \reg_despl:2:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:2:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:2:medios:medff|q~_emulated_q ))))
+// \reg_despl:2:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:2:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:2:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:2:medios:medff|q~0_combout ),
@@ -589,11 +589,11 @@ defparam \reg_despl:3:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X2_Y63_N4
 cycloneive_lcell_comb \reg_despl:3:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:3:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:3:medios:medff|q~_emulated_q ))))
+// \reg_despl:3:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:3:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:3:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:3:medios:medff|q~0_combout ),
@@ -642,11 +642,11 @@ defparam \reg_despl:4:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N28
 cycloneive_lcell_comb \reg_despl:4:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:4:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:4:medios:medff|q~_emulated_q ))))
+// \reg_despl:4:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:4:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:4:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:4:medios:medff|q~0_combout ),
@@ -695,11 +695,11 @@ defparam \reg_despl:5:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N16
 cycloneive_lcell_comb \reg_despl:5:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:5:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:5:medios:medff|q~_emulated_q ))))
+// \reg_despl:5:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:5:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:5:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:5:medios:medff|q~0_combout ),
@@ -748,9 +748,9 @@ defparam \reg_despl:6:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N24
 cycloneive_lcell_comb \reg_despl:6:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:6:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:6:medios:medff|q~_emulated_q ))))
+// \reg_despl:6:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:6:medios:medff|q~_emulated_q ))))
 
-	.dataa(\reset_low~input_o ),
+	.dataa(\rst_low~input_o ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
 	.datac(\reg_despl:6:medios:medff|q~_emulated_q ),
 	.datad(\reg_despl:10:ultimo:ultff|q~5_combout ),
@@ -801,11 +801,11 @@ defparam \reg_despl:7:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N0
 cycloneive_lcell_comb \reg_despl:7:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:7:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:7:medios:medff|q~_emulated_q ))))
+// \reg_despl:7:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:7:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:7:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:7:medios:medff|q~0_combout ),
@@ -854,9 +854,9 @@ defparam \reg_despl:8:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N12
 cycloneive_lcell_comb \reg_despl:8:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:8:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:8:medios:medff|q~_emulated_q ))))
+// \reg_despl:8:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:8:medios:medff|q~_emulated_q ))))
 
-	.dataa(\reset_low~input_o ),
+	.dataa(\rst_low~input_o ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
 	.datac(\reg_despl:8:medios:medff|q~_emulated_q ),
 	.datad(\reg_despl:10:ultimo:ultff|q~5_combout ),
@@ -907,11 +907,11 @@ defparam \reg_despl:9:medios:medff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N20
 cycloneive_lcell_comb \reg_despl:9:medios:medff|q~0 (
 // Equation(s):
-// \reg_despl:9:medios:medff|q~0_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:9:medios:medff|q~_emulated_q ))))
+// \reg_despl:9:medios:medff|q~0_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:9:medios:medff|q~_emulated_q ))))
 
 	.dataa(\reg_despl:10:ultimo:ultff|q~5_combout ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
-	.datac(\reset_low~input_o ),
+	.datac(\rst_low~input_o ),
 	.datad(\reg_despl:9:medios:medff|q~_emulated_q ),
 	.cin(gnd),
 	.combout(\reg_despl:9:medios:medff|q~0_combout ),
@@ -960,9 +960,9 @@ defparam \reg_despl:10:ultimo:ultff|q~_emulated .power_up = "low";
 // Location: LCCOMB_X1_Y63_N14
 cycloneive_lcell_comb \reg_despl:10:ultimo:ultff|q~2 (
 // Equation(s):
-// \reg_despl:10:ultimo:ultff|q~2_combout  = (\reset_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:10:ultimo:ultff|q~_emulated_q ))))
+// \reg_despl:10:ultimo:ultff|q~2_combout  = (\rst_low~input_o  & ((\reg_despl:10:ultimo:ultff|q~5_combout ) # (\reg_despl:10:ultimo:ultff|q~1_combout  $ (\reg_despl:10:ultimo:ultff|q~_emulated_q ))))
 
-	.dataa(\reset_low~input_o ),
+	.dataa(\rst_low~input_o ),
 	.datab(\reg_despl:10:ultimo:ultff|q~1_combout ),
 	.datac(\reg_despl:10:ultimo:ultff|q~_emulated_q ),
 	.datad(\reg_despl:10:ultimo:ultff|q~5_combout ),

@@ -1,5 +1,5 @@
 Flow report for Reg_Despl
-Sat Nov 21 01:16:28 2020
+Sat Nov 21 01:26:17 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Sat Nov 21 01:16:28 2020      ;
+; Flow Status                        ; Successful - Sat Nov 21 01:26:17 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Reg_Despl                                   ;
 ; Top-level Entity Name              ; Reg_Despl                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 25 / 114,480 ( < 1 % )                      ;
+;     Total combinational functions  ; 25 / 114,480 ( < 1 % )                      ;
+;     Dedicated logic registers      ; 11 / 114,480 ( < 1 % )                      ;
+; Total registers                    ; 11                                          ;
+; Total pins                         ; 17 / 529 ( 3 % )                            ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2020 01:16:16 ;
+; Start date & time ; 11/21/2020 01:25:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Reg_Despl           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 93328249748543.160593217505524         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 93328249748543.160593273805989         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_Reg_Despl   ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_Reg_Despl                           ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
@@ -102,8 +102,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 928 MB              ; 00:00:30                           ;
-; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 935 MB              ; 00:00:29                           ;
+; Fitter               ; 00:00:15     ; 1.0                     ; 1405 MB             ; 00:00:18                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 799 MB              ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 857 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1031 MB             ; 00:00:01                           ;
+; Total                ; 00:00:35     ; --                      ; --                  ; 00:00:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,6 +117,10 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
 ; Analysis & Synthesis ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Fitter               ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Assembler            ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Timing Analyzer      ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -120,6 +128,10 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Reg_Despl -c Reg_Despl
+quartus_fit --read_settings_files=off --write_settings_files=off Reg_Despl -c Reg_Despl
+quartus_asm --read_settings_files=off --write_settings_files=off Reg_Despl -c Reg_Despl
+quartus_sta Reg_Despl -c Reg_Despl
+quartus_eda --read_settings_files=off --write_settings_files=off Reg_Despl -c Reg_Despl
 
 
 

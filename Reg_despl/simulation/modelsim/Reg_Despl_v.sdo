@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "Reg_Despl")
-  (DATE "05/06/2020 13:10:13")
+  (DATE "11/21/2020 01:26:17")
   (VENDOR "Altera")
   (PROGRAM "Quartus Prime")
   (VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition")
@@ -48,7 +48,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_io_ibuf")
-    (INSTANCE reset_low\~input)
+    (INSTANCE rst_low\~input)
     (DELAY
       (ABSOLUTE
         (IOPATH i o (680:680:680) (786:786:786))

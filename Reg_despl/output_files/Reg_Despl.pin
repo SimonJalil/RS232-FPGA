@@ -459,7 +459,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F28       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
 load_shift                   : G3        : input  : 2.5 V             :         : 1         : N              
-reset_low                    : G4        : input  : 2.5 V             :         : 1         : N              
+rst_low                      : G4        : input  : 2.5 V             :         : 1         : N              
 data[6]                      : G5        : input  : 2.5 V             :         : 1         : N              
 data[7]                      : G6        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G7        :        :                   :         : 8         :                

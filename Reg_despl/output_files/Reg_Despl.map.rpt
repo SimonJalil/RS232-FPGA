@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reg_Despl
-Sat Nov 21 01:16:28 2020
+Sat Nov 21 01:25:51 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -10,7 +10,14 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |Reg_Despl
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +43,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Sat Nov 21 01:16:28 2020           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 21 01:25:51 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Reg_Despl                                   ;
 ; Top-level Entity Name              ; Reg_Despl                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 25                                          ;
+;     Total combinational functions  ; 25                                          ;
+;     Dedicated logic registers      ; 11                                          ;
+; Total registers                    ; 11                                          ;
+; Total pins                         ; 17                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -148,11 +155,128 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+; ../FFD/FFD.vhd                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd             ;         ;
+; Reg_Despl.vhd                    ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimated Total logic elements              ; 25                                 ;
+;                                             ;                                    ;
+; Total combinational functions               ; 25                                 ;
+; Logic element usage by number of LUT inputs ;                                    ;
+;     -- 4 input functions                    ; 22                                 ;
+;     -- 3 input functions                    ; 1                                  ;
+;     -- <=2 input functions                  ; 2                                  ;
+;                                             ;                                    ;
+; Logic elements by mode                      ;                                    ;
+;     -- normal mode                          ; 25                                 ;
+;     -- arithmetic mode                      ; 0                                  ;
+;                                             ;                                    ;
+; Total registers                             ; 11                                 ;
+;     -- Dedicated logic registers            ; 11                                 ;
+;     -- I/O registers                        ; 0                                  ;
+;                                             ;                                    ;
+; I/O pins                                    ; 17                                 ;
+;                                             ;                                    ;
+; Embedded Multiplier 9-bit elements          ; 0                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; FFD:\reg_despl:10:ultimo:ultff|q~1 ;
+; Maximum fan-out                             ; 23                                 ;
+; Total fan-out                               ; 146                                ;
+; Average fan-out                             ; 2.09                               ;
++---------------------------------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-------------+--------------+
+; |Reg_Despl                          ; 25 (0)              ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 17   ; 0            ; |Reg_Despl                                ; Reg_Despl   ; work         ;
+;    |FFD:\reg_despl:0:primero:priff| ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:0:primero:priff ; FFD         ; work         ;
+;    |FFD:\reg_despl:10:ultimo:ultff| ; 5 (5)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:10:ultimo:ultff ; FFD         ; work         ;
+;    |FFD:\reg_despl:1:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:1:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:2:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:2:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:3:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:3:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:4:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:4:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:5:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:5:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:6:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:6:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:7:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:7:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:8:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:8:medios:medff  ; FFD         ; work         ;
+;    |FFD:\reg_despl:9:medios:medff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reg_Despl|FFD:\reg_despl:9:medios:medff  ; FFD         ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 11    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 11    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Reg_Despl ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; ancho          ; 11    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 17                          ;
+; cycloneiii_ff         ; 11                          ;
+;     CLR               ; 11                          ;
+; cycloneiii_lcell_comb ; 25                          ;
+;     normal            ; 25                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 22                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.11                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,11 +285,13 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 01:16:15 2020
+    Info: Processing started: Sat Nov 21 01:25:38 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reg_Despl -c Reg_Despl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Warning (12019): Can't analyze file -- file ../FFD/FFD.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd
+    Info (12022): Found design unit 1: FFD-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 16
+    Info (12023): Found entity 1: FFD File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file Reg_Despl.vhd
     Info (12022): Found design unit 1: Reg_Despl-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 17
     Info (12023): Found entity 1: Reg_Despl File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 4
@@ -173,21 +299,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file tb_Reg_
     Info (12022): Found design unit 1: tb_Reg_Despl-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/tb_Reg_Despl.vhd Line: 7
     Info (12023): Found entity 1: tb_Reg_Despl File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/tb_Reg_Despl.vhd Line: 4
 Info (12127): Elaborating entity "Reg_Despl" for the top level hierarchy
-Error (12006): Node instance "\reg_despl:0:primero:priff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 43
-Error (12006): Node instance "\reg_despl:1:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:2:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:3:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:4:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:5:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:6:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:7:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:8:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:9:medios:medff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 47
-Error (12006): Node instance "\reg_despl:10:ultimo:ultff" instantiates undefined entity "FFD". Ensure that required library paths are specified correctly, define the specified entity, or change the instantiation. If this entity represents Intel FPGA or third-party IP, generate the synthesis files for the IP. File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 51
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 11 errors, 2 warnings
-    Error: Peak virtual memory: 928 megabytes
-    Error: Processing ended: Sat Nov 21 01:16:28 2020
-    Error: Elapsed time: 00:00:13
-    Error: Total CPU time (on all processors): 00:00:30
+Info (12128): Elaborating entity "FFD" for hierarchy "FFD:\reg_despl:0:primero:priff" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Reg_despl/Reg_Despl.vhd Line: 43
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "FFD:\reg_despl:10:ultimo:ultff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:10:ultimo:ultff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:9:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:9:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:8:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:8:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:7:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:7:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:6:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:6:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:5:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:5:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:4:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:4:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:3:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:3:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:2:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:2:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:1:medios:medff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:1:medios:medff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "FFD:\reg_despl:0:primero:priff|q" is converted into an equivalent circuit using register "FFD:\reg_despl:0:primero:priff|q~_emulated" and latch "FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/FFD/FFD.vhd Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 42 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 16 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 25 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 960 megabytes
+    Info: Processing ended: Sat Nov 21 01:25:51 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

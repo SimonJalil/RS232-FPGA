@@ -8,7 +8,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_low",
+					"name" : "rst_low",
 					"strict" : false
 				},
 				{
