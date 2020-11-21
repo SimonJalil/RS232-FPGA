@@ -1,0 +1,23 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Punto_B is 
+	port(
+			entradas 	:in std_logic_vector(4 downto 0);
+			clk			:in std_logic;
+			reset_low	:in std_logic;
+			datos_out 	:out std_logic_vector(10 downto 0);
+			send 			:out std_logic;
+	
+			
+			);
+end Punto_B;
+
+architecture behav of Punto_B is 
+
+
+
+begin 
+
+
+end behav;
