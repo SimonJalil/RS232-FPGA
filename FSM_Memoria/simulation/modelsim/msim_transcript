@@ -1,0 +1,56 @@
+# do FSM_Memoria_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /home/simon/intelFPGA_lite/18.0/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_B/FSM_Memoria/FSM_Memoria.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:37 on May 07,2020
+# vcom -reportprogress 300 -93 -work work /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_B/FSM_Memoria/FSM_Memoria.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FSM_Memoria
+# -- Compiling architecture behav of FSM_Memoria
+# End time: 10:54:37 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {/home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_B/FSM_Memoria/tb_FSM_Memoria.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 10:54:37 on May 07,2020
+# vcom -reportprogress 300 -93 -work work /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_B/FSM_Memoria/tb_FSM_Memoria.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_FSM_Memoria
+# -- Compiling architecture behav of tb_FSM_Memoria
+# ** Warning: /home/simon/Documentos/Sistemas Digitales Avanzados/Laboratorios/Laboratorio_5/Punto_B/FSM_Memoria/tb_FSM_Memoria.vhd(43): (vcom-1207) An abstract literal and an identifier must have a separator between them.
+# End time: 10:54:37 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs="+acc"  tb_FSM_Memoria
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneive -L rtl_work -L work -voptargs=""+acc"" tb_FSM_Memoria 
+# Start time: 10:54:37 on May 07,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_fsm_memoria(behav)
+# Loading work.fsm_memoria(behav)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# 
+# stdin: <EOF>
+# End time: 10:56:47 on May 07,2020, Elapsed time: 0:02:10
+# Errors: 0, Warnings: 1

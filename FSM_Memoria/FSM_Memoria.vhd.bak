@@ -1,0 +1,16 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FSM_Memoria is
+	port (
+			
+			
+			);
+end FSM_Memoria;
+
+architecture behav of FSM_Memoria is 
+
+begin 
+
+
+end behav;
