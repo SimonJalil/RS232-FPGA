@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Reg_Despl is
+	port (
+			data		:in std_logic_vector(0 to 10);
+			reset 	:in std_logic;
+			start_tx	:in std_logic;
+			clk		:in std_logic;
+			serout	:out std_logic
+			);
+end Reg_Despl;
+
+architecture behav of Reg_Despl is
+
+	--Declaro los estados de la FSM.
+	type FSM_states is (idle,datos,shift);
+	
+	--Declaro las señales de la FSM.
+	signal current_state, next_state : FSM_states;
+	
+	--Establezco el estilo de codificacion.
+	attribute syn_encoding: string;
+	attribute syn_encoding of FSM_States : type is "one hot";
+	
+	
+end behav;

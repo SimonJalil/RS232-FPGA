@@ -1,0 +1,13 @@
+|FSM_Reg_Despl
+start_tx => next_state.load_shift.DATAB
+start_tx => Selector0.IN2
+cont_ok => next_state.finished.DATAB
+cont_ok => Selector1.IN2
+clk => current_state~1.DATAIN
+rst_low => current_state~3.DATAIN
+l_s <= l_s.DB_MAX_OUTPUT_PORT_TYPE
+start_cont <= start_cont.DB_MAX_OUTPUT_PORT_TYPE
+rst_cont <= rst_cont.DB_MAX_OUTPUT_PORT_TYPE
+finished_tx <= finished_tx.DB_MAX_OUTPUT_PORT_TYPE
+
+

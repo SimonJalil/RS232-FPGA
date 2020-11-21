@@ -1,0 +1,181 @@
+|Reg_Despl
+serin => FFD:reg_despl:0:primero:priff.d
+clk => FFD:reg_despl:0:primero:priff.clk
+clk => FFD:reg_despl:1:medios:medff.clk
+clk => FFD:reg_despl:2:medios:medff.clk
+clk => FFD:reg_despl:3:medios:medff.clk
+clk => FFD:reg_despl:4:medios:medff.clk
+clk => FFD:reg_despl:5:medios:medff.clk
+clk => FFD:reg_despl:6:medios:medff.clk
+clk => FFD:reg_despl:7:medios:medff.clk
+clk => FFD:reg_despl:8:medios:medff.clk
+clk => FFD:reg_despl:9:medios:medff.clk
+clk => FFD:reg_despl:10:ultimo:ultff.clk
+rst_low => FFD:reg_despl:0:primero:priff.reset_low
+rst_low => FFD:reg_despl:1:medios:medff.reset_low
+rst_low => FFD:reg_despl:2:medios:medff.reset_low
+rst_low => FFD:reg_despl:3:medios:medff.reset_low
+rst_low => FFD:reg_despl:4:medios:medff.reset_low
+rst_low => FFD:reg_despl:5:medios:medff.reset_low
+rst_low => FFD:reg_despl:6:medios:medff.reset_low
+rst_low => FFD:reg_despl:7:medios:medff.reset_low
+rst_low => FFD:reg_despl:8:medios:medff.reset_low
+rst_low => FFD:reg_despl:9:medios:medff.reset_low
+rst_low => FFD:reg_despl:10:ultimo:ultff.reset_low
+preset => FFD:reg_despl:0:primero:priff.preset
+preset => FFD:reg_despl:1:medios:medff.preset
+preset => FFD:reg_despl:2:medios:medff.preset
+preset => FFD:reg_despl:3:medios:medff.preset
+preset => FFD:reg_despl:4:medios:medff.preset
+preset => FFD:reg_despl:5:medios:medff.preset
+preset => FFD:reg_despl:6:medios:medff.preset
+preset => FFD:reg_despl:7:medios:medff.preset
+preset => FFD:reg_despl:8:medios:medff.preset
+preset => FFD:reg_despl:9:medios:medff.preset
+preset => FFD:reg_despl:10:ultimo:ultff.preset
+data[0] => FFD:reg_despl:0:primero:priff.data
+data[1] => FFD:reg_despl:1:medios:medff.data
+data[2] => FFD:reg_despl:2:medios:medff.data
+data[3] => FFD:reg_despl:3:medios:medff.data
+data[4] => FFD:reg_despl:4:medios:medff.data
+data[5] => FFD:reg_despl:5:medios:medff.data
+data[6] => FFD:reg_despl:6:medios:medff.data
+data[7] => FFD:reg_despl:7:medios:medff.data
+data[8] => FFD:reg_despl:8:medios:medff.data
+data[9] => FFD:reg_despl:9:medios:medff.data
+data[10] => FFD:reg_despl:10:ultimo:ultff.data
+load_shift => FFD:reg_despl:0:primero:priff.load_shift
+load_shift => FFD:reg_despl:1:medios:medff.load_shift
+load_shift => FFD:reg_despl:2:medios:medff.load_shift
+load_shift => FFD:reg_despl:3:medios:medff.load_shift
+load_shift => FFD:reg_despl:4:medios:medff.load_shift
+load_shift => FFD:reg_despl:5:medios:medff.load_shift
+load_shift => FFD:reg_despl:6:medios:medff.load_shift
+load_shift => FFD:reg_despl:7:medios:medff.load_shift
+load_shift => FFD:reg_despl:8:medios:medff.load_shift
+load_shift => FFD:reg_despl:9:medios:medff.load_shift
+load_shift => FFD:reg_despl:10:ultimo:ultff.load_shift
+serout << FFD:reg_despl:10:ultimo:ultff.q
+
+
+|Reg_Despl|FFD:\reg_despl:0:primero:priff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:1:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:2:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:3:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:4:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:5:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:6:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:7:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:8:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:9:medios:medff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Reg_Despl|FFD:\reg_despl:10:ultimo:ultff
+d => q.DATAA
+data => q.DATAB
+reset_low => q.IN0
+reset_low => q~reg0.ACLR
+preset => q.IN1
+clk => q~reg0.CLK
+load_shift => q.OUTPUTSELECT
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

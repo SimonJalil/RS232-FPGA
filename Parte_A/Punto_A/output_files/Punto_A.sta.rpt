@@ -1,0 +1,1068 @@
+Timing Analyzer report for Punto_A
+Sat Nov 21 01:58:57 2020
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clk'
+ 13. Slow 1200mV 85C Model Hold: 'clk'
+ 14. Slow 1200mV 85C Model Recovery: 'clk'
+ 15. Slow 1200mV 85C Model Removal: 'clk'
+ 16. Slow 1200mV 85C Model Metastability Summary
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'clk'
+ 24. Slow 1200mV 0C Model Hold: 'clk'
+ 25. Slow 1200mV 0C Model Recovery: 'clk'
+ 26. Slow 1200mV 0C Model Removal: 'clk'
+ 27. Slow 1200mV 0C Model Metastability Summary
+ 28. Fast 1200mV 0C Model Setup Summary
+ 29. Fast 1200mV 0C Model Hold Summary
+ 30. Fast 1200mV 0C Model Recovery Summary
+ 31. Fast 1200mV 0C Model Removal Summary
+ 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1200mV 0C Model Setup: 'clk'
+ 34. Fast 1200mV 0C Model Hold: 'clk'
+ 35. Fast 1200mV 0C Model Recovery: 'clk'
+ 36. Fast 1200mV 0C Model Removal: 'clk'
+ 37. Fast 1200mV 0C Model Metastability Summary
+ 38. Multicorner Timing Analysis Summary
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Recovery Transfers
+ 47. Removal Transfers
+ 48. Report TCCS
+ 49. Report RSKM
+ 50. Unconstrained Paths Summary
+ 51. Clock Status Summary
+ 52. Unconstrained Input Ports
+ 53. Unconstrained Output Ports
+ 54. Unconstrained Input Ports
+ 55. Unconstrained Output Ports
+ 56. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; Punto_A                                             ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.4%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 631.71 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -0.583 ; -6.195             ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.402 ; 0.000              ;
++-------+-------+--------------------+
+
+
++----------------------------------------+
+; Slow 1200mV 85C Model Recovery Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -0.511 ; -2.555                ;
++-------+--------+-----------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 85C Model Removal Summary ;
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; clk   ; 1.017 ; 0.000                 ;
++-------+-------+-----------------------+
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -28.700                          ;
++-------+--------+----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                                                 ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.583 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.500      ;
+; -0.527 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.444      ;
+; -0.435 ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.082     ; 1.351      ;
+; -0.428 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.345      ;
+; -0.414 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.331      ;
+; -0.414 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.331      ;
+; -0.414 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.331      ;
+; -0.397 ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.314      ;
+; -0.389 ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.306      ;
+; -0.365 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 1.000        ; -0.081     ; 1.282      ;
+; -0.342 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.259      ;
+; -0.300 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.080     ; 1.218      ;
+; -0.300 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.080     ; 1.218      ;
+; -0.300 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.080     ; 1.218      ;
+; -0.300 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.080     ; 1.218      ;
+; -0.299 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.080     ; 1.217      ;
+; -0.292 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.209      ;
+; -0.266 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.183      ;
+; -0.245 ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.162      ;
+; -0.244 ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.161      ;
+; -0.244 ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.161      ;
+; -0.244 ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.161      ;
+; -0.243 ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.160      ;
+; -0.243 ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.160      ;
+; -0.242 ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.081     ; 1.159      ;
+; -0.236 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.153      ;
+; -0.227 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.144      ;
+; -0.225 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.142      ;
+; -0.207 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.124      ;
+; -0.204 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.081     ; 1.121      ;
+; -0.199 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.load_shift               ; clk          ; clk         ; 1.000        ; -0.080     ; 1.117      ;
+; -0.194 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.111      ;
+; -0.182 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 1.099      ;
+; -0.144 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.061      ;
+; -0.144 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.061      ;
+; -0.144 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.061      ;
+; -0.144 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.081     ; 1.061      ;
+; -0.142 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.081     ; 1.059      ;
+; -0.057 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.974      ;
+; -0.056 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.082     ; 0.972      ;
+; -0.050 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 1.000        ; -0.081     ; 0.967      ;
+; 0.097  ; FSM_Reg_Despl:FSM|current_state.finished                 ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 1.000        ; -0.081     ; 0.820      ;
+; 0.099  ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.818      ;
+; 0.109  ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.808      ;
+; 0.152  ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.765      ;
+; 0.152  ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.765      ;
+; 0.152  ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.765      ;
+; 0.152  ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.765      ;
+; 0.183  ; cont_bin:Cont|bus_out                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
+; 0.183  ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
+; 0.183  ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 1.000        ; -0.081     ; 0.734      ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                                 ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.402 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; cont_bin:Cont|bus_out                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.402 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.669      ;
+; 0.407 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.674      ;
+; 0.434 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.701      ;
+; 0.442 ; FSM_Reg_Despl:FSM|current_state.finished                 ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 0.000        ; 0.081      ; 0.709      ;
+; 0.442 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.709      ;
+; 0.561 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 0.000        ; 0.081      ; 0.828      ;
+; 0.611 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.878      ;
+; 0.625 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.081      ; 0.892      ;
+; 0.626 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 0.893      ;
+; 0.627 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 0.894      ;
+; 0.627 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 0.894      ;
+; 0.627 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 0.894      ;
+; 0.639 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.080      ; 0.905      ;
+; 0.650 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.917      ;
+; 0.652 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.919      ;
+; 0.664 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.931      ;
+; 0.677 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.944      ;
+; 0.677 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 0.944      ;
+; 0.706 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.081      ; 0.973      ;
+; 0.741 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.008      ;
+; 0.750 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.017      ;
+; 0.761 ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.028      ;
+; 0.761 ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.028      ;
+; 0.761 ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.081      ; 1.028      ;
+; 0.763 ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.030      ;
+; 0.763 ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.030      ;
+; 0.763 ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.030      ;
+; 0.763 ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.030      ;
+; 0.764 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.load_shift               ; clk          ; clk         ; 0.000        ; 0.082      ; 1.032      ;
+; 0.779 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.046      ;
+; 0.816 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.084      ;
+; 0.816 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.082      ; 1.084      ;
+; 0.816 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.084      ;
+; 0.816 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.084      ;
+; 0.816 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.082      ; 1.084      ;
+; 0.827 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 0.000        ; 0.081      ; 1.094      ;
+; 0.832 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.099      ;
+; 0.883 ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.150      ;
+; 0.889 ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.156      ;
+; 0.924 ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.080      ; 1.190      ;
+; 0.933 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.200      ;
+; 1.053 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.320      ;
+; 1.089 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.356      ;
+; 1.095 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.362      ;
+; 1.095 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.362      ;
+; 1.095 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.362      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Recovery: 'clk'                                                                                                       ;
++--------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.511 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|bus_out ; clk          ; clk         ; 1.000        ; -0.081     ; 1.428      ;
+; -0.511 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[2] ; clk          ; clk         ; 1.000        ; -0.081     ; 1.428      ;
+; -0.511 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[1] ; clk          ; clk         ; 1.000        ; -0.081     ; 1.428      ;
+; -0.511 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[3] ; clk          ; clk         ; 1.000        ; -0.081     ; 1.428      ;
+; -0.511 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[0] ; clk          ; clk         ; 1.000        ; -0.081     ; 1.428      ;
++--------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Removal: 'clk'                                                                                                       ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 1.017 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|bus_out ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
+; 1.017 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[2] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
+; 1.017 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[1] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
+; 1.017 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[3] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
+; 1.017 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[0] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.284      ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 695.41 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.438 ; -3.810            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.354 ; 0.000             ;
++-------+-------+-------------------+
+
+
++---------------------------------------+
+; Slow 1200mV 0C Model Recovery Summary ;
++-------+--------+----------------------+
+; Clock ; Slack  ; End Point TNS        ;
++-------+--------+----------------------+
+; clk   ; -0.356 ; -1.780               ;
++-------+--------+----------------------+
+
+
++--------------------------------------+
+; Slow 1200mV 0C Model Removal Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; clk   ; 0.926 ; 0.000                ;
++-------+-------+----------------------+
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -28.700                         ;
++-------+--------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                                                  ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.438 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.365      ;
+; -0.373 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.300      ;
+; -0.318 ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 1.244      ;
+; -0.291 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.218      ;
+; -0.291 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.218      ;
+; -0.291 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.218      ;
+; -0.287 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.214      ;
+; -0.264 ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.191      ;
+; -0.253 ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 1.179      ;
+; -0.219 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 1.000        ; -0.072     ; 1.146      ;
+; -0.213 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.140      ;
+; -0.164 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.091      ;
+; -0.164 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.091      ;
+; -0.164 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.091      ;
+; -0.164 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.091      ;
+; -0.163 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.072     ; 1.090      ;
+; -0.155 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 1.081      ;
+; -0.154 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.081      ;
+; -0.135 ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 1.061      ;
+; -0.135 ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 1.061      ;
+; -0.134 ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 1.060      ;
+; -0.133 ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.073     ; 1.059      ;
+; -0.133 ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.060      ;
+; -0.133 ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.060      ;
+; -0.132 ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.072     ; 1.059      ;
+; -0.107 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.034      ;
+; -0.103 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.030      ;
+; -0.100 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.027      ;
+; -0.086 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 1.013      ;
+; -0.085 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.072     ; 1.012      ;
+; -0.082 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.load_shift               ; clk          ; clk         ; 1.000        ; -0.072     ; 1.009      ;
+; -0.068 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.995      ;
+; -0.065 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.992      ;
+; -0.027 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 0.953      ;
+; -0.027 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 0.953      ;
+; -0.027 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 0.953      ;
+; -0.026 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.073     ; 0.952      ;
+; -0.025 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.073     ; 0.951      ;
+; 0.045  ; FSM_Reg_Despl:FSM|current_state.load_shift               ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.073     ; 0.881      ;
+; 0.048  ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.879      ;
+; 0.054  ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 1.000        ; -0.072     ; 0.873      ;
+; 0.182  ; FSM_Reg_Despl:FSM|current_state.finished                 ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 1.000        ; -0.072     ; 0.745      ;
+; 0.185  ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.742      ;
+; 0.200  ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.727      ;
+; 0.244  ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.683      ;
+; 0.244  ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.683      ;
+; 0.244  ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.683      ;
+; 0.244  ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.683      ;
+; 0.268  ; cont_bin:Cont|bus_out                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
+; 0.268  ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
+; 0.268  ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 1.000        ; -0.072     ; 0.659      ;
++--------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                                  ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.354 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; cont_bin:Cont|bus_out                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.354 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.597      ;
+; 0.365 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.608      ;
+; 0.393 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.636      ;
+; 0.400 ; FSM_Reg_Despl:FSM|current_state.finished                 ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 0.000        ; 0.072      ; 0.643      ;
+; 0.408 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.651      ;
+; 0.516 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 0.000        ; 0.072      ; 0.759      ;
+; 0.564 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.073      ; 0.808      ;
+; 0.565 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.809      ;
+; 0.565 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.809      ;
+; 0.565 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.809      ;
+; 0.566 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.810      ;
+; 0.567 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.810      ;
+; 0.580 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.823      ;
+; 0.596 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.839      ;
+; 0.597 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.840      ;
+; 0.607 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.850      ;
+; 0.619 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.862      ;
+; 0.619 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.862      ;
+; 0.647 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.072      ; 0.890      ;
+; 0.675 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.919      ;
+; 0.681 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.924      ;
+; 0.686 ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.073      ; 0.930      ;
+; 0.687 ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.930      ;
+; 0.687 ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.930      ;
+; 0.687 ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.931      ;
+; 0.688 ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.072      ; 0.931      ;
+; 0.688 ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.932      ;
+; 0.688 ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.932      ;
+; 0.703 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.946      ;
+; 0.709 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.load_shift               ; clk          ; clk         ; 0.000        ; 0.073      ; 0.953      ;
+; 0.749 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.993      ;
+; 0.749 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.993      ;
+; 0.750 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.073      ; 0.994      ;
+; 0.750 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.994      ;
+; 0.750 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 0.994      ;
+; 0.767 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 0.000        ; 0.072      ; 1.010      ;
+; 0.774 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.017      ;
+; 0.799 ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.042      ;
+; 0.812 ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.073      ; 1.056      ;
+; 0.829 ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.072      ; 1.072      ;
+; 0.862 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.105      ;
+; 0.971 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.214      ;
+; 0.989 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.232      ;
+; 1.006 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.249      ;
+; 1.006 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.249      ;
+; 1.006 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 0.000        ; 0.072      ; 1.249      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Recovery: 'clk'                                                                                                        ;
++--------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; -0.356 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|bus_out ; clk          ; clk         ; 1.000        ; -0.072     ; 1.283      ;
+; -0.356 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[2] ; clk          ; clk         ; 1.000        ; -0.072     ; 1.283      ;
+; -0.356 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[1] ; clk          ; clk         ; 1.000        ; -0.072     ; 1.283      ;
+; -0.356 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[3] ; clk          ; clk         ; 1.000        ; -0.072     ; 1.283      ;
+; -0.356 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[0] ; clk          ; clk         ; 1.000        ; -0.072     ; 1.283      ;
++--------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Removal: 'clk'                                                                                                        ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.926 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|bus_out ; clk          ; clk         ; 0.000        ; 0.072      ; 1.169      ;
+; 0.926 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[2] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.169      ;
+; 0.926 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[1] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.169      ;
+; 0.926 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[3] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.169      ;
+; 0.926 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[0] ; clk          ; clk         ; 0.000        ; 0.072      ; 1.169      ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.237 ; 0.000              ;
++-------+-------+--------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.181 ; 0.000             ;
++-------+-------+-------------------+
+
+
++---------------------------------------+
+; Fast 1200mV 0C Model Recovery Summary ;
++-------+-------+-----------------------+
+; Clock ; Slack ; End Point TNS         ;
++-------+-------+-----------------------+
+; clk   ; 0.242 ; 0.000                 ;
++-------+-------+-----------------------+
+
+
++--------------------------------------+
+; Fast 1200mV 0C Model Removal Summary ;
++-------+-------+----------------------+
+; Clock ; Slack ; End Point TNS        ;
++-------+-------+----------------------+
+; clk   ; 0.483 ; 0.000                ;
++-------+-------+----------------------+
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -24.240                         ;
++-------+--------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                                                 ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.237 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.708      ;
+; 0.252 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.693      ;
+; 0.302 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.643      ;
+; 0.308 ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.637      ;
+; 0.312 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.633      ;
+; 0.312 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.633      ;
+; 0.312 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.633      ;
+; 0.326 ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.619      ;
+; 0.326 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.619      ;
+; 0.327 ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.618      ;
+; 0.337 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.608      ;
+; 0.350 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.595      ;
+; 0.350 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.595      ;
+; 0.350 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.595      ;
+; 0.350 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.042     ; 0.595      ;
+; 0.350 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.595      ;
+; 0.361 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.584      ;
+; 0.396 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.549      ;
+; 0.397 ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.548      ;
+; 0.398 ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.547      ;
+; 0.399 ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.042     ; 0.546      ;
+; 0.399 ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.546      ;
+; 0.399 ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.546      ;
+; 0.399 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.546      ;
+; 0.400 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.545      ;
+; 0.400 ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.545      ;
+; 0.400 ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.545      ;
+; 0.401 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.544      ;
+; 0.408 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.537      ;
+; 0.409 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.042     ; 0.536      ;
+; 0.410 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.535      ;
+; 0.418 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.load_shift               ; clk          ; clk         ; 1.000        ; -0.041     ; 0.528      ;
+; 0.421 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.524      ;
+; 0.438 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.507      ;
+; 0.439 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.506      ;
+; 0.439 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.506      ;
+; 0.440 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 1.000        ; -0.042     ; 0.505      ;
+; 0.443 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 1.000        ; -0.042     ; 0.502      ;
+; 0.474 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.043     ; 0.470      ;
+; 0.478 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.467      ;
+; 0.488 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 1.000        ; -0.042     ; 0.457      ;
+; 0.560 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.385      ;
+; 0.561 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.384      ;
+; 0.565 ; FSM_Reg_Despl:FSM|current_state.finished                 ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 1.000        ; -0.042     ; 0.380      ;
+; 0.586 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.359      ;
+; 0.586 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.359      ;
+; 0.586 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.359      ;
+; 0.586 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.359      ;
+; 0.595 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 1.000        ; -0.042     ; 0.350      ;
+; 0.595 ; cont_bin:Cont|bus_out                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 1.000        ; -0.042     ; 0.350      ;
+; 0.595 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 1.000        ; -0.042     ; 0.350      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                                  ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                ; To Node                                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.181 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; cont_bin:Cont|bus_out                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.181 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.307      ;
+; 0.188 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.314      ;
+; 0.195 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.321      ;
+; 0.196 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.322      ;
+; 0.203 ; FSM_Reg_Despl:FSM|current_state.finished                 ; FSM_Reg_Despl:FSM|current_state.idle                     ; clk          ; clk         ; 0.000        ; 0.042      ; 0.329      ;
+; 0.254 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.380      ;
+; 0.269 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.395      ;
+; 0.279 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.041      ; 0.404      ;
+; 0.290 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.416      ;
+; 0.291 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.042      ; 0.417      ;
+; 0.291 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.417      ;
+; 0.292 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.418      ;
+; 0.293 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.419      ;
+; 0.298 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.424      ;
+; 0.299 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.425      ;
+; 0.304 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.430      ;
+; 0.310 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.436      ;
+; 0.310 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[2]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.436      ;
+; 0.322 ; cont_bin:Cont|bus_out                                    ; FSM_Reg_Despl:FSM|current_state.cont_down                ; clk          ; clk         ; 0.000        ; 0.042      ; 0.448      ;
+; 0.337 ; FSM_Reg_Despl:FSM|current_state.idle                     ; FSM_Reg_Despl:FSM|current_state.load_shift               ; clk          ; clk         ; 0.000        ; 0.043      ; 0.464      ;
+; 0.341 ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.467      ;
+; 0.341 ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.042      ; 0.467      ;
+; 0.342 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.468      ;
+; 0.342 ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.468      ;
+; 0.342 ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.468      ;
+; 0.342 ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.468      ;
+; 0.342 ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.468      ;
+; 0.344 ; Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.470      ;
+; 0.345 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.471      ;
+; 0.369 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; FSM_Reg_Despl:FSM|current_state.finished                 ; clk          ; clk         ; 0.000        ; 0.042      ; 0.495      ;
+; 0.370 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.496      ;
+; 0.370 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated ; clk          ; clk         ; 0.000        ; 0.042      ; 0.496      ;
+; 0.370 ; cont_bin:Cont|cont[2]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.496      ;
+; 0.370 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.496      ;
+; 0.370 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.496      ;
+; 0.370 ; FSM_Reg_Despl:FSM|current_state.load_shift               ; Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.496      ;
+; 0.372 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.498      ;
+; 0.399 ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.525      ;
+; 0.400 ; Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.526      ;
+; 0.417 ; Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated  ; Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated  ; clk          ; clk         ; 0.000        ; 0.042      ; 0.543      ;
+; 0.420 ; cont_bin:Cont|cont[0]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.546      ;
+; 0.476 ; cont_bin:Cont|cont[3]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.602      ;
+; 0.511 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[1]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.637      ;
+; 0.511 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[3]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.637      ;
+; 0.511 ; FSM_Reg_Despl:FSM|current_state.cont_down                ; cont_bin:Cont|cont[0]                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.637      ;
+; 0.515 ; cont_bin:Cont|cont[1]                                    ; cont_bin:Cont|bus_out                                    ; clk          ; clk         ; 0.000        ; 0.042      ; 0.641      ;
++-------+----------------------------------------------------------+----------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Recovery: 'clk'                                                                                                       ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.242 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|bus_out ; clk          ; clk         ; 1.000        ; -0.042     ; 0.703      ;
+; 0.242 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[2] ; clk          ; clk         ; 1.000        ; -0.042     ; 0.703      ;
+; 0.242 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[1] ; clk          ; clk         ; 1.000        ; -0.042     ; 0.703      ;
+; 0.242 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[3] ; clk          ; clk         ; 1.000        ; -0.042     ; 0.703      ;
+; 0.242 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[0] ; clk          ; clk         ; 1.000        ; -0.042     ; 0.703      ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Removal: 'clk'                                                                                                        ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+; 0.483 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|bus_out ; clk          ; clk         ; 0.000        ; 0.042      ; 0.609      ;
+; 0.483 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[2] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.609      ;
+; 0.483 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[1] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.609      ;
+; 0.483 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[3] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.609      ;
+; 0.483 ; FSM_Reg_Despl:FSM|current_state.idle ; cont_bin:Cont|cont[0] ; clk          ; clk         ; 0.000        ; 0.042      ; 0.609      ;
++-------+--------------------------------------+-----------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                          ;
++------------------+--------+-------+----------+---------+---------------------+
+; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -0.583 ; 0.181 ; -0.511   ; 0.483   ; -3.000              ;
+;  clk             ; -0.583 ; 0.181 ; -0.511   ; 0.483   ; -3.000              ;
+; Design-wide TNS  ; -6.195 ; 0.0   ; -2.555   ; 0.0     ; -28.7               ;
+;  clk             ; -6.195 ; 0.000 ; -2.555   ; 0.000   ; -28.700             ;
++------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; serout        ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; finished      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; reset_low               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; tri_state               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[10]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; preset                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; start_tx                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[9]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[8]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[7]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[6]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[5]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[4]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[3]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[2]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[1]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; data[0]                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; serout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.37 V              ; -0.00994 V          ; 0.186 V                              ; 0.028 V                              ; 4.98e-10 s                  ; 4.96e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.37 V             ; -0.00994 V         ; 0.186 V                             ; 0.028 V                             ; 4.98e-10 s                 ; 4.96e-10 s                 ; Yes                       ; Yes                       ;
+; finished      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; serout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.35 V              ; -0.00942 V          ; 0.116 V                              ; 0.033 V                              ; 6.66e-10 s                  ; 6.27e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.35 V             ; -0.00942 V         ; 0.116 V                             ; 0.033 V                             ; 6.66e-10 s                 ; 6.27e-10 s                 ; Yes                       ; Yes                       ;
+; finished      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; serout        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; finished      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 51       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 51       ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 5        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 5        ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 44    ; 44   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 6     ; 6    ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; clk    ; clk   ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; data[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[4]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[5]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[6]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[7]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[8]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[9]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[10]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; preset     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_low  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start_tx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tri_state  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; finished    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; serout      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; data[0]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[1]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[2]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[3]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[4]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[5]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[6]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[7]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[8]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[9]    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; data[10]   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; preset     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; reset_low  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; start_tx   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; tri_state  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; finished    ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; serout      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sat Nov 21 01:58:55 2020
+Info: Command: quartus_sta Punto_A -c Punto_A
+Info: qsta_default_script.tcl version: #2
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): The Timing Analyzer is analyzing 1 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Punto_A.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.583
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.583              -6.195 clk 
+Info (332146): Worst-case hold slack is 0.402
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.402               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.511
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.511              -2.555 clk 
+Info (332146): Worst-case removal slack is 1.017
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.017               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -28.700 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.438
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.438              -3.810 clk 
+Info (332146): Worst-case hold slack is 0.354
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.354               0.000 clk 
+Info (332146): Worst-case recovery slack is -0.356
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.356              -1.780 clk 
+Info (332146): Worst-case removal slack is 0.926
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.926               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -28.700 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info (332146): Worst-case setup slack is 0.237
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.237               0.000 clk 
+Info (332146): Worst-case hold slack is 0.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.181               0.000 clk 
+Info (332146): Worst-case recovery slack is 0.242
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.242               0.000 clk 
+Info (332146): Worst-case removal slack is 0.483
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.483               0.000 clk 
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -24.240 clk 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 862 megabytes
+    Info: Processing ended: Sat Nov 21 01:58:57 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

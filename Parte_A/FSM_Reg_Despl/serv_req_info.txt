@@ -1,0 +1,31 @@
+<internal_error>
+<sub_system>ERR</sub_system>
+<callstack>
+	0x7f4c28cee171: ccl_err + 0x8171 (_ZN15ERR_STACKWALKER15get_stack_traceEPPKviiPv + 0xb1)
+	0x7f4c28cf1015: ccl_err + 0xb015 (_Z14err_terminatorv + 0x4b)
+	0x7f4c24980796: stdc++.so.6 + 0x63796 (_ZN10__cxxabiv111__terminateEPFvvE + 0x6)
+	0x7f4c249807c3: stdc++.so.6 + 0x637c3
+	0x7f4c249809ee: stdc++.so.6 + 0x639ee
+	0x7f4c249d1867: stdc++.so.6 + 0xb4867 (_ZSt20__throw_out_of_rangePKc + 0x67)
+	   0x47f631: quartus_npp + 0x7f631 (_ZN31NPP_STATE_MACHINE_ENCODING_INFO32process_state_machines_encodingsERSt14basic_ifstreamIcSt11char_traitsIcEE + 0x1bd)
+	   0x480768: quartus_npp + 0x80768 (_ZN31NPP_STATE_MACHINE_ENCODING_INFO21extract_encoding_infoEP10CMP_FACADEP25NVD_STATE_MACHINE_LOCATER + 0x5a6)
+	   0x4243a1: quartus_npp + 0x243a1 (_ZN12NPP_SGATE_OP9executingEP10CMP_FACADERbS2_b + 0xa09)
+	   0x41ac26: quartus_npp + 0x1ac26 (_ZN13NPP_FRAMEWORK7executeEv + 0x38)
+	0x7f4c4d69275b: comp_qexe + 0x1c75b (_Z18qexe_standard_mainP14QEXE_FRAMEWORKPPK22QEXE_OPTION_DEFINITIONiPPKc + 0x888)
+	   0x41ae49: quartus_npp + 0x1ae49 (_Z8npp_mainiPPKc + 0x59)
+	0x7f4c2b558720: ccl_msg + 0x40720 (_Z15msg_main_threadPv + 0x10)
+	0x7f4c288b002c: ccl_thr + 0x602c (thr_final_wrapper + 0xc)
+	0x7f4c2b5587df: ccl_msg + 0x407df (_Z18msg_thread_wrapperPFPvS_ES_ + 0x62)
+	0x7f4c28f21559: ccl_mem + 0xa559 (_Z18mem_thread_wrapperPFPvS_ES_ + 0x99)
+	0x7f4c28ceef92: ccl_err + 0x8f92 (_Z18err_thread_wrapperPFPvS_ES_ + 0x27)
+	0x7f4c288b03f2: ccl_thr + 0x63f2 (thr_thread_wrapper + 0x15)
+	0x7f4c2b55a7e2: ccl_msg + 0x427e2 (_Z12msg_exe_mainiPPKcPFiiS1_E + 0xa3)
+	   0x41aee4: quartus_npp + 0x1aee4 (main + 0x26)
+	0x7f4c23d8bb97: c.so.6 + 0x21b97 (__libc_start_main + 0xe7)
+	   0x419cf9: quartus_npp + 0x19cf9
+</callstack>
+<error>*** Fatal Error: Unhandled Exception</error>
+<date>Mon Apr 13 06:52:35 2020
+</date>
+<version>Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition</version>
+</internal_error>

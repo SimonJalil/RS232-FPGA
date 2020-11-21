@@ -1,0 +1,25 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "cont_ok",
+					"strict" : false
+				},
+				{
+					"name" : "start_cont",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_low",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

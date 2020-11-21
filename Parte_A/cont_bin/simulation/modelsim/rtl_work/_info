@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/simulation/modelsim
+Econt_bin
+Z1 w1573869042
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/cont_bin.vhd
+Z5 FC:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/cont_bin.vhd
+l0
+L4
+Vn0IT=0dTR6Oz4e9K_zC0R3
+!s100 S=lg3R_d5QA?QElc0U8Bf1
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1573869116
+!i10b 1
+Z8 !s108 1573869116.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/cont_bin.vhd|
+Z10 !s107 C:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/cont_bin.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+DEx4 work 8 cont_bin 0 22 n0IT=0dTR6Oz4e9K_zC0R3
+l22
+L13
+VffUHBaAk^`PT]ioIhG^o>3
+!s100 g_@J6;G^5BGQag^bC7Z<F1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etb_cont_bin
+Z13 w1573868416
+R2
+R3
+R0
+Z14 8C:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/tb_cont_bin.vhd
+Z15 FC:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/tb_cont_bin.vhd
+l0
+L4
+V3XPYaW4;A`8]o4O_2>l_11
+!s100 I426TBZCAhknI`hNA[0Md0
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/tb_cont_bin.vhd|
+Z17 !s107 C:/Users/SIMON JALIL/Documents/FACULTAD/5_Ano/Sistemas Digitales Avanzados - FPGA/Laboratorios/Laboratorio_5/cont_bin/tb_cont_bin.vhd|
+!i113 1
+R11
+R12
+Abehav
+R2
+R3
+DEx4 work 11 tb_cont_bin 0 22 3XPYaW4;A`8]o4O_2>l_11
+l27
+L7
+Vi<]<<2iP@Bd]160o]C:]10
+!s100 Y?1[LVAORad:<PNRdX2UM2
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
