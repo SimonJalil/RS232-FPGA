@@ -1,5 +1,5 @@
 Flow report for LCD
-Sat Nov 21 03:18:40 2020
+Sun Dec 13 17:40:34 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 21 03:18:40 2020       ;
+; Flow Status                        ; Successful - Sun Dec 13 17:40:34 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; LCD                                         ;
 ; Top-level Entity Name              ; LCD                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 152 / 6,272 ( 2 % )                         ;
-;     Total combinational functions  ; 135 / 6,272 ( 2 % )                         ;
+; Total logic elements               ; 151 / 6,272 ( 2 % )                         ;
+;     Total combinational functions  ; 136 / 6,272 ( 2 % )                         ;
 ;     Dedicated logic registers      ; 99 / 6,272 ( 2 % )                          ;
 ; Total registers                    ; 99                                          ;
 ; Total pins                         ; 18 / 92 ( 20 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2020 03:18:13 ;
+; Start date & time ; 12/13/2020 17:40:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCD                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 93328249748543.160593949314657         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 93328249748543.160789201218387         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_LCD         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_LCD                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -101,12 +101,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 932 MB              ; 00:00:30                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 1207 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 786 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 772 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1025 MB             ; 00:00:01                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 931 MB              ; 00:00:27                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 1207 MB             ; 00:00:05                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 786 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 770 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1024 MB             ; 00:00:01                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

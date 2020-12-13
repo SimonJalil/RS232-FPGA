@@ -226,13 +226,13 @@ begin
 			db <= x"00";
 			case current_state is
 				when FunctionSet1 => 
-					db <= x"34";
+					db <= x"38";
 				when FunctionSet2 => 
-					db <= x"34";
+					db <= x"38";
 				when FunctionSet3 => 
-					db <= x"34";
+					db <= x"38";
 				when FunctionSet4 => 
-					db <= x"34";
+					db <= x"38";
 				when ClearDisplay1 => 
 					db <= x"01";
 				when DisplayControl => 

@@ -3,35 +3,35 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -6.810
-TNS   : -116.675
-
-Type  : Slow 1200mV 85C Model Setup 'entradas[0]'
-Slack : -2.414
-TNS   : -2.414
+Slack : -5.281
+TNS   : -117.555
 
 Type  : Slow 1200mV 85C Model Setup 'FSM_LCD:fsm|e'
-Slack : -1.909
-TNS   : -23.941
+Slack : -2.568
+TNS   : -30.950
+
+Type  : Slow 1200mV 85C Model Setup 'entradas[0]'
+Slack : -1.596
+TNS   : -1.596
+
+Type  : Slow 1200mV 85C Model Hold 'FSM_LCD:fsm|e'
+Slack : 0.210
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
 Slack : 0.453
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'FSM_LCD:fsm|e'
-Slack : 0.454
-TNS   : 0.000
-
 Type  : Slow 1200mV 85C Model Hold 'entradas[0]'
-Slack : 0.785
+Slack : 0.668
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'clk'
-Slack : -2.302
-TNS   : -57.659
+Slack : -2.525
+TNS   : -68.280
 
 Type  : Slow 1200mV 85C Model Removal 'clk'
-Slack : 1.778
+Slack : 1.103
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -47,35 +47,35 @@ Slack : -1.487
 TNS   : -78.811
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -6.371
-TNS   : -104.446
-
-Type  : Slow 1200mV 0C Model Setup 'entradas[0]'
-Slack : -2.379
-TNS   : -2.379
+Slack : -4.798
+TNS   : -104.197
 
 Type  : Slow 1200mV 0C Model Setup 'FSM_LCD:fsm|e'
-Slack : -1.991
-TNS   : -20.150
+Slack : -2.228
+TNS   : -26.324
+
+Type  : Slow 1200mV 0C Model Setup 'entradas[0]'
+Slack : -1.577
+TNS   : -1.577
 
 Type  : Slow 1200mV 0C Model Hold 'FSM_LCD:fsm|e'
-Slack : 0.401
+Slack : 0.176
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.402
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'entradas[0]'
-Slack : 0.794
+Slack : 0.680
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'clk'
-Slack : -2.042
-TNS   : -50.440
+Slack : -2.250
+TNS   : -60.836
 
 Type  : Slow 1200mV 0C Model Removal 'clk'
-Slack : 1.699
+Slack : 1.043
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -91,40 +91,40 @@ Slack : -1.487
 TNS   : -78.811
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -2.261
-TNS   : -25.312
-
-Type  : Fast 1200mV 0C Model Setup 'entradas[0]'
-Slack : -0.871
-TNS   : -0.871
+Slack : -1.674
+TNS   : -26.813
 
 Type  : Fast 1200mV 0C Model Setup 'FSM_LCD:fsm|e'
-Slack : -0.837
-TNS   : -3.446
+Slack : -0.768
+TNS   : -3.368
+
+Type  : Fast 1200mV 0C Model Setup 'entradas[0]'
+Slack : -0.635
+TNS   : -0.635
 
 Type  : Fast 1200mV 0C Model Hold 'FSM_LCD:fsm|e'
-Slack : 0.182
-TNS   : 0.000
+Slack : -0.012
+TNS   : -0.012
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
 Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'entradas[0]'
-Slack : 0.312
+Slack : 0.252
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'clk'
-Slack : -0.418
-TNS   : -9.291
+Slack : -0.500
+TNS   : -12.704
 
 Type  : Fast 1200mV 0C Model Removal 'clk'
-Slack : 0.646
+Slack : 0.378
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -51.934
+TNS   : -52.027
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'entradas[0]'
 Slack : -3.000
