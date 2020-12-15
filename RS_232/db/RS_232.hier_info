@@ -28,27 +28,6 @@ db[4] <= LCD:mod_lcd.db[4]
 db[5] <= LCD:mod_lcd.db[5]
 db[6] <= LCD:mod_lcd.db[6]
 db[7] <= LCD:mod_lcd.db[7]
-clk_en_uso <= Mux:Multiplexer.mux_out
-address[0] <= Punto_B:Parte_B.direccion[0]
-address[1] <= Punto_B:Parte_B.direccion[1]
-address[2] <= Punto_B:Parte_B.direccion[2]
-address[3] <= Punto_B:Parte_B.direccion[3]
-address[4] <= Punto_B:Parte_B.direccion[4]
-address[5] <= Punto_B:Parte_B.direccion[5]
-cont_finished <= Punto_B:Parte_B.enviado_cont
-enviado_MEF1 <= Punto_A:Parte_A.finished
-enviar <= Punto_B:Parte_B.enviar
-ASCII[0] <= Punto_B:Parte_B.datos_out[0]
-ASCII[1] <= Punto_B:Parte_B.datos_out[1]
-ASCII[2] <= Punto_B:Parte_B.datos_out[2]
-ASCII[3] <= Punto_B:Parte_B.datos_out[3]
-ASCII[4] <= Punto_B:Parte_B.datos_out[4]
-ASCII[5] <= Punto_B:Parte_B.datos_out[5]
-ASCII[6] <= Punto_B:Parte_B.datos_out[6]
-ASCII[7] <= Punto_B:Parte_B.datos_out[7]
-ASCII[8] <= Punto_B:Parte_B.datos_out[8]
-ASCII[9] <= Punto_B:Parte_B.datos_out[9]
-ASCII[10] <= Punto_B:Parte_B.datos_out[10]
 
 
 |RS_232|antirrebote:\antirrebotes:0:antirreb

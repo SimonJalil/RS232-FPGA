@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RS_232
-Sat Nov 21 13:08:01 2020
+Tue Dec 15 16:23:14 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -30,10 +30,11 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: Punto_A:Parte_A|Reg_Despl:Reg
  23. Parameter Settings for User Entity Instance: Mux:Multiplexer
  24. Parameter Settings for User Entity Instance: LCD:mod_lcd|FSM_LCD:fsm
- 25. Port Connectivity Checks: "Punto_A:Parte_A|Reg_Despl:Reg"
- 26. Post-Synthesis Netlist Statistics for Top Partition
- 27. Elapsed Time Per Partition
- 28. Analysis & Synthesis Messages
+ 25. Port Connectivity Checks: "Punto_B:Parte_B"
+ 26. Port Connectivity Checks: "Punto_A:Parte_A|Reg_Despl:Reg"
+ 27. Post-Synthesis Netlist Statistics for Top Partition
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -59,16 +60,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 21 13:08:01 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 15 16:23:14 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; RS_232                                      ;
 ; Top-level Entity Name              ; RS_232                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 431                                         ;
-;     Total combinational functions  ; 378                                         ;
+; Total logic elements               ; 427                                         ;
+;     Total combinational functions  ; 374                                         ;
 ;     Dedicated logic registers      ; 233                                         ;
 ; Total registers                    ; 233                                         ;
-; Total pins                         ; 42                                          ;
+; Total pins                         ; 21                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -209,30 +210,30 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 431       ;
+; Estimated Total logic elements              ; 427       ;
 ;                                             ;           ;
-; Total combinational functions               ; 378       ;
+; Total combinational functions               ; 374       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 176       ;
-;     -- 3 input functions                    ; 64        ;
-;     -- <=2 input functions                  ; 138       ;
+;     -- 4 input functions                    ; 173       ;
+;     -- 3 input functions                    ; 65        ;
+;     -- <=2 input functions                  ; 136       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 283       ;
+;     -- normal mode                          ; 279       ;
 ;     -- arithmetic mode                      ; 95        ;
 ;                                             ;           ;
 ; Total registers                             ; 233       ;
 ;     -- Dedicated logic registers            ; 233       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 42        ;
+; I/O pins                                    ; 21        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 93        ;
-; Total fan-out                               ; 1889      ;
-; Average fan-out                             ; 2.72      ;
+; Total fan-out                               ; 1831      ;
+; Average fan-out                             ; 2.82      ;
 +---------------------------------------------+-----------+
 
 
@@ -241,13 +242,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name      ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
-; |RS_232                                    ; 378 (0)             ; 233 (0)                   ; 0           ; 0            ; 0       ; 0         ; 42   ; 0            ; |RS_232                                                              ; RS_232           ; work         ;
-;    |LCD:mod_lcd|                           ; 133 (0)             ; 99 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd                                                  ; LCD              ; work         ;
-;       |FSM_LCD:fsm|                        ; 83 (83)             ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd|FSM_LCD:fsm                                      ; FSM_LCD          ; work         ;
+; |RS_232                                    ; 374 (0)             ; 233 (0)                   ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |RS_232                                                              ; RS_232           ; work         ;
+;    |LCD:mod_lcd|                           ; 134 (0)             ; 99 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd                                                  ; LCD              ; work         ;
+;       |FSM_LCD:fsm|                        ; 84 (84)             ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd|FSM_LCD:fsm                                      ; FSM_LCD          ; work         ;
 ;       |cont_bin_lcd:cont|                  ; 50 (50)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd|cont_bin_lcd:cont                                ; cont_bin_lcd     ; work         ;
 ;    |Mux:Multiplexer|                       ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Mux:Multiplexer                                              ; Mux              ; work         ;
-;    |Punto_A:Parte_A|                       ; 34 (0)              ; 19 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A                                              ; Punto_A          ; work         ;
-;       |FSM_Reg_Despl:FSM|                  ; 3 (3)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|FSM_Reg_Despl:FSM                            ; FSM_Reg_Despl    ; work         ;
+;    |Punto_A:Parte_A|                       ; 35 (0)              ; 20 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A                                              ; Punto_A          ; work         ;
+;       |FSM_Reg_Despl:FSM|                  ; 4 (4)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|FSM_Reg_Despl:FSM                            ; FSM_Reg_Despl    ; work         ;
 ;       |Reg_Despl:Reg|                      ; 25 (0)              ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|Reg_Despl:Reg                                ; Reg_Despl        ; work         ;
 ;          |FFD:\reg_despl:0:primero:priff|  ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff ; FFD              ; work         ;
 ;          |FFD:\reg_despl:10:ultimo:ultff|  ; 5 (5)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff ; FFD              ; work         ;
@@ -261,10 +262,10 @@ refer to the applicable agreement for further details.
 ;          |FFD:\reg_despl:8:medios:medff|   ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff  ; FFD              ; work         ;
 ;          |FFD:\reg_despl:9:medios:medff|   ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff  ; FFD              ; work         ;
 ;       |cont_bin:Cont|                      ; 6 (6)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_A:Parte_A|cont_bin:Cont                                ; cont_bin         ; work         ;
-;    |Punto_B:Parte_B|                       ; 110 (0)             ; 33 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B                                              ; Punto_B          ; work         ;
-;       |Contador_memoria:Contador|          ; 60 (60)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador                    ; Contador_memoria ; work         ;
+;    |Punto_B:Parte_B|                       ; 104 (0)             ; 32 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B                                              ; Punto_B          ; work         ;
+;       |Contador_memoria:Contador|          ; 58 (58)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador                    ; Contador_memoria ; work         ;
 ;       |FSM_Memoria:FSM|                    ; 14 (14)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B|FSM_Memoria:FSM                              ; FSM_Memoria      ; work         ;
-;       |Memoria_ROM:Memoria|                ; 36 (36)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B|Memoria_ROM:Memoria                          ; Memoria_ROM      ; work         ;
+;       |Memoria_ROM:Memoria|                ; 32 (32)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|Punto_B:Parte_B|Memoria_ROM:Memoria                          ; Memoria_ROM      ; work         ;
 ;    |antirrebote:\antirrebotes:0:antirreb|  ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|antirrebote:\antirrebotes:0:antirreb                         ; antirrebote      ; work         ;
 ;    |antirrebote:\antirrebotes:1:antirreb|  ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|antirrebote:\antirrebotes:1:antirreb                         ; antirrebote      ; work         ;
 ;    |antirrebote:\antirrebotes:2:antirreb|  ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|antirrebote:\antirrebotes:2:antirreb                         ; antirrebote      ; work         ;
@@ -391,21 +392,21 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------------+
-; Register name                                                     ; Reason for Removal                                                            ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------------+
-; Punto_B:Parte_B|Memoria_ROM:Memoria|dato_ok[0]                    ; Stuck at VCC due to stuck port data_in                                        ;
-; Punto_B:Parte_B|Memoria_ROM:Memoria|dato_ok[9,10]                 ; Stuck at GND due to stuck port data_in                                        ;
-; Punto_A:Parte_A|FSM_Reg_Despl:FSM|current_state.idle              ; Merged with Punto_B:Parte_B|FSM_Memoria:FSM|current_state.espera              ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[1]~en ; Merged with Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[2]~en ; Merged with Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[3]~en ; Merged with Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[4]~en ; Merged with Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[5]~en ; Merged with Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ;
-; Total Number of Removed Registers = 9                             ;                                                                               ;
-+-------------------------------------------------------------------+-------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                         ;
++-------------------------------------------------------------------+----------------------------------------+
+; Register name                                                     ; Reason for Removal                     ;
++-------------------------------------------------------------------+----------------------------------------+
+; Punto_B:Parte_B|Memoria_ROM:Memoria|dato_ok[0]                    ; Stuck at VCC due to stuck port data_in ;
+; Punto_B:Parte_B|Memoria_ROM:Memoria|dato_ok[2,10]                 ; Stuck at GND due to stuck port data_in ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ; Lost fanout                            ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[1]~en ; Lost fanout                            ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[2]~en ; Lost fanout                            ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[3]~en ; Lost fanout                            ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[4]~en ; Lost fanout                            ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[5]~en ; Lost fanout                            ;
+; Total Number of Removed Registers = 9                             ;                                        ;
++-------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -418,25 +419,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 135   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Clock Enable       ; 9     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------+
-; Inverted Register Statistics                                                ;
-+-------------------------------------------------------------------+---------+
-; Inverted Register                                                 ; Fan out ;
-+-------------------------------------------------------------------+---------+
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]    ; 17      ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en ; 13      ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[1]    ; 20      ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[2]    ; 15      ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[3]    ; 19      ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[4]    ; 20      ;
-; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[5]    ; 15      ;
-; Total number of inverted registers = 7                            ;         ;
-+-------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------+
+; Inverted Register Statistics                                             ;
++----------------------------------------------------------------+---------+
+; Inverted Register                                              ; Fan out ;
++----------------------------------------------------------------+---------+
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[2] ; 16      ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[1] ; 17      ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[4] ; 17      ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[3] ; 17      ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[5] ; 12      ;
+; Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0] ; 16      ;
+; Total number of inverted registers = 6                         ;         ;
++----------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -444,14 +444,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:4:antirreb|cont[3]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:3:antirreb|cont[0]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:2:antirreb|cont[0]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:4:antirreb|cont[0]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:3:antirreb|cont[3]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:2:antirreb|cont[3]                   ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:1:antirreb|cont[3]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:0:antirreb|cont[3]                   ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|cont[0]              ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[2] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[5] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:0:antirreb|cont[0]                   ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|cont[3]              ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[1] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[4] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
@@ -550,6 +550,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Punto_B:Parte_B"                                                                            ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; enviado_cont ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; direccion    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------------+
 ; Port Connectivity Checks: "Punto_A:Parte_A|Reg_Despl:Reg" ;
 +-------+-------+----------+--------------------------------+
@@ -564,25 +574,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 42                          ;
+; boundary_port         ; 21                          ;
 ; cycloneiii_ff         ; 233                         ;
-;     CLR               ; 125                         ;
-;     ENA CLR           ; 10                          ;
+;     CLR               ; 126                         ;
+;     ENA CLR           ; 9                           ;
 ;     SCLR              ; 43                          ;
 ;     plain             ; 55                          ;
-; cycloneiii_io_obuf    ; 7                           ;
-; cycloneiii_lcell_comb ; 383                         ;
+; cycloneiii_io_obuf    ; 1                           ;
+; cycloneiii_lcell_comb ; 378                         ;
 ;     arith             ; 95                          ;
 ;         2 data inputs ; 95                          ;
-;     normal            ; 288                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 64                          ;
-;         4 data inputs ; 176                         ;
+;     normal            ; 283                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 29                          ;
+;         3 data inputs ; 65                          ;
+;         4 data inputs ; 173                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.30                        ;
-; Average LUT depth     ; 3.20                        ;
+; Average LUT depth     ; 3.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -601,7 +611,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 13:07:47 2020
+    Info: Processing started: Tue Dec 15 16:23:01 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RS_232 -c RS_232
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -610,7 +620,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file /home/s
     Info (12023): Found entity 1: Punto_B File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 5
 Info (12021): Found 2 design units, including 0 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
     Info (12022): Found design unit 1: pkg_rom File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 5
-    Info (12022): Found design unit 2: pkg_rom-body File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 69
+    Info (12022): Found design unit 2: pkg_rom-body File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 113
 Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
     Info (12022): Found design unit 1: Memoria_ROM-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 15
     Info (12023): Found entity 1: Memoria_ROM File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 7
@@ -664,6 +674,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file compone
     Info (12022): Found design unit 1: antirrebote-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd Line: 16
     Info (12023): Found entity 1: antirrebote File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd Line: 4
 Info (12127): Elaborating entity "RS_232" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at RS_232.vhd(123): object "direccion" assigned a value but never read File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 123
+Warning (10036): Verilog HDL or VHDL warning at RS_232.vhd(124): object "enviadoXcont" assigned a value but never read File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 124
 Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:\antirrebotes:0:antirreb" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 136
 Info (12128): Elaborating entity "sincronizador" for hierarchy "sincronizador:\sincronizadores:0:sinc" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 141
 Info (12128): Elaborating entity "Punto_A" for hierarchy "Punto_A:Parte_A" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 144
@@ -707,12 +719,12 @@ Info (12128): Elaborating entity "cont_bin_lcd" for hierarchy "LCD:mod_lcd|cont_
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer Mux:Multiplexer|Mux0 File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 16
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[0]" to the node "Punto_B:Parte_B|Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[1]" to the node "Punto_B:Parte_B|Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[2]" to the node "Punto_B:Parte_B|Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[3]" to the node "Punto_B:Parte_B|Memoria_ROM:Memoria|Mux2" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[4]" to the node "Punto_B:Parte_B|Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[5]" to the node "Punto_B:Parte_B|Memoria_ROM:Memoria|Mux3" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[0]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[1]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[2]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[3]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[4]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[5]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
 Warning (13012): Latch LCD:mod_lcd|FSM_LCD:fsm|\nx_proc:flag has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal sincronizador:\sincronizadores:0:sinc|syncin File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 9
 Info (13000): Registers with preset signals will power-up high File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
@@ -731,22 +743,18 @@ Warning (13004): Presettable and clearable registers converted to equivalent cir
     Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "rw" is stuck at GND File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 14
-    Warning (13410): Pin "ASCII[0]" is stuck at VCC File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 27
-    Warning (13410): Pin "ASCII[9]" is stuck at GND File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 27
-    Warning (13410): Pin "ASCII[10]" is stuck at GND File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 27
 Info (286030): Timing-Driven Synthesis is running
-Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[0]~en will power up to High File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
+Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 492 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 467 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 33 output pins
-    Info (21061): Implemented 450 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Peak virtual memory: 949 megabytes
-    Info: Processing ended: Sat Nov 21 13:08:01 2020
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 446 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 47 warnings
+    Info: Peak virtual memory: 948 megabytes
+    Info: Processing ended: Tue Dec 15 16:23:14 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

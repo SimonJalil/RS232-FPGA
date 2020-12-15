@@ -14,17 +14,17 @@ entity RS_232 is
 			rw				:out std_logic;							--Escritura/lectura.
 			rs 			:out std_logic;							--Datos/Instrucciones.
 			e				:buffer std_logic;						--Señal de hanilitacion del modulo LCD.
-			db 			:out std_logic_vector(7 downto 0);	--Señales de datos para el modulo LCD.
+			db 			:out std_logic_vector(7 downto 0)	--Señales de datos para el modulo LCD.
 					
 			--Estas señales se añadieron para evaluar de manera mas eficiente el test bench y entender que procesos 
 			--actuaban de por medio, se pueden eliminar a traves de comentarios, haciendolo ademas con las ultimas 
 			--cinco lineas de este codigo.
-			clk_en_uso		:out std_logic;
-			address			:out std_logic_vector(addr_length-1 downto 0);
-			cont_finished	:out std_logic;
-			enviado_MEF1 	:out std_logic;
-			enviar			:out std_logic;
-			ASCII				:out std_logic_vector(10 downto 0)
+--			clk_en_uso		:out std_logic;
+--			address			:out std_logic_vector(addr_length-1 downto 0);
+--			cont_finished	:out std_logic;
+--			enviado_MEF1 	:out std_logic;
+--			enviar			:out std_logic;
+--			ASCII				:out std_logic_vector(10 downto 0)
 			);
 end RS_232;
 
@@ -156,10 +156,10 @@ begin
 	Salida <= reg_out;
 	
 	--Señales extras para test bench. 
-	clk_en_uso <= clk_RS_232;
-	address <= direccion;
-	cont_finished <= enviadoXcont;
-	enviado_MEF1 <= enviado;
-	enviar <= enviar_dato;
-	ASCII <= dato;
+--	clk_en_uso <= clk_RS_232;
+--	address <= direccion;
+--	cont_finished <= enviadoXcont;
+--	enviado_MEF1 <= enviado;
+--	enviar <= enviar_dato;
+--	ASCII <= dato;
 end behav;

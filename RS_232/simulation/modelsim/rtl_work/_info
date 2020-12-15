@@ -21,9 +21,9 @@ V0afnON9@kL]A5CcW8fUi60
 !s100 ZJPW3B0mbYV<7`BPjkD?P1
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1605975103
+Z7 !s110 1607892592
 !i10b 1
-Z8 !s108 1605975103.000000
+Z8 !s108 1607892592.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd|
 Z10 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd|
 !i113 1
@@ -247,12 +247,12 @@ R38
 R11
 R12
 Efsm_lcd
-R18
+Z39 w1607891619
 R2
 R3
 R0
-Z39 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
-Z40 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
+Z40 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
+Z41 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
 l0
 L4
 VLjK9<HmbCj=Y`SGb8zFe:0
@@ -262,8 +262,8 @@ R6
 R7
 !i10b 1
 R8
-Z41 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd|
-Z42 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd|
+Z42 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd|
+Z43 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd|
 !i113 1
 R11
 R12
@@ -273,25 +273,25 @@ R3
 DEx4 work 7 fsm_lcd 0 22 LjK9<HmbCj=Y`SGb8zFe:0
 l35
 L19
-VQJj:==1`JNe_OR@^2iTn=1
-!s100 XVkdN@=XKffNJi[[>Dh<o2
+VRTDXSHn[[Wf>=kc2e`Jac2
+!s100 Ff]GiH2em[XX0AHoYNXCX3
 R6
 31
 R7
 !i10b 1
 R8
-R41
 R42
+R43
 !i113 1
 R11
 R12
 Efsm_memoria
-Z43 w1605974151
+Z44 w1605974151
 R2
 R3
 R0
-Z44 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
-Z45 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
+Z45 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
+Z46 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
 l0
 L4
 VIZL;97MlW[<hZ0E>L25W_2
@@ -301,8 +301,8 @@ R6
 R7
 !i10b 1
 R8
-Z46 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd|
-Z47 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd|
+Z47 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd|
+Z48 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd|
 !i113 1
 R11
 R12
@@ -319,8 +319,8 @@ R6
 R7
 !i10b 1
 R8
-R46
 R47
+R48
 !i113 1
 R11
 R12
@@ -329,8 +329,8 @@ R34
 R2
 R3
 R0
-Z48 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
-Z49 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
+Z49 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
+Z50 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
 l0
 L4
 VC0G?gfW9NFJaoozd_]g`M0
@@ -340,8 +340,8 @@ R6
 R7
 !i10b 1
 R8
-Z50 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd|
-Z51 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd|
+Z51 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd|
+Z52 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd|
 !i113 1
 R11
 R12
@@ -358,8 +358,8 @@ R6
 R7
 !i10b 1
 R8
-R50
 R51
+R52
 !i113 1
 R11
 R12
@@ -368,8 +368,8 @@ R18
 R2
 R3
 R0
-Z52 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
-Z53 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
+Z53 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
+Z54 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
 l0
 L4
 V1X<j;9Y7mjej?444N4BYH3
@@ -379,8 +379,8 @@ R6
 R7
 !i10b 1
 R8
-Z54 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd|
-Z55 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd|
+Z55 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd|
+Z56 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd|
 !i113 1
 R11
 R12
@@ -397,20 +397,20 @@ R6
 R7
 !i10b 1
 R8
-R54
 R55
+R56
 !i113 1
 R11
 R12
 Ememoria_rom
-R43
-Z56 DPx4 work 7 pkg_rom 0 22 L1@5NLMYnSM`l6P>0d_Wk0
+R44
+Z57 DPx4 work 7 pkg_rom 0 22 L1@5NLMYnSM`l6P>0d_Wk0
 R25
 R2
 R3
 R0
-Z57 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
-Z58 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
+Z58 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
+Z59 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
 l0
 L7
 VRT?6QI?A[cGT<D0A_>]GI2
@@ -420,13 +420,13 @@ R6
 R7
 !i10b 1
 R8
-Z59 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd|
-Z60 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd|
+Z60 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd|
+Z61 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd|
 !i113 1
 R11
 R12
 Abehav
-R56
+R57
 R25
 R2
 R3
@@ -440,8 +440,8 @@ R6
 R7
 !i10b 1
 R8
-R59
 R60
+R61
 !i113 1
 R11
 R12
@@ -451,8 +451,8 @@ R25
 R2
 R3
 R0
-Z61 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd
-Z62 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd
+Z62 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd
+Z63 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd
 l0
 L5
 VA]<z47NMAeB[gh<70_]@[0
@@ -462,8 +462,8 @@ R6
 R7
 !i10b 1
 R8
-Z63 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd|
-Z64 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd|
+Z64 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd|
+Z65 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd|
 !i113 1
 R11
 R12
@@ -481,8 +481,8 @@ R6
 R7
 !i10b 1
 R8
-R63
 R64
+R65
 !i113 1
 R11
 R12
@@ -490,10 +490,10 @@ Ppkg_rom
 R25
 R2
 R3
-R43
+R44
 R0
-Z65 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
-Z66 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
+Z66 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
+Z67 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
 l0
 L5
 VL1@5NLMYnSM`l6P>0d_Wk0
@@ -501,16 +501,16 @@ VL1@5NLMYnSM`l6P>0d_Wk0
 R6
 31
 b1
-R7
+Z68 !s110 1607892591
 !i10b 1
-R8
-Z67 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd|
-Z68 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd|
+Z69 !s108 1607892591.000000
+Z70 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd|
+Z71 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd|
 !i113 1
 R11
 R12
 Bbody
-R56
+R57
 R25
 R2
 R3
@@ -520,11 +520,11 @@ V3:CoUc0cLoR?[:HLdBKoW0
 !s100 fNB4OPYWiU^j1R>f?kT[H3
 R6
 31
-R7
-!i10b 1
-R8
-R67
 R68
+!i10b 1
+R69
+R70
+R71
 !i113 1
 R11
 R12
@@ -533,8 +533,8 @@ R34
 R2
 R3
 R0
-Z69 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd
-Z70 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd
+Z72 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd
+Z73 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd
 l0
 L4
 VHP?He84BMK^^Foc]iaSaO3
@@ -544,8 +544,8 @@ R6
 R7
 !i10b 1
 R8
-Z71 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd|
-Z72 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd|
+Z74 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd|
+Z75 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd|
 !i113 1
 R11
 R12
@@ -562,20 +562,20 @@ R6
 R7
 !i10b 1
 R8
-R71
-R72
+R74
+R75
 !i113 1
 R11
 R12
 Epunto_b
-R43
+R44
 R25
-R56
+R57
 R2
 R3
 R0
-Z73 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd
-Z74 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd
+Z76 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd
+Z77 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd
 l0
 L5
 VGgdI@F[n5EzzGcHfV6fRP3
@@ -585,14 +585,14 @@ R6
 R7
 !i10b 1
 R8
-Z75 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd|
-Z76 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd|
+Z78 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd|
+Z79 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd|
 !i113 1
 R11
 R12
 Abehav
 R25
-R56
+R57
 R2
 R3
 DEx4 work 7 punto_b 0 22 GgdI@F[n5EzzGcHfV6fRP3
@@ -605,8 +605,8 @@ R6
 R7
 !i10b 1
 R8
-R75
-R76
+R78
+R79
 !i113 1
 R11
 R12
@@ -615,8 +615,8 @@ R13
 R2
 R3
 R0
-Z77 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd
-Z78 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd
+Z80 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd
+Z81 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd
 l0
 L4
 VY6f9LJUG6zoKc>iPLTLU?2
@@ -626,8 +626,8 @@ R6
 R7
 !i10b 1
 R8
-Z79 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd|
-Z80 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd|
+Z82 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd|
+Z83 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd|
 !i113 1
 R11
 R12
@@ -644,20 +644,20 @@ R6
 R7
 !i10b 1
 R8
-R79
-R80
+R82
+R83
 !i113 1
 R11
 R12
 Ers_232
-Z81 w1605974865
+Z84 w1605974865
 R25
-R56
+R57
 R2
 R3
 R0
-Z82 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd
-Z83 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd
+Z85 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd
+Z86 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd
 l0
 L5
 Va@Wz]zAA=khPeoZzPEmh00
@@ -667,14 +667,14 @@ R6
 R7
 !i10b 1
 R8
-Z84 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd|
-Z85 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd|
+Z87 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd|
+Z88 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd|
 !i113 1
 R11
 R12
 Abehav
 R25
-R56
+R57
 R2
 R3
 DEx4 work 6 rs_232 0 22 a@Wz]zAA=khPeoZzPEmh00
@@ -687,8 +687,8 @@ R6
 R7
 !i10b 1
 R8
-R84
-R85
+R87
+R88
 !i113 1
 R11
 R12
@@ -697,8 +697,8 @@ R1
 R2
 R3
 R0
-Z86 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd
-Z87 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd
+Z89 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd
+Z90 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd
 l0
 L4
 V7Kj`6jK<>2aY=;4HajW[k2
@@ -708,8 +708,8 @@ R6
 R7
 !i10b 1
 R8
-Z88 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd|
-Z89 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd|
+Z91 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd|
+Z92 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd|
 !i113 1
 R11
 R12
@@ -726,20 +726,20 @@ R6
 R7
 !i10b 1
 R8
-R88
-R89
+R91
+R92
 !i113 1
 R11
 R12
 Etb_rs_232
 R1
 R25
-R56
+R57
 R2
 R3
 R0
-Z90 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd
-Z91 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd
+Z93 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd
+Z94 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd
 l0
 L5
 V9cI1?ORE5U`bbXPn0c7;^1
@@ -749,14 +749,14 @@ R6
 R7
 !i10b 1
 R8
-Z92 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd|
-Z93 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd|
+Z95 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd|
+Z96 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd|
 !i113 1
 R11
 R12
 Abehav
 R25
-R56
+R57
 R2
 R3
 DEx4 work 9 tb_rs_232 0 22 9cI1?ORE5U`bbXPn0c7;^1
@@ -769,8 +769,8 @@ R6
 R7
 !i10b 1
 R8
-R92
-R93
+R95
+R96
 !i113 1
 R11
 R12
