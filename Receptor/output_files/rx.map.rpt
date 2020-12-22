@@ -1,5 +1,5 @@
 Analysis & Synthesis report for rx
-Sat Nov 21 03:23:45 2020
+Tue Dec 22 18:23:34 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -13,12 +13,15 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |rx|current_state
-  9. User-Specified and Inferred Latches
- 10. General Register Statistics
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. State Machine - |rx|UART_RX:uart|state
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |rx
+ 12. Parameter Settings for User Entity Instance: UART_RX:uart
+ 13. Port Connectivity Checks: "mod_7seg:seg"
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -44,15 +47,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 21 03:23:45 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 22 18:23:34 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; rx                                          ;
 ; Top-level Entity Name              ; rx                                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 74                                          ;
-;     Total combinational functions  ; 74                                          ;
-;     Dedicated logic registers      ; 4                                           ;
-; Total registers                    ; 4                                           ;
+; Total logic elements               ; 84                                          ;
+;     Total combinational functions  ; 84                                          ;
+;     Dedicated logic registers      ; 44                                          ;
+; Total registers                    ; 44                                          ;
 ; Total pins                         ; 14                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -66,6 +69,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
 ; Top-level entity name                                            ; rx                 ; rx                 ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -163,45 +167,47 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                         ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
-; rx.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                 ;
++-----------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path              ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                             ; Library ;
++-----------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
+; ../UART_RX/UART_RX.vhd                        ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd ;         ;
+; ../../../Proyectos_FPGA/mod_7seg/mod_7seg.vhd ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Proyectos_FPGA/mod_7seg/mod_7seg.vhd        ;         ;
+; rx.vhd                                        ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd     ;         ;
++-----------------------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 74                 ;
-;                                             ;                    ;
-; Total combinational functions               ; 74                 ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 30                 ;
-;     -- 3 input functions                    ; 29                 ;
-;     -- <=2 input functions                  ; 15                 ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 62                 ;
-;     -- arithmetic mode                      ; 12                 ;
-;                                             ;                    ;
-; Total registers                             ; 4                  ;
-;     -- Dedicated logic registers            ; 4                  ;
-;     -- I/O registers                        ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 14                 ;
-;                                             ;                    ;
-; Embedded Multiplier 9-bit elements          ; 0                  ;
-;                                             ;                    ;
-; Maximum fan-out node                        ; current_state.idle ;
-; Maximum fan-out                             ; 16                 ;
-; Total fan-out                               ; 271                ;
-; Average fan-out                             ; 2.56               ;
-+---------------------------------------------+--------------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 84        ;
+;                                             ;           ;
+; Total combinational functions               ; 84        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 35        ;
+;     -- 3 input functions                    ; 14        ;
+;     -- <=2 input functions                  ; 35        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 59        ;
+;     -- arithmetic mode                      ; 25        ;
+;                                             ;           ;
+; Total registers                             ; 44        ;
+;     -- Dedicated logic registers            ; 44        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 14        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 44        ;
+; Total fan-out                               ; 398       ;
+; Average fan-out                             ; 2.55      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,57 +215,25 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |rx                        ; 74 (74)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |rx                 ; rx          ; work         ;
+; |rx                        ; 84 (0)              ; 44 (0)                    ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |rx                 ;             ;              ;
+;    |UART_RX:uart|          ; 49 (49)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rx|UART_RX:uart    ; UART_RX     ; work         ;
+;    |mod_7seg:seg|          ; 35 (35)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rx|mod_7seg:seg    ; mod_7seg    ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------+
-; State Machine - |rx|current_state                                                                               ;
-+------------------------+--------------------+------------------------+---------------------+--------------------+
-; Name                   ; current_state.stop ; current_state.data_bit ; current_state.start ; current_state.idle ;
-+------------------------+--------------------+------------------------+---------------------+--------------------+
-; current_state.idle     ; 0                  ; 0                      ; 0                   ; 0                  ;
-; current_state.start    ; 0                  ; 0                      ; 1                   ; 1                  ;
-; current_state.data_bit ; 0                  ; 1                      ; 0                   ; 1                  ;
-; current_state.stop     ; 1                  ; 0                      ; 0                   ; 1                  ;
-+------------------------+--------------------+------------------------+---------------------+--------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; rxbuff[0]                                           ; Decoder0            ; yes                    ;
-; rxbuff[1]                                           ; Decoder0            ; yes                    ;
-; rxbuff[2]                                           ; Decoder0            ; yes                    ;
-; rxbuff[3]                                           ; Decoder0            ; yes                    ;
-; rxbuff[4]                                           ; Decoder0            ; yes                    ;
-; rxbuff[5]                                           ; Decoder0            ; yes                    ;
-; rxbuff[6]                                           ; Decoder0            ; yes                    ;
-; rxbuff[7]                                           ; Decoder0            ; yes                    ;
-; bit_cont[1]                                         ; bit_cont[1]         ; yes                    ;
-; bit_cont[0]                                         ; bit_cont[1]         ; yes                    ;
-; bit_cont[2]                                         ; bit_cont[1]         ; yes                    ;
-; baud_cont[12]                                       ; current_state.idle  ; yes                    ;
-; baud_cont[11]                                       ; current_state.idle  ; yes                    ;
-; baud_cont[10]                                       ; current_state.idle  ; yes                    ;
-; baud_cont[7]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[8]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[9]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[6]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[5]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[3]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[4]                                        ; current_state.idle  ; yes                    ;
-; bit_cont[3]                                         ; bit_cont[1]         ; yes                    ;
-; baud_cont[2]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[1]                                        ; current_state.idle  ; yes                    ;
-; baud_cont[0]                                        ; current_state.idle  ; yes                    ;
-; Number of user-specified and inferred latches = 25  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++----------------------------------------------------------------------------------------+
+; State Machine - |rx|UART_RX:uart|state                                                 ;
++----------------+--------------+------------+----------------+-------------+------------+
+; Name           ; state.espera ; state.stop ; state.data_bit ; state.start ; state.idle ;
++----------------+--------------+------------+----------------+-------------+------------+
+; state.idle     ; 0            ; 0          ; 0              ; 0           ; 0          ;
+; state.start    ; 0            ; 0          ; 0              ; 1           ; 1          ;
+; state.data_bit ; 0            ; 0          ; 1              ; 0           ; 1          ;
+; state.stop     ; 0            ; 1          ; 0              ; 0           ; 1          ;
+; state.espera   ; 1            ; 0          ; 0              ; 0           ; 1          ;
++----------------+--------------+------------+----------------+-------------+------------+
 
 
 +------------------------------------------------------+
@@ -267,14 +241,54 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 44    ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rx|UART_RX:uart|baud_cont[7] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |rx|mod_7seg:seg|Mux1         ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |rx|UART_RX:uart|bit_cont     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |rx ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; clksXbit       ; 5209  ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_RX:uart ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; clksxbit       ; 217   ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mod_7seg:seg"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dp   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -283,19 +297,22 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 14                          ;
-; cycloneiii_ff         ; 4                           ;
-;     CLR               ; 4                           ;
-; cycloneiii_lcell_comb ; 75                          ;
-;     arith             ; 12                          ;
-;         2 data inputs ; 12                          ;
+; cycloneiii_ff         ; 44                          ;
+;     CLR               ; 20                          ;
+;     ENA SCLR          ; 8                           ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 88                          ;
+;     arith             ; 25                          ;
+;         2 data inputs ; 24                          ;
+;         3 data inputs ; 1                           ;
 ;     normal            ; 63                          ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 29                          ;
-;         4 data inputs ; 30                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 35                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.90                        ;
-; Average LUT depth     ; 2.73                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.52                        ;
 +-----------------------+-----------------------------+
 
 
@@ -314,76 +331,40 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 03:23:30 2020
+    Info: Processing started: Tue Dec 22 18:23:22 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rx -c rx
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file tb_rx.vhd
-    Info (12022): Found design unit 1: tb_rx-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd Line: 7
-    Info (12023): Found entity 1: tb_rx File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+    Info (12022): Found design unit 1: UART_RX-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 17
+    Info (12023): Found entity 1: UART_RX File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Proyectos_FPGA/mod_7seg/mod_7seg.vhd
+    Info (12022): Found design unit 1: mod_7seg-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Proyectos_FPGA/mod_7seg/mod_7seg.vhd Line: 16
+    Info (12023): Found entity 1: mod_7seg File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Proyectos_FPGA/mod_7seg/mod_7seg.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
-    Info (12022): Found design unit 1: rx-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 16
+    Info (12022): Found design unit 1: rx-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 19
     Info (12023): Found entity 1: rx File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 5
 Info (12127): Elaborating entity "rx" for the top level hierarchy
-Warning (10524): VHDL warning at rx.vhd(18): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 18
-Warning (10524): VHDL warning at rx.vhd(18): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 18
-Warning (10524): VHDL warning at rx.vhd(18): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 18
-Warning (10524): VHDL warning at rx.vhd(18): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 18
-Warning (10336): VHDL Attribute warning in rx.vhd(18): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 18
-Warning (10492): VHDL Process Statement warning at rx.vhd(48): signal "rxd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 48
-Warning (10492): VHDL Process Statement warning at rx.vhd(55): signal "baud_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 55
-Warning (10492): VHDL Process Statement warning at rx.vhd(57): signal "rxd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 57
-Warning (10492): VHDL Process Statement warning at rx.vhd(63): signal "baud_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 63
-Warning (10492): VHDL Process Statement warning at rx.vhd(68): signal "baud_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 68
-Warning (10492): VHDL Process Statement warning at rx.vhd(69): signal "baud_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 69
-Warning (10492): VHDL Process Statement warning at rx.vhd(73): signal "rxd" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at rx.vhd(73): signal "bit_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at rx.vhd(74): signal "bit_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 74
-Warning (10492): VHDL Process Statement warning at rx.vhd(75): signal "bit_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 75
-Warning (10492): VHDL Process Statement warning at rx.vhd(84): signal "baud_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 84
-Warning (10492): VHDL Process Statement warning at rx.vhd(85): signal "baud_cont" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 85
-Warning (10631): VHDL Process Statement warning at rx.vhd(44): inferring latch(es) for signal or variable "baud_cont", which holds its previous value in one or more paths through the process File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Warning (10631): VHDL Process Statement warning at rx.vhd(44): inferring latch(es) for signal or variable "rxbuff", which holds its previous value in one or more paths through the process File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Warning (10631): VHDL Process Statement warning at rx.vhd(44): inferring latch(es) for signal or variable "bit_cont", which holds its previous value in one or more paths through the process File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "bit_cont[0]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "bit_cont[1]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "bit_cont[2]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "bit_cont[3]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[0]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[1]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[2]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[3]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[4]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[5]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[6]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "rxbuff[7]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[0]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[1]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[2]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[3]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[4]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[5]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[6]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[7]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[8]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[9]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[10]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[11]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
-Info (10041): Inferred latch for "baud_cont[12]" at rx.vhd(44) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 44
+Critical Warning (10920): VHDL Incomplete Partial Association warning at rx.vhd(48): port or argument "x" has 8/16 unassociated elements File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 48
+Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:uart" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 46
+Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../UART_RX/UART_RX.vhd(23) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 23
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10336): VHDL Attribute warning in UART_RX.vhd(19): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Info (12128): Elaborating entity "mod_7seg" for hierarchy "mod_7seg:seg" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 48
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk_entry[0]" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 10
-    Warning (15610): No output dependent on input pin "clk_entry[1]" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 10
-Info (21057): Implemented 88 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 5 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 74 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
-    Info: Peak virtual memory: 942 megabytes
-    Info: Processing ended: Sat Nov 21 03:23:45 2020
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:32
+Info (21057): Implemented 98 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 84 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 944 megabytes
+    Info: Processing ended: Tue Dec 22 18:23:34 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

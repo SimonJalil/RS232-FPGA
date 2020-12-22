@@ -1,0 +1,93 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/simulation/modelsim
+Euart_rx
+Z1 w1608669879
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+Z6 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+l0
+L5
+V6dMo1dU@bTDfXZI06m0=N3
+!s100 CTeQ3HV0O5Y0gO;CQkz8T3
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1608669937
+!i10b 1
+Z9 !s108 1608669937.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd|
+Z11 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Abehav
+R2
+R3
+R4
+Z14 DEx4 work 7 uart_rx 0 22 6dMo1dU@bTDfXZI06m0=N3
+l29
+L17
+Vof]FaZVczhfbOGK4m`FDP0
+!s100 ^mG4FWNP^ZAmjcNS]J95H2
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Euart_rx_tb
+Z15 w1608669203
+R2
+R3
+R4
+R0
+Z16 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX_TB.vhd
+Z17 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX_TB.vhd
+l0
+L5
+VXLWdk7XP@fizz<;EA`5Fg1
+!s100 AT1I;l_7nf703j96aY4@_0
+R7
+31
+Z18 !s110 1608669938
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX_TB.vhd|
+Z20 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX_TB.vhd|
+!i113 1
+R12
+R13
+Abehav
+R14
+R2
+R3
+R4
+DEx4 work 10 uart_rx_tb 0 22 XLWdk7XP@fizz<;EA`5Fg1
+l45
+L8
+V>TI8mFRTlR^[FWe2bDiUI2
+!s100 l0<lXVE^1InTTPB01M=he3
+R7
+31
+R18
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13

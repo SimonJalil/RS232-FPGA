@@ -1,7 +1,8 @@
 
-State Machine - |rx|current_state
-Name current_state.stop current_state.data_bit current_state.start current_state.idle 
-current_state.idle 0 0 0 0 
-current_state.start 0 0 1 1 
-current_state.data_bit 0 1 0 1 
-current_state.stop 1 0 0 1 
+State Machine - |rx|UART_RX:uart|state
+Name state.espera state.stop state.data_bit state.start state.idle 
+state.idle 0 0 0 0 0 
+state.start 0 0 0 1 1 
+state.data_bit 0 0 1 0 1 
+state.stop 0 1 0 0 1 
+state.espera 1 0 0 0 1 

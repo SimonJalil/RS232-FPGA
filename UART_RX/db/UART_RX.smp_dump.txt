@@ -1,0 +1,8 @@
+
+State Machine - |UART_RX|state
+Name state.espera state.stop state.data_bit state.start state.idle 
+state.idle 0 0 0 0 0 
+state.start 0 0 0 1 1 
+state.data_bit 0 0 1 0 1 
+state.stop 0 1 0 0 1 
+state.espera 1 0 0 0 1 

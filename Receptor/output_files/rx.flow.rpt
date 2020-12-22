@@ -1,5 +1,5 @@
 Flow report for rx
-Sat Nov 21 03:23:59 2020
+Tue Dec 22 18:23:43 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Nov 21 03:23:59 2020       ;
+; Flow Status                        ; Successful - Tue Dec 22 18:23:43 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; rx                                          ;
 ; Top-level Entity Name              ; rx                                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 75 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 74 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 4 / 6,272 ( < 1 % )                         ;
-; Total registers                    ; 4                                           ;
+; Device                             ; EP4CE6E22C8                                 ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 84 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 84 / 6,272 ( 1 % )                          ;
+;     Dedicated logic registers      ; 44 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 44                                          ;
 ; Total pins                         ; 14 / 92 ( 15 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
-; Device                             ; EP4CE6E22C6                                 ;
-; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2020 03:23:31 ;
+; Start date & time ; 12/22/2020 18:23:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; rx                  ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 93328249748543.160593981115544         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 190135456950301.160867220219381        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_rx          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_rx                                  ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -85,6 +85,8 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_rx                                  ; --            ; --          ; tb_rx          ;
 ; EDA_TEST_BENCH_NAME                  ; tb_rx                                  ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -97,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 932 MB              ; 00:00:32                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 1217 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 788 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 787 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1022 MB             ; 00:00:01                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:43                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 931 MB              ; 00:00:28                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 1207 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 789 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 766 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1022 MB             ; 00:00:01                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

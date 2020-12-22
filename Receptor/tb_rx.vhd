@@ -6,28 +6,24 @@ entity tb_rx is
 end tb_rx;
 
 architecture behav of tb_rx is 
-
-	component rx is 
-		port (
-				clk 			:in std_logic;								
-				reset_low 	:in std_logic;								
-				rxd 			:in std_logic;								
-				--clk_entry	:in std_logic_vector(1 downto 0);	
-				rx_byte		:out std_logic_vector(7 downto 0);	
-				led			:out std_logic								
-				);
-	end component;
+	--50 MHz de clock 
+	constant semiperiod	:time 	:= 10ns;
+	
+	--Interfaz de 9600
+	--50000000/9600 = 5208
+	constant clksXbit 	:integer :=5209;
+	
+	--1/9600 
+	constant perXbit 		:time		:=104us ;
 
 	signal tb_clk			:std_logic := '0';
 	signal tb_reset_low	:std_logic := '1';
 	signal tb_rxd 			:std_logic := '1';
 	--signal tb_clk_entry	:std_logic_vector(1 downto 0) := "00";
-	signal tb_rx_byte 	:std_logic_vector(7 downto 0) := "11111111";
-	signal tb_led 			:std_logic;
+	signal tb_rx_byte 	:std_logic_vector(7 downto 0);
+	--signal tb_led 			:std_logic;
 	
-	constant semiperiod	:time 	:= 20ns;
-	constant clksXbit 	:integer :=217;
-	constant perXbit 		:time		:=5208ns ;
+	
 	
 --	type tabla is array (0 to 3) of integer;
 --	constant CLK_POR_BIT : tabla := (10416, 5208, 1302, 434);
@@ -47,8 +43,8 @@ architecture behav of tb_rx is
 		wait for perXbit;
 		
 		--Envio byte de dato
-		for i in 0 to 7 loop 
-			serial_out <= data_in(i);
+		for ii in 0 to 7 loop 
+			serial_out <= data_in(ii);
 			--wait for PERIODO_BIT(to_integer(unsigned(clk_select)));	
 			wait for perXbit;
 		end loop;
@@ -61,7 +57,20 @@ architecture behav of tb_rx is
 
 begin 
 	--uut: rx port map (clk => tb_clk, reset_low => tb_reset_low, rxd => tb_rxd, clk_entry => tb_clk_entry, rx_byte => tb_rx_byte, led => tb_led);
-	uut: rx port map (clk => tb_clk, reset_low => tb_reset_low, rxd => tb_rxd, rx_byte => tb_rx_byte, led => tb_led);
+	--uut: rx port map (clk => tb_clk, reset_low => tb_reset_low, rxd => tb_rxd, rx_byte => tb_rx_byte, led => tb_led);
+	
+	uut: entity work.rx 
+		generic map(
+			clksXbit	=> clksXbit
+		)
+		port map(
+				clk 			=> tb_clk,								
+				reset_low 	=> tb_reset_low,								
+				rxd 			=> tb_rxd,								
+				--clk_entry	:in std_logic_vector(1 downto 0);	
+				rx_byte		=> tb_rx_byte	
+				--led			=>	open						
+				);
 	
 	clk_gen: tb_clk <= not tb_clk after semiperiod;
 	
@@ -80,7 +89,7 @@ begin
 			report "Testeo desaprobado" severity note;
 		end if;
 	
-		--assert false report "Tests Complete" severity failure;
+		assert false report "Tests Complete" severity failure;
 	end process;
 end behav;
 	

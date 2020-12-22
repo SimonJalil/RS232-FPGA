@@ -4,43 +4,51 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "rx_byte[0]",
+					"name" : "salida[0]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[1]",
+					"name" : "salida[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[2]",
+					"name" : "salida[2]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[3]",
+					"name" : "salida[3]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[4]",
+					"name" : "salida[4]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[5]",
+					"name" : "salida[5]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[6]",
+					"name" : "salida[6]",
 					"strict" : false
 				},
 				{
-					"name" : "rx_byte[7]",
+					"name" : "dig[0]",
 					"strict" : false
 				},
 				{
-					"name" : "led",
+					"name" : "dig[1]",
 					"strict" : false
 				},
 				{
-					"name" : "rxd",
+					"name" : "dig[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dig[3]",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
 					"strict" : false
 				},
 				{
