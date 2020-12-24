@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity rx is 
+	port (
+			clk :in std_logic;	--Entrada de clk.
+			reset_low :in std_logic;	--Entrada de reset en bajo.
+			rxd 	:in std_logic;	--Entrada del receptor.
+			rx_byte	:out std_logic_vector(7 downto 0);
+			led	:out std_logic;
+			);
+	end rx;
+
+architecture behav of rx is 
+
+	type FSM_states is (idle, start, delay, shift, stop);
+	signal current_state, next_state :FSM_states;
+	
+	signal 
+
+begin 
+
+	cs_proc: process (clk, reset_low)
+		begin 
+			if (reset_low = '0') then 
+				current_state <= idle;
+			elsif (rising_edge(clk)) then
+				current_state <= next_state;
+			end if;
+		end process;
+
+
+end behav;
