@@ -48,15 +48,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "rx",
-					"strict" : false
-				},
-				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "reset_low",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
 					"strict" : false
 				}
 			]

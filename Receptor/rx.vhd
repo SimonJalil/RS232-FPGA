@@ -20,7 +20,7 @@ architecture behav of rx is
 
 	component UART_RX is 
 		generic (
-			clksXbit : integer := 217     
+			clksXbit : integer := 5209     
 			);
 		port (
 			clk       : in  std_logic;
@@ -45,6 +45,6 @@ architecture behav of rx is
 begin
 	uart: UART_RX port map(clk => clk, rx_serial => rx, rx_byte => byte);
 	
-	seg: mod_7seg port map(x(7 downto 0) => byte, clk => clk, clr => reset_low, salida => salida, dig => dig);
+	seg: mod_7seg port map(x(15 downto 8) => "11111111", x(7 downto 0) => byte, clk => clk, clr => reset_low, salida => salida, dig => dig);
 
 end behav;

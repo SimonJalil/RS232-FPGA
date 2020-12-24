@@ -3,17 +3,17 @@ clk => UART_RX:uart.clk
 clk => mod_7seg:seg.clk
 reset_low => mod_7seg:seg.clr
 rx => UART_RX:uart.rx_serial
-salida[0] <= mod_7seg:seg.salida[0]
-salida[1] <= mod_7seg:seg.salida[1]
-salida[2] <= mod_7seg:seg.salida[2]
-salida[3] <= mod_7seg:seg.salida[3]
-salida[4] <= mod_7seg:seg.salida[4]
-salida[5] <= mod_7seg:seg.salida[5]
-salida[6] <= mod_7seg:seg.salida[6]
-dig[0] <= mod_7seg:seg.dig[0]
-dig[1] <= mod_7seg:seg.dig[1]
-dig[2] <= mod_7seg:seg.dig[2]
-dig[3] <= mod_7seg:seg.dig[3]
+salida[0] << mod_7seg:seg.salida[0]
+salida[1] << mod_7seg:seg.salida[1]
+salida[2] << mod_7seg:seg.salida[2]
+salida[3] << mod_7seg:seg.salida[3]
+salida[4] << mod_7seg:seg.salida[4]
+salida[5] << mod_7seg:seg.salida[5]
+salida[6] << mod_7seg:seg.salida[6]
+dig[0] << mod_7seg:seg.dig[0]
+dig[1] << mod_7seg:seg.dig[1]
+dig[2] << mod_7seg:seg.dig[2]
+dig[3] << mod_7seg:seg.dig[3]
 
 
 |rx|UART_RX:uart
@@ -36,6 +36,11 @@ clk => baud_cont[4].CLK
 clk => baud_cont[5].CLK
 clk => baud_cont[6].CLK
 clk => baud_cont[7].CLK
+clk => baud_cont[8].CLK
+clk => baud_cont[9].CLK
+clk => baud_cont[10].CLK
+clk => baud_cont[11].CLK
+clk => baud_cont[12].CLK
 clk => state~1.DATAIN
 rx_serial => state.DATAB
 rx_serial => rx.DATAB
@@ -46,7 +51,12 @@ rx_serial => rx.DATAB
 rx_serial => rx.DATAB
 rx_serial => rx.DATAB
 rx_serial => rx.DATAB
-rx_serial => Selector11.IN4
+rx_serial => Selector16.IN4
+rx_serial => baud_cont.OUTPUTSELECT
+rx_serial => baud_cont.OUTPUTSELECT
+rx_serial => baud_cont.OUTPUTSELECT
+rx_serial => baud_cont.OUTPUTSELECT
+rx_serial => baud_cont.OUTPUTSELECT
 rx_serial => baud_cont.OUTPUTSELECT
 rx_serial => baud_cont.OUTPUTSELECT
 rx_serial => baud_cont.OUTPUTSELECT
@@ -56,7 +66,7 @@ rx_serial => baud_cont.OUTPUTSELECT
 rx_serial => baud_cont.OUTPUTSELECT
 rx_serial => baud_cont.OUTPUTSELECT
 rx_serial => state.DATAB
-rx_serial => Selector12.IN1
+rx_serial => Selector17.IN1
 rx_byte[0] <= rx[0].DB_MAX_OUTPUT_PORT_TYPE
 rx_byte[1] <= rx[1].DB_MAX_OUTPUT_PORT_TYPE
 rx_byte[2] <= rx[2].DB_MAX_OUTPUT_PORT_TYPE

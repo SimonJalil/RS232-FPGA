@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity UART_RX is
   generic (
-    clksXbit : integer := 217     
+    clksXbit : integer := 5209     
     );
   port (
     clk       : in  std_logic;
@@ -84,8 +84,7 @@ begin
           end if;
           
         when espera =>
-          state <= idle;
-       
+          state <= idle;	
         when others =>
           state <= idle;
 
@@ -95,4 +94,4 @@ begin
 
   rx_byte <= rx;
   
-end behav;
+end behav;			 
