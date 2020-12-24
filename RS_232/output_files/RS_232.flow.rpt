@@ -1,5 +1,5 @@
 Flow report for RS_232
-Thu Dec 24 16:12:14 2020
+Thu Dec 24 16:24:59 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,13 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 24 16:12:14 2020       ;
+; Flow Status                        ; Successful - Thu Dec 24 16:24:59 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; RS_232                                      ;
 ; Top-level Entity Name              ; RS_232                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 499 / 6,272 ( 8 % )                         ;
-;     Total combinational functions  ; 469 / 6,272 ( 7 % )                         ;
+; Device                             ; EP4CE6E22C8                                 ;
+; Timing Models                      ; Final                                       ;
+; Total logic elements               ; 503 / 6,272 ( 8 % )                         ;
+;     Total combinational functions  ; 468 / 6,272 ( 7 % )                         ;
 ;     Dedicated logic registers      ; 282 / 6,272 ( 4 % )                         ;
 ; Total registers                    ; 282                                         ;
 ; Total pins                         ; 33 / 92 ( 36 % )                            ;
@@ -54,8 +56,6 @@ refer to the applicable agreement for further details.
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
 ; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
-; Device                             ; EP4CE6E22C6                                 ;
-; Timing Models                      ; Final                                       ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/24/2020 16:11:47 ;
+; Start date & time ; 12/24/2020 16:24:34 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RS_232              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 93328249748543.160883710606049         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 93328249748543.160883787306665         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_RS_232      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_RS_232                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -85,6 +85,8 @@ refer to the applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; tb_RS_232                              ; --            ; --          ; tb_RS_232      ;
 ; EDA_TEST_BENCH_NAME                  ; tb_RS_232                              ; --            ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --             ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -98,11 +100,11 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 936 MB              ; 00:00:29                           ;
-; Fitter               ; 00:00:08     ; 1.0                     ; 1231 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 789 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 799 MB              ; 00:00:02                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 1211 MB             ; 00:00:08                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 787 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 778 MB              ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1031 MB             ; 00:00:01                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:42                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:41                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

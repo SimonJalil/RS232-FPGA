@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RS_232
-Thu Dec 24 16:12:00 2020
+Thu Dec 24 16:24:47 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -64,13 +64,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 24 16:12:00 2020       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 24 16:24:46 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; RS_232                                      ;
 ; Top-level Entity Name              ; RS_232                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 520                                         ;
-;     Total combinational functions  ; 467                                         ;
+; Total logic elements               ; 519                                         ;
+;     Total combinational functions  ; 466                                         ;
 ;     Dedicated logic registers      ; 282                                         ;
 ; Total registers                    ; 282                                         ;
 ; Total pins                         ; 33                                          ;
@@ -86,6 +86,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8        ;                    ;
 ; Top-level entity name                                            ; RS_232             ; RS_232             ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -217,16 +218,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 520       ;
+; Estimated Total logic elements              ; 519       ;
 ;                                             ;           ;
-; Total combinational functions               ; 467       ;
+; Total combinational functions               ; 466       ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 209       ;
 ;     -- 3 input functions                    ; 81        ;
-;     -- <=2 input functions                  ; 177       ;
+;     -- <=2 input functions                  ; 176       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 342       ;
+;     -- normal mode                          ; 341       ;
 ;     -- arithmetic mode                      ; 125       ;
 ;                                             ;           ;
 ; Total registers                             ; 282       ;
@@ -239,8 +240,8 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 142       ;
-; Total fan-out                               ; 2269      ;
-; Average fan-out                             ; 2.78      ;
+; Total fan-out                               ; 2267      ;
+; Average fan-out                             ; 2.79      ;
 +---------------------------------------------+-----------+
 
 
@@ -249,7 +250,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                  ; Entity Name      ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------+------------------+--------------+
-; |RS_232                                    ; 467 (0)             ; 282 (0)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |RS_232                                                              ; RS_232           ; work         ;
+; |RS_232                                    ; 466 (0)             ; 282 (0)                   ; 0           ; 0            ; 0       ; 0         ; 33   ; 0            ; |RS_232                                                              ; RS_232           ; work         ;
 ;    |LCD:mod_lcd|                           ; 134 (0)             ; 99 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd                                                  ; LCD              ; work         ;
 ;       |FSM_LCD:fsm|                        ; 84 (84)             ; 71 (71)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd|FSM_LCD:fsm                                      ; FSM_LCD          ; work         ;
 ;       |cont_bin_lcd:cont|                  ; 50 (50)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|LCD:mod_lcd|cont_bin_lcd:cont                                ; cont_bin_lcd     ; work         ;
@@ -279,8 +280,8 @@ refer to the applicable agreement for further details.
 ;    |antirrebote:\antirrebotes:3:antirreb|  ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|antirrebote:\antirrebotes:3:antirreb                         ; antirrebote      ; work         ;
 ;    |antirrebote:\antirrebotes:4:antirreb|  ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|antirrebote:\antirrebotes:4:antirreb                         ; antirrebote      ; work         ;
 ;    |divisores:Clock|                       ; 59 (59)             ; 47 (47)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|divisores:Clock                                              ; divisores        ; work         ;
-;    |rx:Receptor|                           ; 90 (0)              ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|rx:Receptor                                                  ; rx               ; work         ;
-;       |UART_RX:uart|                       ; 55 (55)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|rx:Receptor|UART_RX:uart                                     ; UART_RX          ; work         ;
+;    |rx:Receptor|                           ; 89 (0)              ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|rx:Receptor                                                  ; rx               ; work         ;
+;       |UART_RX:uart|                       ; 54 (54)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|rx:Receptor|UART_RX:uart                                     ; UART_RX          ; work         ;
 ;       |mod_7seg:seg|                       ; 35 (35)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|rx:Receptor|mod_7seg:seg                                     ; mod_7seg         ; work         ;
 ;    |sincronizador:\sincronizadores:0:sinc| ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|sincronizador:\sincronizadores:0:sinc                        ; sincronizador    ; work         ;
 ;    |sincronizador:\sincronizadores:1:sinc| ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |RS_232|sincronizador:\sincronizadores:1:sinc                        ; sincronizador    ; work         ;
@@ -637,19 +638,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 43                          ;
 ;     plain             ; 71                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 475                         ;
+; cycloneiii_lcell_comb ; 474                         ;
 ;     arith             ; 125                         ;
 ;         2 data inputs ; 124                         ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 350                         ;
+;     normal            ; 349                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 22                          ;
-;         2 data inputs ; 38                          ;
+;         2 data inputs ; 37                          ;
 ;         3 data inputs ; 80                          ;
 ;         4 data inputs ; 209                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 3.28                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -668,7 +669,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 24 16:11:46 2020
+    Info: Processing started: Thu Dec 24 16:24:33 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RS_232 -c RS_232
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -749,6 +750,7 @@ Info (12128): Elaborating entity "cont_bin" for hierarchy "Punto_A:Parte_A|cont_
 Info (12128): Elaborating entity "Reg_Despl" for hierarchy "Punto_A:Parte_A|Reg_Despl:Reg" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 70
 Info (12128): Elaborating entity "FFD" for hierarchy "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 43
 Info (12128): Elaborating entity "FSM_Reg_Despl" for hierarchy "Punto_A:Parte_A|FSM_Reg_Despl:FSM" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 72
+Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd(27) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 27
 Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
 Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
 Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
@@ -757,6 +759,7 @@ Warning (10336): VHDL Attribute warning in FSM_Reg_Despl.vhd(20): ENUM_ENCODING 
 Info (12128): Elaborating entity "Punto_B" for hierarchy "Punto_B:Parte_B" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 189
 Info (12128): Elaborating entity "Memoria_ROM" for hierarchy "Punto_B:Parte_B|Memoria_ROM:Memoria" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 73
 Info (12128): Elaborating entity "FSM_Memoria" for hierarchy "Punto_B:Parte_B|FSM_Memoria:FSM" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 75
+Warning (10306): Invalid value "one_hot" for synthesis attribute "syn_encoding" at ../Parte_B/FSM_Memoria/FSM_Memoria.vhd(30) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 30
 Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
 Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
 Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
@@ -773,6 +776,7 @@ Info (12128): Elaborating entity "divisores" for hierarchy "divisores:Clock" Fil
 Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Multiplexer" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 194
 Info (12128): Elaborating entity "LCD" for hierarchy "LCD:mod_lcd" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 196
 Info (12128): Elaborating entity "FSM_LCD" for hierarchy "LCD:mod_lcd|FSM_LCD:fsm" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 45
+Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../LCD/FSM_LCD.vhd(33) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 33
 Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
 Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
 Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
@@ -784,6 +788,7 @@ Info (10041): Inferred latch for "nx_proc:flag" at FSM_LCD.vhd(61) File: /home/s
 Info (12128): Elaborating entity "cont_bin_lcd" for hierarchy "LCD:mod_lcd|cont_bin_lcd:cont" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 47
 Info (12128): Elaborating entity "rx" for hierarchy "rx:Receptor" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 198
 Info (12128): Elaborating entity "UART_RX" for hierarchy "rx:Receptor|UART_RX:uart" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 46
+Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../UART_RX/UART_RX.vhd(23) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 23
 Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
 Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
 Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
@@ -829,13 +834,13 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 572 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 571 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 23 output pins
-    Info (21061): Implemented 539 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info (21061): Implemented 538 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
     Info: Peak virtual memory: 949 megabytes
-    Info: Processing ended: Thu Dec 24 16:12:00 2020
+    Info: Processing ended: Thu Dec 24 16:24:47 2020
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:29
 

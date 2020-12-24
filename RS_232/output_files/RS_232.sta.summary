@@ -3,276 +3,276 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : -5.023
-TNS   : -5.023
+Slack : -6.870
+TNS   : -6.870
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -4.184
-TNS   : -230.328
+Slack : -6.467
+TNS   : -345.137
 
 Type  : Slow 1200mV 85C Model Setup 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : -3.436
-TNS   : -22.847
+Slack : -5.437
+TNS   : -43.041
 
 Type  : Slow 1200mV 85C Model Setup 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : -2.550
-TNS   : -17.037
+Slack : -4.214
+TNS   : -28.427
 
 Type  : Slow 1200mV 85C Model Setup 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -2.389
-TNS   : -27.675
+Slack : -3.793
+TNS   : -41.285
 
 Type  : Slow 1200mV 85C Model Setup 'clk_select[0]'
-Slack : -1.797
-TNS   : -42.097
+Slack : -3.058
+TNS   : -78.433
 
 Type  : Slow 1200mV 85C Model Hold 'clk_select[0]'
-Slack : -0.087
-TNS   : -0.087
-
-Type  : Slow 1200mV 85C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : 0.224
+Slack : 0.281
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.343
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|e'
+Slack : 0.454
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : 0.586
+Slack : 0.524
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : 1.524
+Slack : 2.749
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : 2.334
+Slack : 3.339
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -3.415
-TNS   : -43.043
+Slack : -3.248
+TNS   : -39.966
 
 Type  : Slow 1200mV 85C Model Recovery 'clk'
-Slack : -1.272
-TNS   : -32.889
+Slack : -2.530
+TNS   : -64.866
 
 Type  : Slow 1200mV 85C Model Recovery 'clk_select[0]'
-Slack : -1.097
-TNS   : -12.162
+Slack : -2.330
+TNS   : -22.371
 
 Type  : Slow 1200mV 85C Model Removal 'clk_select[0]'
-Slack : 0.876
+Slack : 1.148
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'clk'
-Slack : 1.245
+Slack : 1.953
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : 3.391
+Slack : 2.816
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -145.000
+TNS   : -214.154
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_select[0]'
 Slack : -3.000
-TNS   : -69.000
+TNS   : -101.142
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : -1.000
-TNS   : -53.000
+Slack : -1.487
+TNS   : -78.811
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -1.000
-TNS   : -13.000
+Slack : -1.487
+TNS   : -19.331
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : -1.000
-TNS   : -8.000
+Slack : -1.487
+TNS   : -11.896
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : 0.421
+Slack : 0.440
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : -4.539
-TNS   : -4.539
+Slack : -6.586
+TNS   : -6.586
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -3.650
-TNS   : -192.397
+Slack : -5.945
+TNS   : -306.889
 
 Type  : Slow 1200mV 0C Model Setup 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : -3.066
-TNS   : -18.293
+Slack : -5.155
+TNS   : -38.145
 
 Type  : Slow 1200mV 0C Model Setup 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : -2.175
-TNS   : -14.606
+Slack : -3.951
+TNS   : -26.161
 
 Type  : Slow 1200mV 0C Model Setup 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -2.041
-TNS   : -23.428
+Slack : -3.415
+TNS   : -37.153
 
 Type  : Slow 1200mV 0C Model Setup 'clk_select[0]'
-Slack : -1.486
-TNS   : -31.393
+Slack : -2.864
+TNS   : -68.051
 
 Type  : Slow 1200mV 0C Model Hold 'clk_select[0]'
-Slack : -0.011
-TNS   : -0.011
-
-Type  : Slow 1200mV 0C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : 0.216
+Slack : 0.171
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.297
+Slack : 0.383
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|e'
+Slack : 0.402
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : 0.523
+Slack : 0.484
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : 1.386
+Slack : 2.531
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : 2.217
+Slack : 3.190
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -3.040
-TNS   : -38.322
+Slack : -2.979
+TNS   : -36.775
 
 Type  : Slow 1200mV 0C Model Recovery 'clk'
-Slack : -1.026
-TNS   : -26.085
+Slack : -2.242
+TNS   : -57.105
 
 Type  : Slow 1200mV 0C Model Recovery 'clk_select[0]'
-Slack : -0.898
-TNS   : -9.320
+Slack : -2.080
+TNS   : -18.964
 
 Type  : Slow 1200mV 0C Model Removal 'clk_select[0]'
-Slack : 0.787
+Slack : 1.052
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'clk'
-Slack : 1.080
+Slack : 1.752
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : 3.113
+Slack : 2.645
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -145.000
+TNS   : -214.154
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_select[0]'
 Slack : -3.000
-TNS   : -69.000
+TNS   : -102.450
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : -1.000
-TNS   : -53.000
+Slack : -1.487
+TNS   : -78.811
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -1.000
-TNS   : -13.000
+Slack : -1.487
+TNS   : -19.331
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : -1.000
-TNS   : -8.000
+Slack : -1.487
+TNS   : -11.896
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : 0.462
+Slack : 0.436
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : -2.631
-TNS   : -2.631
+Slack : -2.558
+TNS   : -2.558
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -1.948
-TNS   : -67.629
+Slack : -2.196
+TNS   : -65.830
 
 Type  : Fast 1200mV 0C Model Setup 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : -1.507
-TNS   : -6.918
+Slack : -1.569
+TNS   : -7.187
 
 Type  : Fast 1200mV 0C Model Setup 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : -1.028
-TNS   : -6.248
+Slack : -1.289
+TNS   : -7.869
 
 Type  : Fast 1200mV 0C Model Setup 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -0.888
-TNS   : -9.819
+Slack : -1.056
+TNS   : -10.649
 
 Type  : Fast 1200mV 0C Model Setup 'clk_select[0]'
-Slack : -0.598
-TNS   : -3.441
+Slack : -0.686
+TNS   : -7.213
 
 Type  : Fast 1200mV 0C Model Hold 'clk_select[0]'
-Slack : -0.172
-TNS   : -0.182
-
-Type  : Fast 1200mV 0C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|e'
-Slack : 0.093
+Slack : 0.099
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.179
+Slack : 0.178
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|e'
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : 0.314
+Slack : 0.212
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.memoria'
-Slack : 0.817
+Slack : 1.131
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : 1.500
+Slack : 1.601
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : -1.529
-TNS   : -19.091
+Slack : -0.837
+TNS   : -9.590
 
 Type  : Fast 1200mV 0C Model Recovery 'clk'
-Slack : -0.293
-TNS   : -6.323
+Slack : -0.530
+TNS   : -12.361
 
 Type  : Fast 1200mV 0C Model Recovery 'clk_select[0]'
-Slack : -0.167
-TNS   : -1.166
+Slack : -0.437
+TNS   : -2.033
 
 Type  : Fast 1200mV 0C Model Removal 'clk_select[0]'
-Slack : 0.479
+Slack : 0.489
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'clk'
-Slack : 0.661
+Slack : 0.793
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'Punto_B:Parte_B|FSM_Memoria:FSM|current_state.contador'
-Slack : 1.916
+Slack : 1.125
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -155.216
+TNS   : -154.852
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_select[0]'
 Slack : -3.000
-TNS   : -73.918
+TNS   : -82.998
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD:mod_lcd|FSM_LCD:fsm|e'
 Slack : -1.000
@@ -287,7 +287,7 @@ Slack : -1.000
 TNS   : -8.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD:mod_lcd|FSM_LCD:fsm|current_state.ClearDisplay2'
-Slack : 0.412
+Slack : 0.397
 TNS   : 0.000
 
 ------------------------------------------------------------
