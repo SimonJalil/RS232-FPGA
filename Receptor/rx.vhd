@@ -8,7 +8,7 @@ entity rx is
 	);
 	port (
 			clk 			:in std_logic;								--Entrada de clk.
-			reset_low 	:in std_logic;								--Entrada de reset en bajo.
+			clr		 	:in std_logic;								--Entrada de clr.
 			rx 			:in std_logic;								--Entrada del receptor.
 			salida		:out std_logic_vector(6 downto 0);	--Salida de byte recibido.
 			dig 			:out std_logic_vector(3 downto 0)
@@ -45,6 +45,6 @@ architecture behav of rx is
 begin
 	uart: UART_RX port map(clk => clk, rx_serial => rx, rx_byte => byte);
 	
-	seg: mod_7seg port map(x(15 downto 8) => "11111111", x(7 downto 0) => byte, clk => clk, clr => reset_low, salida => salida, dig => dig);
+	seg: mod_7seg port map(x(15 downto 8) => "ZZZZZZZZ", x(7 downto 0) => byte, clk => clk, clr => clr, salida => salida, dig => dig);
 
 end behav;

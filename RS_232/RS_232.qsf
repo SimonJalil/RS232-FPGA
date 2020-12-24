@@ -55,6 +55,9 @@ set_global_assignment -name EDA_TEST_BENCH_NAME tb_RS_232 -section_id eda_simula
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME uut -section_id tb_RS_232
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_RS_232 -section_id tb_RS_232
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_RS_232.vhd -section_id tb_RS_232
+set_global_assignment -name VHDL_FILE ../UART_RX/UART_RX.vhd
+set_global_assignment -name VHDL_FILE ../Receptor/rx.vhd
+set_global_assignment -name VHDL_FILE ../Receptor/mod_7seg.vhd
 set_global_assignment -name VHDL_FILE ../Parte_B/Punto_B/Punto_B.vhd
 set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/pkg_rom.vhd
 set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/Memoria_ROM.vhd

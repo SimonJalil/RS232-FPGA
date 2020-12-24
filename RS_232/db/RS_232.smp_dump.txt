@@ -1,4 +1,12 @@
 
+State Machine - |RS_232|rx:Receptor|UART_RX:uart|state
+Name state.espera state.stop state.data_bit state.start state.idle 
+state.idle 0 0 0 0 0 
+state.start 0 0 0 1 1 
+state.data_bit 0 0 1 0 1 
+state.stop 0 1 0 0 1 
+state.espera 1 0 0 0 1 
+
 State Machine - |RS_232|LCD:mod_lcd|FSM_LCD:fsm|current_state
 Name current_state.Write37 current_state.Write36 current_state.Write35 current_state.Write34 current_state.Write33 current_state.Write32 current_state.Write31 current_state.Write30 current_state.Write29 current_state.Write28 current_state.Write27 current_state.Write26 current_state.Write25 current_state.Write24 current_state.Write23 current_state.Write22 current_state.Write21 current_state.Write20 current_state.Write19 current_state.Write18 current_state.Write17 current_state.Write16 current_state.Write15 current_state.Write14 current_state.Write13 current_state.Write12 current_state.Write11 current_state.Write10 current_state.Write9 current_state.Write8 current_state.Write7 current_state.Write6 current_state.Write5 current_state.Write4 current_state.Write3 current_state.Write2 current_state.Write1 current_state.ReturnHome4 current_state.ReturnHome3 current_state.ReturnHome2 current_state.ReturnHome1 current_state.ClearDisplay5 current_state.ClearDisplay4 current_state.ClearDisplay3 current_state.ClearDisplay2 current_state.ClearDisplay1 current_state.SetAddress current_state.EntryMode current_state.DisplayControl current_state.FunctionSet4 current_state.FunctionSet3 current_state.FunctionSet2 current_state.FunctionSet1 
 current_state.FunctionSet1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 

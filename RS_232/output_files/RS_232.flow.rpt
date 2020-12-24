@@ -1,5 +1,5 @@
 Flow report for RS_232
-Tue Dec 15 16:23:55 2020
+Thu Dec 24 16:12:14 2020
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,16 +40,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 15 16:23:55 2020       ;
+; Flow Status                        ; Successful - Thu Dec 24 16:12:14 2020       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; RS_232                                      ;
 ; Top-level Entity Name              ; RS_232                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 404 / 6,272 ( 6 % )                         ;
-;     Total combinational functions  ; 376 / 6,272 ( 6 % )                         ;
-;     Dedicated logic registers      ; 233 / 6,272 ( 4 % )                         ;
-; Total registers                    ; 233                                         ;
-; Total pins                         ; 21 / 92 ( 23 % )                            ;
+; Total logic elements               ; 499 / 6,272 ( 8 % )                         ;
+;     Total combinational functions  ; 469 / 6,272 ( 7 % )                         ;
+;     Dedicated logic registers      ; 282 / 6,272 ( 4 % )                         ;
+; Total registers                    ; 282                                         ;
+; Total pins                         ; 33 / 92 ( 36 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/15/2020 16:23:01 ;
+; Start date & time ; 12/24/2020 16:11:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RS_232              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 93328249748543.160806018106669         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 93328249748543.160883710606049         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_RS_232      ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_RS_232                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -97,12 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 932 MB              ; 00:00:29                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 1233 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 786 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 794 MB              ; 00:00:03                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1028 MB             ; 00:00:01                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:41                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 936 MB              ; 00:00:29                           ;
+; Fitter               ; 00:00:08     ; 1.0                     ; 1231 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 789 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 799 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1031 MB             ; 00:00:01                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

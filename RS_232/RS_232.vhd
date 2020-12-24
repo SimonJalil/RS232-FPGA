@@ -8,7 +8,10 @@ entity RS_232 is
 			reset_low	:in std_logic;								--Señal de reset en bajo.
 			clk			:in std_logic;								--Señal de reloj.
 			clk_select	:in std_logic_vector(1 downto 0);	--Entrada de seleccion de reloj de sistema (baudios).
+			rx_serial 	:in std_logic;								--Entrada serial de datos.
 			salida 		:out std_logic;							--Señal de salida de registro serie.
+			salida_7seg	:out std_logic_vector(6 downto 0);	--Salida para graficar en display 7 segmentos datos recibidos seriales.
+			dig_out 		:out std_logic_vector(3 downto 0);	--Salida de habilitacion de displays.
 			
 			--Modulo LCD.
 			rw				:out std_logic;							--Escritura/lectura.
@@ -115,6 +118,45 @@ architecture behav of RS_232 is
 				);
 	end component;
 	
+	--Declaro top receptor
+	component rx is 
+	generic (
+		clksXbit	:integer := 5209
+	);
+	port (
+			clk 			:in std_logic;								--Entrada de clk.
+			clr		 	:in std_logic;								--Entrada de clr.
+			rx 			:in std_logic;								--Entrada del receptor.
+			salida		:out std_logic_vector(6 downto 0);	--Salida de byte recibido.
+			dig 			:out std_logic_vector(3 downto 0)
+			--led			:out std_logic								--led indicador de transmision (cuando esta apagado esta recibiendo).
+			);
+	end component;
+	
+	--Declaro Receptor UART
+	component UART_RX is
+	generic (
+		clksXbit : integer := 5209     
+		);
+	port (
+		clk       : in  std_logic;
+		rx_serial : in  std_logic;
+		rx_byte   : out std_logic_vector(7 downto 0)
+		);
+	end component;
+	
+	--Declaro controlador de display 7 segmentos
+	component mod_7seg is 
+	port(
+		x		:in std_logic_vector(15 downto 0);
+		clk	:in std_logic;
+		clr 	:in std_logic;
+		salida:out std_logic_vector(6 downto 0);
+		dig 	:out std_logic_vector(3 downto 0);
+		dp 	:out std_logic
+		);
+	end component;
+	
 	--Declaro señales auxiliares
 	signal enviado			:std_logic;												--Señal de caracter ASCII enviado por parte de Punto_A.
 	signal dato 			:std_logic_vector(10 downto 0);					--Señal RS232 a transmitir.
@@ -152,6 +194,8 @@ begin
 	Multiplexer: Mux port map(mux_input => clocks, mux_sel => clk_select, mux_out => clk_RS_232);
 	
 	mod_lcd: LCD port map(clk => clk, reset_low => reset_low, entradas => sincToRS232, rw => rw, rs => rs, e => e, db => db);
+	
+	Receptor: rx port map(clk => clk, clr => reset_low, rx => rx_serial, salida => salida_7seg, dig => dig_out);
 	
 	Salida <= reg_out;
 	
