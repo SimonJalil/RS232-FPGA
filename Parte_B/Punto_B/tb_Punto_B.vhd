@@ -47,19 +47,14 @@ begin
 			--Damos una entrada correspondiente a la ultima frase.
 			tb_entradas <= "01000";
 			tb_reset_low <= '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
-			wait until tb_clk = '1';
+			for i in 0 to 15 loop
+				wait until tb_clk = '1';
+			end loop;
 			
 			--La MEF que controla al registro envia el caracter...
 			tb_send_MEF1 <= '1';
 			wait until tb_clk = '1';
-			wait until tb_clk = '1';
+			
 			
 --			--Y una vez finalizado, enviamos una entrada invalida.
 --			tb_entradas <= "00011";

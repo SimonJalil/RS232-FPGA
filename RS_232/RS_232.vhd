@@ -120,14 +120,13 @@ architecture behav of RS_232 is
 	
 	--Declaro top receptor
 	component rx is 
-	generic (
-		clksXbit	:integer := 5209
-	);
 	port (
 			clk 			:in std_logic;								--Entrada de clk.
 			clr		 	:in std_logic;								--Entrada de clr.
 			rx 			:in std_logic;								--Entrada del receptor.
+			sel 			:in std_logic_vector(2 downto 0);	--Entrada de seleccion del mux paralelo.
 			salida		:out std_logic_vector(6 downto 0);	--Salida de byte recibido.
+			byte_out 	:out std_logic_vector(7 downto 0);	--Extraccion del byte para LCD
 			dig 			:out std_logic_vector(3 downto 0)
 			--led			:out std_logic								--led indicador de transmision (cuando esta apagado esta recibiendo).
 			);
@@ -136,7 +135,7 @@ architecture behav of RS_232 is
 	--Declaro Receptor UART
 	component UART_RX is
 	generic (
-		clksXbit : integer := 5209     
+		clksXbit : integer    
 		);
 	port (
 		clk       : in  std_logic;
@@ -195,7 +194,7 @@ begin
 	
 	mod_lcd: LCD port map(clk => clk, reset_low => reset_low, entradas => sincToRS232, rw => rw, rs => rs, e => e, db => db);
 	
-	Receptor: rx port map(clk => clk, clr => reset_low, rx => rx_serial, salida => salida_7seg, dig => dig_out);
+	Receptor: rx port map(clk => clk, clr => reset_low, rx => rx_serial, sel(2) => '0', sel(1 downto 0) => clk_select, salida => salida_7seg, dig => dig_out);
 	
 	Salida <= reg_out;
 	

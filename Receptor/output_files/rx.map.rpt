@@ -1,6 +1,6 @@
 Analysis & Synthesis report for rx
-Thu Dec 24 15:50:36 2020
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Wed Mar 24 00:38:06 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -13,24 +13,31 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |rx|UART_RX:uart|state
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |rx
- 12. Parameter Settings for User Entity Instance: UART_RX:uart
- 13. Port Connectivity Checks: "mod_7seg:seg"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. State Machine - |rx|UART_RX:\t:3:uart|state
+  9. State Machine - |rx|UART_RX:\t:2:uart|state
+ 10. State Machine - |rx|UART_RX:\t:1:uart|state
+ 11. State Machine - |rx|UART_RX:\t:0:uart|state
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |rx
+ 16. Parameter Settings for User Entity Instance: UART_RX:\t:0:uart
+ 17. Parameter Settings for User Entity Instance: UART_RX:\t:1:uart
+ 18. Parameter Settings for User Entity Instance: UART_RX:\t:2:uart
+ 19. Parameter Settings for User Entity Instance: UART_RX:\t:3:uart
+ 20. Port Connectivity Checks: "mod_7seg:seg"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -40,23 +47,24 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 24 15:50:36 2020       ;
-; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 24 00:38:06 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; rx                                          ;
 ; Top-level Entity Name              ; rx                                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 90                                          ;
-;     Total combinational functions  ; 90                                          ;
-;     Dedicated logic registers      ; 49                                          ;
-; Total registers                    ; 49                                          ;
-; Total pins                         ; 14                                          ;
+; Total logic elements               ; 83                                          ;
+;     Total combinational functions  ; 83                                          ;
+;     Dedicated logic registers      ; 44                                          ;
+; Total registers                    ; 44                                          ;
+; Total pins                         ; 25                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -167,15 +175,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                               ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
-; mod_7seg.vhd                     ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd ;         ;
-; ../UART_RX/UART_RX.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd   ;         ;
-; rx.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
+; mod_7seg.vhd                     ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd ;         ;
+; ../UART_RX/UART_RX.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd   ;         ;
+; rx.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd       ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -183,48 +191,48 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 90        ;
+; Estimated Total logic elements              ; 83        ;
 ;                                             ;           ;
-; Total combinational functions               ; 90        ;
+; Total combinational functions               ; 83        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 39        ;
-;     -- 3 input functions                    ; 10        ;
-;     -- <=2 input functions                  ; 41        ;
+;     -- 4 input functions                    ; 32        ;
+;     -- 3 input functions                    ; 19        ;
+;     -- <=2 input functions                  ; 32        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 60        ;
-;     -- arithmetic mode                      ; 30        ;
+;     -- normal mode                          ; 58        ;
+;     -- arithmetic mode                      ; 25        ;
 ;                                             ;           ;
-; Total registers                             ; 49        ;
-;     -- Dedicated logic registers            ; 49        ;
+; Total registers                             ; 44        ;
+;     -- Dedicated logic registers            ; 44        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 14        ;
+; I/O pins                                    ; 25        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 49        ;
-; Total fan-out                               ; 434       ;
-; Average fan-out                             ; 2.60      ;
+; Maximum fan-out                             ; 44        ;
+; Total fan-out                               ; 414       ;
+; Average fan-out                             ; 2.34      ;
 +---------------------------------------------+-----------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |rx                        ; 90 (0)              ; 49 (0)                    ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |rx                 ;             ;              ;
-;    |UART_RX:uart|          ; 55 (55)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rx|UART_RX:uart    ; UART_RX     ; work         ;
-;    |mod_7seg:seg|          ; 35 (35)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rx|mod_7seg:seg    ; mod_7seg    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
+; |rx                        ; 83 (0)              ; 44 (0)                    ; 0           ; 0            ; 0       ; 0         ; 25   ; 0            ; |rx                   ;             ;              ;
+;    |UART_RX:\t:0:uart|     ; 48 (48)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rx|UART_RX:\t:0:uart ; UART_RX     ; work         ;
+;    |mod_7seg:seg|          ; 35 (35)             ; 20 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |rx|mod_7seg:seg      ; mod_7seg    ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------+
-; State Machine - |rx|UART_RX:uart|state                                                 ;
+; State Machine - |rx|UART_RX:\t:3:uart|state                                            ;
 +----------------+--------------+------------+----------------+-------------+------------+
 ; Name           ; state.espera ; state.stop ; state.data_bit ; state.start ; state.idle ;
 +----------------+--------------+------------+----------------+-------------+------------+
@@ -236,30 +244,159 @@ Encoding Type:  One-Hot
 +----------------+--------------+------------+----------------+-------------+------------+
 
 
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |rx|UART_RX:\t:2:uart|state                                            ;
++----------------+--------------+------------+----------------+-------------+------------+
+; Name           ; state.espera ; state.stop ; state.data_bit ; state.start ; state.idle ;
++----------------+--------------+------------+----------------+-------------+------------+
+; state.idle     ; 0            ; 0          ; 0              ; 0           ; 0          ;
+; state.start    ; 0            ; 0          ; 0              ; 1           ; 1          ;
+; state.data_bit ; 0            ; 0          ; 1              ; 0           ; 1          ;
+; state.stop     ; 0            ; 1          ; 0              ; 0           ; 1          ;
+; state.espera   ; 1            ; 0          ; 0              ; 0           ; 1          ;
++----------------+--------------+------------+----------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |rx|UART_RX:\t:1:uart|state                                            ;
++----------------+--------------+------------+----------------+-------------+------------+
+; Name           ; state.espera ; state.stop ; state.data_bit ; state.start ; state.idle ;
++----------------+--------------+------------+----------------+-------------+------------+
+; state.idle     ; 0            ; 0          ; 0              ; 0           ; 0          ;
+; state.start    ; 0            ; 0          ; 0              ; 1           ; 1          ;
+; state.data_bit ; 0            ; 0          ; 1              ; 0           ; 1          ;
+; state.stop     ; 0            ; 1          ; 0              ; 0           ; 1          ;
+; state.espera   ; 1            ; 0          ; 0              ; 0           ; 1          ;
++----------------+--------------+------------+----------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |rx|UART_RX:\t:0:uart|state                                            ;
++----------------+--------------+------------+----------------+-------------+------------+
+; Name           ; state.espera ; state.stop ; state.data_bit ; state.start ; state.idle ;
++----------------+--------------+------------+----------------+-------------+------------+
+; state.idle     ; 0            ; 0          ; 0              ; 0           ; 0          ;
+; state.start    ; 0            ; 0          ; 0              ; 1           ; 1          ;
+; state.data_bit ; 0            ; 0          ; 1              ; 0           ; 1          ;
+; state.stop     ; 0            ; 1          ; 0              ; 0           ; 1          ;
+; state.espera   ; 1            ; 0          ; 0              ; 0           ; 1          ;
++----------------+--------------+------------+----------------+-------------+------------+
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++----------------------------------------+----------------------------------------------+
+; Register name                          ; Reason for Removal                           ;
++----------------------------------------+----------------------------------------------+
+; UART_RX:\t:1:uart|rx[3]                ; Merged with UART_RX:\t:0:uart|rx[3]          ;
+; UART_RX:\t:2:uart|rx[3]                ; Merged with UART_RX:\t:0:uart|rx[3]          ;
+; UART_RX:\t:3:uart|rx[3]                ; Merged with UART_RX:\t:0:uart|rx[3]          ;
+; UART_RX:\t:1:uart|rx[7]                ; Merged with UART_RX:\t:0:uart|rx[7]          ;
+; UART_RX:\t:2:uart|rx[7]                ; Merged with UART_RX:\t:0:uart|rx[7]          ;
+; UART_RX:\t:3:uart|rx[7]                ; Merged with UART_RX:\t:0:uart|rx[7]          ;
+; UART_RX:\t:1:uart|rx[2]                ; Merged with UART_RX:\t:0:uart|rx[2]          ;
+; UART_RX:\t:2:uart|rx[2]                ; Merged with UART_RX:\t:0:uart|rx[2]          ;
+; UART_RX:\t:3:uart|rx[2]                ; Merged with UART_RX:\t:0:uart|rx[2]          ;
+; UART_RX:\t:1:uart|rx[6]                ; Merged with UART_RX:\t:0:uart|rx[6]          ;
+; UART_RX:\t:2:uart|rx[6]                ; Merged with UART_RX:\t:0:uart|rx[6]          ;
+; UART_RX:\t:3:uart|rx[6]                ; Merged with UART_RX:\t:0:uart|rx[6]          ;
+; UART_RX:\t:1:uart|rx[1]                ; Merged with UART_RX:\t:0:uart|rx[1]          ;
+; UART_RX:\t:2:uart|rx[1]                ; Merged with UART_RX:\t:0:uart|rx[1]          ;
+; UART_RX:\t:3:uart|rx[1]                ; Merged with UART_RX:\t:0:uart|rx[1]          ;
+; UART_RX:\t:1:uart|rx[5]                ; Merged with UART_RX:\t:0:uart|rx[5]          ;
+; UART_RX:\t:2:uart|rx[5]                ; Merged with UART_RX:\t:0:uart|rx[5]          ;
+; UART_RX:\t:3:uart|rx[5]                ; Merged with UART_RX:\t:0:uart|rx[5]          ;
+; UART_RX:\t:1:uart|rx[0]                ; Merged with UART_RX:\t:0:uart|rx[0]          ;
+; UART_RX:\t:2:uart|rx[0]                ; Merged with UART_RX:\t:0:uart|rx[0]          ;
+; UART_RX:\t:3:uart|rx[0]                ; Merged with UART_RX:\t:0:uart|rx[0]          ;
+; UART_RX:\t:1:uart|rx[4]                ; Merged with UART_RX:\t:0:uart|rx[4]          ;
+; UART_RX:\t:2:uart|rx[4]                ; Merged with UART_RX:\t:0:uart|rx[4]          ;
+; UART_RX:\t:3:uart|rx[4]                ; Merged with UART_RX:\t:0:uart|rx[4]          ;
+; UART_RX:\t:1:uart|bit_cont[2]          ; Merged with UART_RX:\t:0:uart|bit_cont[2]    ;
+; UART_RX:\t:2:uart|bit_cont[2]          ; Merged with UART_RX:\t:0:uart|bit_cont[2]    ;
+; UART_RX:\t:3:uart|bit_cont[2]          ; Merged with UART_RX:\t:0:uart|bit_cont[2]    ;
+; UART_RX:\t:1:uart|bit_cont[1]          ; Merged with UART_RX:\t:0:uart|bit_cont[1]    ;
+; UART_RX:\t:2:uart|bit_cont[1]          ; Merged with UART_RX:\t:0:uart|bit_cont[1]    ;
+; UART_RX:\t:3:uart|bit_cont[1]          ; Merged with UART_RX:\t:0:uart|bit_cont[1]    ;
+; UART_RX:\t:1:uart|bit_cont[0]          ; Merged with UART_RX:\t:0:uart|bit_cont[0]    ;
+; UART_RX:\t:2:uart|bit_cont[0]          ; Merged with UART_RX:\t:0:uart|bit_cont[0]    ;
+; UART_RX:\t:3:uart|bit_cont[0]          ; Merged with UART_RX:\t:0:uart|bit_cont[0]    ;
+; UART_RX:\t:1:uart|baud_cont[7]         ; Merged with UART_RX:\t:0:uart|baud_cont[7]   ;
+; UART_RX:\t:2:uart|baud_cont[7]         ; Merged with UART_RX:\t:0:uart|baud_cont[7]   ;
+; UART_RX:\t:3:uart|baud_cont[7]         ; Merged with UART_RX:\t:0:uart|baud_cont[7]   ;
+; UART_RX:\t:1:uart|baud_cont[6]         ; Merged with UART_RX:\t:0:uart|baud_cont[6]   ;
+; UART_RX:\t:2:uart|baud_cont[6]         ; Merged with UART_RX:\t:0:uart|baud_cont[6]   ;
+; UART_RX:\t:3:uart|baud_cont[6]         ; Merged with UART_RX:\t:0:uart|baud_cont[6]   ;
+; UART_RX:\t:1:uart|baud_cont[5]         ; Merged with UART_RX:\t:0:uart|baud_cont[5]   ;
+; UART_RX:\t:2:uart|baud_cont[5]         ; Merged with UART_RX:\t:0:uart|baud_cont[5]   ;
+; UART_RX:\t:3:uart|baud_cont[5]         ; Merged with UART_RX:\t:0:uart|baud_cont[5]   ;
+; UART_RX:\t:1:uart|baud_cont[4]         ; Merged with UART_RX:\t:0:uart|baud_cont[4]   ;
+; UART_RX:\t:2:uart|baud_cont[4]         ; Merged with UART_RX:\t:0:uart|baud_cont[4]   ;
+; UART_RX:\t:3:uart|baud_cont[4]         ; Merged with UART_RX:\t:0:uart|baud_cont[4]   ;
+; UART_RX:\t:1:uart|baud_cont[3]         ; Merged with UART_RX:\t:0:uart|baud_cont[3]   ;
+; UART_RX:\t:2:uart|baud_cont[3]         ; Merged with UART_RX:\t:0:uart|baud_cont[3]   ;
+; UART_RX:\t:3:uart|baud_cont[3]         ; Merged with UART_RX:\t:0:uart|baud_cont[3]   ;
+; UART_RX:\t:1:uart|baud_cont[2]         ; Merged with UART_RX:\t:0:uart|baud_cont[2]   ;
+; UART_RX:\t:2:uart|baud_cont[2]         ; Merged with UART_RX:\t:0:uart|baud_cont[2]   ;
+; UART_RX:\t:3:uart|baud_cont[2]         ; Merged with UART_RX:\t:0:uart|baud_cont[2]   ;
+; UART_RX:\t:1:uart|baud_cont[0]         ; Merged with UART_RX:\t:0:uart|baud_cont[0]   ;
+; UART_RX:\t:2:uart|baud_cont[0]         ; Merged with UART_RX:\t:0:uart|baud_cont[0]   ;
+; UART_RX:\t:3:uart|baud_cont[0]         ; Merged with UART_RX:\t:0:uart|baud_cont[0]   ;
+; UART_RX:\t:1:uart|baud_cont[1]         ; Merged with UART_RX:\t:0:uart|baud_cont[1]   ;
+; UART_RX:\t:2:uart|baud_cont[1]         ; Merged with UART_RX:\t:0:uart|baud_cont[1]   ;
+; UART_RX:\t:3:uart|baud_cont[1]         ; Merged with UART_RX:\t:0:uart|baud_cont[1]   ;
+; UART_RX:\t:1:uart|state.data_bit       ; Merged with UART_RX:\t:0:uart|state.data_bit ;
+; UART_RX:\t:2:uart|state.data_bit       ; Merged with UART_RX:\t:0:uart|state.data_bit ;
+; UART_RX:\t:3:uart|state.data_bit       ; Merged with UART_RX:\t:0:uart|state.data_bit ;
+; UART_RX:\t:1:uart|state.idle           ; Merged with UART_RX:\t:0:uart|state.idle     ;
+; UART_RX:\t:2:uart|state.idle           ; Merged with UART_RX:\t:0:uart|state.idle     ;
+; UART_RX:\t:3:uart|state.idle           ; Merged with UART_RX:\t:0:uart|state.idle     ;
+; UART_RX:\t:1:uart|state.start          ; Merged with UART_RX:\t:0:uart|state.start    ;
+; UART_RX:\t:2:uart|state.start          ; Merged with UART_RX:\t:0:uart|state.start    ;
+; UART_RX:\t:3:uart|state.start          ; Merged with UART_RX:\t:0:uart|state.start    ;
+; UART_RX:\t:1:uart|state.espera         ; Merged with UART_RX:\t:0:uart|state.espera   ;
+; UART_RX:\t:2:uart|state.espera         ; Merged with UART_RX:\t:0:uart|state.espera   ;
+; UART_RX:\t:3:uart|state.espera         ; Merged with UART_RX:\t:0:uart|state.espera   ;
+; UART_RX:\t:1:uart|state.stop           ; Merged with UART_RX:\t:0:uart|state.stop     ;
+; UART_RX:\t:2:uart|state.stop           ; Merged with UART_RX:\t:0:uart|state.stop     ;
+; UART_RX:\t:3:uart|state.stop           ; Merged with UART_RX:\t:0:uart|state.stop     ;
+; Total Number of Removed Registers = 72 ;                                              ;
++----------------------------------------+----------------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 49    ;
-; Number of registers using Synchronous Clear  ; 13    ;
+; Total registers                              ; 44    ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 13    ;
+; Number of registers using Clock Enable       ; 8     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |rx|UART_RX:uart|baud_cont[0] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |rx|mod_7seg:seg|Mux1         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |rx|UART_RX:uart|bit_cont     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rx|UART_RX:\t:3:uart|baud_cont[0] ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rx|UART_RX:\t:2:uart|baud_cont[1] ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rx|UART_RX:\t:1:uart|baud_cont[2] ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; Yes        ; |rx|UART_RX:\t:0:uart|baud_cont[6] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |rx|UART_RX:\t:3:uart|bit_cont     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |rx|UART_RX:\t:2:uart|bit_cont     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |rx|UART_RX:\t:1:uart|bit_cont     ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |rx|UART_RX:\t:0:uart|bit_cont     ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 16 LEs               ; 24 LEs                 ; No         ; |rx|Mux0                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -272,24 +409,53 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: UART_RX:uart ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; clksxbit       ; 5209  ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_RX:\t:0:uart ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; clksxbit       ; 256   ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mod_7seg:seg"                                                                           ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; x[15..8] ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; dp       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_RX:\t:1:uart ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; clksxbit       ; 256   ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_RX:\t:2:uart ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; clksxbit       ; 256   ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_RX:\t:3:uart ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; clksxbit       ; 256   ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mod_7seg:seg"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; dp   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -297,23 +463,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 14                          ;
-; cycloneiii_ff         ; 49                          ;
+; boundary_port         ; 25                          ;
+; cycloneiii_ff         ; 44                          ;
 ;     CLR               ; 20                          ;
-;     ENA SCLR          ; 13                          ;
+;     ENA SCLR          ; 8                           ;
 ;     plain             ; 16                          ;
-; cycloneiii_lcell_comb ; 94                          ;
-;     arith             ; 30                          ;
-;         2 data inputs ; 29                          ;
+; cycloneiii_lcell_comb ; 87                          ;
+;     arith             ; 25                          ;
+;         2 data inputs ; 24                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 64                          ;
+;     normal            ; 62                          ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 9                           ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 39                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 18                          ;
+;         4 data inputs ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.00                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.57                        ;
 +-----------------------+-----------------------------+
 
 
@@ -331,39 +497,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 24 15:50:24 2020
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Mar 24 00:37:56 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off rx -c rx
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Warning (12090): Entity "Mux" obtained from "../../Laboratorio 3/Mx/Mux.vhd" instead of from Quartus Prime megafunction library File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/Laboratorio 3/Mx/Mux.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/Laboratorio 3/Mx/Mux.vhd
+    Info (12022): Found design unit 1: Mux-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/Laboratorio 3/Mx/Mux.vhd Line: 14
+    Info (12023): Found entity 1: Mux File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/Laboratorio 3/Mx/Mux.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file mod_7seg.vhd
-    Info (12022): Found design unit 1: mod_7seg-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 16
-    Info (12023): Found entity 1: mod_7seg File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
-    Info (12022): Found design unit 1: UART_RX-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 17
-    Info (12023): Found entity 1: UART_RX File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 5
+    Info (12022): Found design unit 1: mod_7seg-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 16
+    Info (12023): Found entity 1: mod_7seg File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+    Info (12022): Found design unit 1: UART_RX-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 17
+    Info (12023): Found entity 1: UART_RX File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file rx.vhd
-    Info (12022): Found design unit 1: rx-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 19
-    Info (12023): Found entity 1: rx File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 5
+    Info (12022): Found design unit 1: rx-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 21
+    Info (12023): Found entity 1: rx File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mux_paralelos.vhd
+    Info (12022): Found design unit 1: mux_paralelos-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mux_paralelos.vhd Line: 16
+    Info (12023): Found entity 1: mux_paralelos File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mux_paralelos.vhd Line: 5
 Info (12127): Elaborating entity "rx" for the top level hierarchy
-Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:uart" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 46
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10336): VHDL Attribute warning in UART_RX.vhd(19): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Info (12128): Elaborating entity "mod_7seg" for hierarchy "mod_7seg:seg" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 48
+Info (12128): Elaborating entity "UART_RX" for hierarchy "UART_RX:\t:0:uart" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 63
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10336): VHDL Attribute warning in UART_RX.vhd(19): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Info (12128): Elaborating entity "mod_7seg" for hierarchy "mod_7seg:seg" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 77
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
+    Warning (13049): Converted tri-state buffer "comb~synth" feeding internal logic into a wire
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 90 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 944 megabytes
-    Info: Processing ended: Thu Dec 24 15:50:36 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "sel[0]" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 13
+    Warning (15610): No output dependent on input pin "sel[1]" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 13
+    Warning (15610): No output dependent on input pin "sel[2]" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 13
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 83 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 427 megabytes
+    Info: Processing ended: Wed Mar 24 00:38:06 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 

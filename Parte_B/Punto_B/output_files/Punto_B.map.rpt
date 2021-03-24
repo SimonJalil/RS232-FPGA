@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Punto_B
-Sat Nov 21 03:00:17 2020
+Sat Mar 13 18:30:41 2021
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 21 03:00:17 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 13 18:30:41 2021       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Punto_B                                     ;
 ; Top-level Entity Name              ; Punto_B                                     ;
@@ -166,17 +166,17 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
-+------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                       ; Library ;
-+------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ../Memoria_ROM/pkg_rom.vhd               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd               ;         ;
-; ../Memoria_ROM/Memoria_ROM.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd           ;         ;
-; ../FSM_Memoria/FSM_Memoria.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd           ;         ;
-; ../Contador_memoria/Contador_memoria.vhd ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd ;         ;
-; Punto_B.vhd                              ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd                   ;         ;
-+------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
++------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                             ; Library ;
++------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../Memoria_ROM/pkg_rom.vhd               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd               ;         ;
+; ../Memoria_ROM/Memoria_ROM.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd           ;         ;
+; ../FSM_Memoria/FSM_Memoria.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd           ;         ;
+; ../Contador_memoria/Contador_memoria.vhd ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd ;         ;
+; Punto_B.vhd                              ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd                   ;         ;
++------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------+
@@ -265,7 +265,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register name                                     ; Reason for Removal                                            ;
 +---------------------------------------------------+---------------------------------------------------------------+
 ; Memoria_ROM:Memoria|dato_ok[0]                    ; Stuck at VCC due to stuck port data_in                        ;
-; Memoria_ROM:Memoria|dato_ok[9,10]                 ; Stuck at GND due to stuck port data_in                        ;
+; Memoria_ROM:Memoria|dato_ok[2,10]                 ; Stuck at GND due to stuck port data_in                        ;
 ; Contador_memoria:Contador|contToaddress_out[1]~en ; Merged with Contador_memoria:Contador|contToaddress_out[0]~en ;
 ; Contador_memoria:Contador|contToaddress_out[2]~en ; Merged with Contador_memoria:Contador|contToaddress_out[0]~en ;
 ; Contador_memoria:Contador|contToaddress_out[3]~en ; Merged with Contador_memoria:Contador|contToaddress_out[0]~en ;
@@ -358,60 +358,60 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 03:00:01 2020
+    Info: Processing started: Sat Mar 13 18:30:27 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Punto_B -c Punto_B
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 0 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
-    Info (12022): Found design unit 1: pkg_rom File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 5
-    Info (12022): Found design unit 2: pkg_rom-body File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 69
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
-    Info (12022): Found design unit 1: Memoria_ROM-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 15
-    Info (12023): Found entity 1: Memoria_ROM File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
-    Info (12022): Found design unit 1: FSM_Memoria-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 21
-    Info (12023): Found entity 1: FSM_Memoria File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd
-    Info (12022): Found design unit 1: Contador_memoria-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 17
-    Info (12023): Found entity 1: Contador_memoria File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 7
+Info (12021): Found 2 design units, including 0 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
+    Info (12022): Found design unit 1: pkg_rom File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 5
+    Info (12022): Found design unit 2: pkg_rom-body File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 113
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
+    Info (12022): Found design unit 1: Memoria_ROM-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 15
+    Info (12023): Found entity 1: Memoria_ROM File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
+    Info (12022): Found design unit 1: FSM_Memoria-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 21
+    Info (12023): Found entity 1: FSM_Memoria File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd
+    Info (12022): Found design unit 1: Contador_memoria-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 17
+    Info (12023): Found entity 1: Contador_memoria File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file Punto_B.vhd
-    Info (12022): Found design unit 1: Punto_B-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 24
-    Info (12023): Found entity 1: Punto_B File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 5
+    Info (12022): Found design unit 1: Punto_B-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 24
+    Info (12023): Found entity 1: Punto_B File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file tb_Punto_B.vhd
-    Info (12022): Found design unit 1: tb_Punto_B-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/tb_Punto_B.vhd Line: 8
-    Info (12023): Found entity 1: tb_Punto_B File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/tb_Punto_B.vhd Line: 5
+    Info (12022): Found design unit 1: tb_Punto_B-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/tb_Punto_B.vhd Line: 8
+    Info (12023): Found entity 1: tb_Punto_B File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/tb_Punto_B.vhd Line: 5
 Info (12127): Elaborating entity "Punto_B" for the top level hierarchy
-Info (12128): Elaborating entity "Memoria_ROM" for hierarchy "Memoria_ROM:Memoria" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 73
-Info (12128): Elaborating entity "FSM_Memoria" for hierarchy "FSM_Memoria:FSM" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 75
-Warning (10306): Invalid value "one_hot" for synthesis attribute "syn_encoding" at ../FSM_Memoria/FSM_Memoria.vhd(30) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 30
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character '_' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10336): VHDL Attribute warning in FSM_Memoria.vhd(23): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Info (12128): Elaborating entity "Contador_memoria" for hierarchy "Contador_memoria:Contador" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 78
-Info (10041): Inferred latch for "opcion[4]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[3]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[2]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[1]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[0]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (12128): Elaborating entity "Memoria_ROM" for hierarchy "Memoria_ROM:Memoria" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 73
+Info (12128): Elaborating entity "FSM_Memoria" for hierarchy "FSM_Memoria:FSM" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 75
+Warning (10306): Invalid value "one_hot" for synthesis attribute "syn_encoding" at ../FSM_Memoria/FSM_Memoria.vhd(30) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 30
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character '_' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10336): VHDL Attribute warning in FSM_Memoria.vhd(23): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Info (12128): Elaborating entity "Contador_memoria" for hierarchy "Contador_memoria:Contador" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 78
+Info (10041): Inferred latch for "opcion[4]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[3]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[2]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[1]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[0]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[0]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[1]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[2]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[3]" to the node "Memoria_ROM:Memoria|Mux2" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[4]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[5]" to the node "Memoria_ROM:Memoria|Mux3" into an OR gate File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-Info (13000): Registers with preset signals will power-up high File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
+    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[0]" to the node "Memoria_ROM:Memoria|Mux1" into an OR gate File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[1]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[2]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[3]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[4]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13047): Converted the fan-out from the tri-state buffer "Contador_memoria:Contador|address_out[5]" to the node "Memoria_ROM:Memoria|Mux0" into an OR gate File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+Info (13000): Registers with preset signals will power-up high File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "datos_out[0]" is stuck at VCC File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 11
-    Warning (13410): Pin "datos_out[9]" is stuck at GND File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 11
-    Warning (13410): Pin "datos_out[10]" is stuck at GND File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 11
+    Warning (13410): Pin "datos_out[0]" is stuck at VCC File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 11
+    Warning (13410): Pin "datos_out[2]" is stuck at GND File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 11
+    Warning (13410): Pin "datos_out[10]" is stuck at GND File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Critical Warning (18061): Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register Contador_memoria:Contador|contToaddress_out[0]~en will power up to High File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
+    Critical Warning (18010): Register Contador_memoria:Contador|contToaddress_out[0]~en will power up to High File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 153 device resources after synthesis - the final resource count might be different
@@ -419,9 +419,9 @@ Info (21057): Implemented 153 device resources after synthesis - the final resou
     Info (21059): Implemented 21 output pins
     Info (21061): Implemented 124 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 945 megabytes
-    Info: Processing ended: Sat Nov 21 03:00:17 2020
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 965 megabytes
+    Info: Processing ended: Sat Mar 13 18:30:41 2021
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 

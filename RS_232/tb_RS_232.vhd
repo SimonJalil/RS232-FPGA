@@ -14,8 +14,11 @@ architecture behav of tb_RS_232 is
 				reset_low		:in std_logic;
 				clk				:in std_logic;
 				clk_select		:in std_logic_vector(1 downto 0);
+				rx_serial 		:in std_logic;	
 				salida 			:out std_logic;
-				
+				salida_7seg		:out std_logic_vector(6 downto 0);
+				dig_out 			:out std_logic_vector(3 downto 0);
+					
 				rw					:out std_logic;							
 				rs 				:out std_logic;							
 				e					:buffer std_logic;						
@@ -35,6 +38,7 @@ architecture behav of tb_RS_232 is
 	signal tb_reset_low 		:std_logic := '1';
 	signal tb_clk 				:std_logic := '0';
 	signal tb_clk_select		:std_logic_vector(1 downto 0) :="11";
+	signal tb_rx_serial 		:std_logic;
 	
 	signal tb_rw				:std_logic;
 	signal tb_rs 				:std_logic;
@@ -42,6 +46,8 @@ architecture behav of tb_RS_232 is
 	signal tb_db				:std_logic_vector(7 downto 0);
 	
 	signal tb_salida 			:std_logic;
+	signal tb_salida_7seg	:std_logic_vector(6 downto 0);
+	signal tb_dig_out 		:std_logic_vector(3 downto 0);
 	signal tb_clk_en_uso 	:std_logic;
 	signal tb_address			:std_logic_vector(addr_length-1 downto 0);
 	signal tb_cont_finished	:std_logic;
@@ -56,6 +62,7 @@ begin
 	clk_gen: tb_clk <= not tb_clk after semiperiod;
 
 	uut: RS_232 port map(entry => tb_entry, reset_low => tb_reset_low, clk => tb_clk, clk_select => tb_clk_select, salida => tb_salida, 
+								salida_7seg => tb_salida_7seg, rx_serial => tb_rx_serial, dig_out => tb_dig_out,
 								rw => tb_rw, rs => tb_rs, e => tb_e, db => tb_db,
 								clk_en_uso => tb_clk_en_uso, address => tb_address, cont_finished => tb_cont_finished, enviado_MEF1 =>tb_enviado_MEF1,enviar => tb_enviar, ASCII => tb_ASCII);
 	

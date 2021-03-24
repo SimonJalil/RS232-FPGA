@@ -1,93 +1,165 @@
 m255
 K4
 z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/simulation/modelsim
-Erx
-Z1 w1608667704
-Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z0 d/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/simulation/modelsim
+Emod_7seg
+Z1 w1614998059
+Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z3 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
 R0
-Z5 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd
-Z6 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd
+Z6 8/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd
+Z7 F/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd
 l0
-L5
-Vh<V4m?Q4hi;SB<QecMKOX3
-!s100 MkBEdf<==Y^M?2I_jfMZJ3
-Z7 OV;C;10.5b;63
+L5 1
+V:1j>;O[5:mzkLGzeKRUQ52
+!s100 bnH:6@``AZ5Ff;:IfzDXF2
+Z8 OV;C;2020.1;71
 31
-Z8 !s110 1608667733
+Z9 !s110 1616380321
 !i10b 1
-Z9 !s108 1608667733.000000
-Z10 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd|
-Z11 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd|
+Z10 !s108 1616380321.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd|
+Z12 !s107 /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd|
 !i113 1
-Z12 o-93 -work work
-Z13 tExplicit 1 CvgOpt 0
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
 Abehav
 R2
 R3
 R4
-Z14 DEx4 work 2 rx 0 22 h<V4m?Q4hi;SB<QecMKOX3
-l35
-L19
-VY^J9hO;bUT^2mO_[Mn;]:2
-!s100 j<2Oig9TkZ2[j2UdCI5]01
-R7
-31
+R5
+DEx4 work 8 mod_7seg 0 22 :1j>;O[5:mzkLGzeKRUQ52
+!i122 0
+l21
+L16 64
+Vlm^2zUz_R@j:EN3e_:V[Y0
+!s100 @9C2lHRSjn4;oDg4dH5Q`3
 R8
-!i10b 1
+31
 R9
+!i10b 1
 R10
 R11
-!i113 1
 R12
+!i113 1
 R13
-Etb_rx
-Z15 w1608667682
-R2
-R3
+R14
+Erx
+Z15 w1608837105
+Z16 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 R4
+R5
+!i122 2
 R0
-Z16 8/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd
-Z17 F/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd
+Z17 8/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd
+Z18 F/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd
 l0
-L5
+L5 1
+VQe:6k5k[jU;CWHD9b4mP32
+!s100 PA?<h::VSSLa6O>nm6Mi;1
+R8
+31
+R9
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd|
+Z20 !s107 /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd|
+!i113 1
+R13
+R14
+Abehav
+R16
+R4
+R5
+DEx4 work 2 rx 0 22 Qe:6k5k[jU;CWHD9b4mP32
+!i122 2
+l45
+L19 32
+V[?A@>mS2]T9?@_IM[gbbN2
+!s100 zehfhl1IbWN0O=bTK]d`C3
+R8
+31
+R9
+!i10b 1
+R10
+R19
+R20
+!i113 1
+R13
+R14
+Etb_rx
+w1608836077
+R16
+R4
+R5
+!i122 3
+R0
+8/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd
+F/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd
+l0
+L5 1
 VTIM9jC94bJLVfRj<^l<Mo3
 !s100 97?NNJi;Rzd:07>:;>V2=3
-R7
-31
 R8
-!i10b 1
+31
 R9
-Z18 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd|
-Z19 !s107 /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd|
+!i10b 1
+R10
+!s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd|
+!s107 /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/tb_rx.vhd|
 !i113 1
-R12
 R13
-Abehav
 R14
-R2
-R3
+Euart_rx
+Z21 w1615704925
+R16
 R4
-DEx4 work 5 tb_rx 0 22 TIM9jC94bJLVfRj<^l<Mo3
-l58
-L8
-VV>Iz<hHV9B4?1Dii<D@GQ3
-!s100 i42UY65YKg7ZC?OPSK?VG1
-R7
-31
+R5
+!i122 1
+R0
+Z22 8/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+Z23 F/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+l0
+L5 1
+Vie3D0jd:3YUX:H]CfX[kE1
+!s100 GbK[ZY4KYL<UW_f7Q_Y6g1
 R8
-!i10b 1
+31
 R9
-R18
-R19
+!i10b 1
+R10
+Z24 !s90 -reportprogress|300|-93|-work|work|/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd|
+Z25 !s107 /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd|
 !i113 1
-R12
 R13
+R14
+Abehav
+R16
+R4
+R5
+DEx4 work 7 uart_rx 0 22 ie3D0jd:3YUX:H]CfX[kE1
+!i122 1
+l29
+L17 81
+VQE9kI7^V5lj7^UU>WSnAi3
+!s100 Voe;N0I[bod1<;SV`6P090
+R8
+31
+R9
+!i10b 1
+R10
+R24
+R25
+!i113 1
+R13
+R14

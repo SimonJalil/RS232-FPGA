@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity UART_RX is
   generic (
-    clksXbit : integer := 5209     
+    clksXbit : integer   
     );
   port (
     clk       : in  std_logic;

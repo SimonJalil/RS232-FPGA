@@ -31,6 +31,7 @@ begin
 			when "01" => digit <= x(7 downto 4);
 			when "10" => digit <= x(11 downto 8);
 			when "11" => digit <= x(15 downto 12);
+			when others => null;
 		end case;
 	end process;
 	

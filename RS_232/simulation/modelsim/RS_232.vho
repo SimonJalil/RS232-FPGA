@@ -1,6 +1,6 @@
--- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
+-- and other software and tools, and any partner logic 
 -- functions, and any output files from any of the foregoing 
 -- (including device programming or simulation files), and any 
 -- associated documentation or information are expressly subject 
@@ -10,13 +10,14 @@
 -- agreement, including, without limitation, that your use is for
 -- the sole purpose of programming logic devices manufactured by
 -- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
 
 -- VENDOR "Altera"
 -- PROGRAM "Quartus Prime"
--- VERSION "Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition"
+-- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "12/24/2020 16:24:59"
+-- DATE "03/24/2021 00:54:02"
 
 -- 
 -- Device: Altera EP4CE6E22C8 Package TQFP144
@@ -83,13 +84,13 @@ ENTITY 	RS_232 IS
 	clk : IN std_logic;
 	clk_select : IN std_logic_vector(1 DOWNTO 0);
 	rx_serial : IN std_logic;
-	salida : OUT std_logic;
-	salida_7seg : OUT std_logic_vector(6 DOWNTO 0);
-	dig_out : OUT std_logic_vector(3 DOWNTO 0);
-	rw : OUT std_logic;
-	rs : OUT std_logic;
+	salida : BUFFER std_logic;
+	salida_7seg : BUFFER std_logic_vector(6 DOWNTO 0);
+	dig_out : BUFFER std_logic_vector(3 DOWNTO 0);
+	rw : BUFFER std_logic;
+	rs : BUFFER std_logic;
 	e : BUFFER std_logic;
-	db : OUT std_logic_vector(7 DOWNTO 0)
+	db : BUFFER std_logic_vector(7 DOWNTO 0)
 	);
 END RS_232;
 
@@ -312,7 +313,7 @@ SIGNAL \Parte_B|FSM|current_state.espera~q\ : std_logic;
 SIGNAL \Parte_B|FSM|Selector0~0_combout\ : std_logic;
 SIGNAL \entry[4]~input_o\ : std_logic;
 SIGNAL \antirrebotes:4:antirreb|cont~0_combout\ : std_logic;
-SIGNAL \antirrebotes:4:antirreb|cont[3]~2_combout\ : std_logic;
+SIGNAL \antirrebotes:4:antirreb|cont[1]~2_combout\ : std_logic;
 SIGNAL \antirrebotes:4:antirreb|cont~4_combout\ : std_logic;
 SIGNAL \antirrebotes:4:antirreb|cont~3_combout\ : std_logic;
 SIGNAL \antirrebotes:4:antirreb|Add0~0_combout\ : std_logic;
@@ -325,7 +326,7 @@ SIGNAL \sincronizadores:4:sinc|meta~q\ : std_logic;
 SIGNAL \sincronizadores:4:sinc|syncin~q\ : std_logic;
 SIGNAL \entry[3]~input_o\ : std_logic;
 SIGNAL \antirrebotes:3:antirreb|cont~0_combout\ : std_logic;
-SIGNAL \antirrebotes:3:antirreb|cont[2]~2_combout\ : std_logic;
+SIGNAL \antirrebotes:3:antirreb|cont[0]~2_combout\ : std_logic;
 SIGNAL \antirrebotes:3:antirreb|cont~4_combout\ : std_logic;
 SIGNAL \antirrebotes:3:antirreb|cont~3_combout\ : std_logic;
 SIGNAL \antirrebotes:3:antirreb|Add0~0_combout\ : std_logic;
@@ -339,7 +340,7 @@ SIGNAL \sincronizadores:3:sinc|syncin~feeder_combout\ : std_logic;
 SIGNAL \sincronizadores:3:sinc|syncin~q\ : std_logic;
 SIGNAL \entry[1]~input_o\ : std_logic;
 SIGNAL \antirrebotes:1:antirreb|cont~0_combout\ : std_logic;
-SIGNAL \antirrebotes:1:antirreb|cont[3]~2_combout\ : std_logic;
+SIGNAL \antirrebotes:1:antirreb|cont[0]~2_combout\ : std_logic;
 SIGNAL \antirrebotes:1:antirreb|cont~4_combout\ : std_logic;
 SIGNAL \antirrebotes:1:antirreb|cont~3_combout\ : std_logic;
 SIGNAL \antirrebotes:1:antirreb|Add0~0_combout\ : std_logic;
@@ -353,7 +354,7 @@ SIGNAL \sincronizadores:1:sinc|syncin~feeder_combout\ : std_logic;
 SIGNAL \sincronizadores:1:sinc|syncin~q\ : std_logic;
 SIGNAL \entry[0]~input_o\ : std_logic;
 SIGNAL \antirrebotes:0:antirreb|cont~0_combout\ : std_logic;
-SIGNAL \antirrebotes:0:antirreb|cont[2]~2_combout\ : std_logic;
+SIGNAL \antirrebotes:0:antirreb|cont[3]~2_combout\ : std_logic;
 SIGNAL \antirrebotes:0:antirreb|cont~4_combout\ : std_logic;
 SIGNAL \antirrebotes:0:antirreb|cont~3_combout\ : std_logic;
 SIGNAL \antirrebotes:0:antirreb|Add0~0_combout\ : std_logic;
@@ -366,7 +367,7 @@ SIGNAL \sincronizadores:0:sinc|meta~q\ : std_logic;
 SIGNAL \sincronizadores:0:sinc|syncin~q\ : std_logic;
 SIGNAL \entry[2]~input_o\ : std_logic;
 SIGNAL \antirrebotes:2:antirreb|cont~0_combout\ : std_logic;
-SIGNAL \antirrebotes:2:antirreb|cont[0]~2_combout\ : std_logic;
+SIGNAL \antirrebotes:2:antirreb|cont[1]~2_combout\ : std_logic;
 SIGNAL \antirrebotes:2:antirreb|cont~4_combout\ : std_logic;
 SIGNAL \antirrebotes:2:antirreb|cont~3_combout\ : std_logic;
 SIGNAL \antirrebotes:2:antirreb|Add0~0_combout\ : std_logic;
@@ -405,8 +406,8 @@ SIGNAL \Parte_B|Contador|Mux2~1_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|Mux4~0_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|Mux0~1_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|Mux3~0_combout\ : std_logic;
-SIGNAL \Parte_B|Contador|cont[3]~6_combout\ : std_logic;
-SIGNAL \Parte_B|Contador|cont[3]~13_combout\ : std_logic;
+SIGNAL \Parte_B|Contador|cont[0]~6_combout\ : std_logic;
+SIGNAL \Parte_B|Contador|cont[0]~13_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|contador~3_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|contador~4_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|cont[0]~8\ : std_logic;
@@ -440,8 +441,8 @@ SIGNAL \Parte_B|FSM|current_state.start~q\ : std_logic;
 SIGNAL \Parte_A|FSM|next_state.load_shift~0_combout\ : std_logic;
 SIGNAL \Parte_A|FSM|current_state.load_shift~q\ : std_logic;
 SIGNAL \Parte_B|FSM|current_state.memoria~clkctrl_outclk\ : std_logic;
-SIGNAL \Parte_B|Contador|contToaddress_out[3]~5_combout\ : std_logic;
-SIGNAL \Parte_B|Contador|contToaddress_out[3]~4_combout\ : std_logic;
+SIGNAL \Parte_B|Contador|contToaddress_out[5]~5_combout\ : std_logic;
+SIGNAL \Parte_B|Contador|contToaddress_out[5]~4_combout\ : std_logic;
 SIGNAL \Parte_B|Contador|Add1~1\ : std_logic;
 SIGNAL \Parte_B|Contador|Add1~3\ : std_logic;
 SIGNAL \Parte_B|Contador|Add1~5\ : std_logic;
@@ -600,7 +601,7 @@ SIGNAL \Receptor|uart|state.stop~1_combout\ : std_logic;
 SIGNAL \Receptor|uart|state.stop~q\ : std_logic;
 SIGNAL \Receptor|uart|state~7_combout\ : std_logic;
 SIGNAL \Receptor|uart|state.espera~q\ : std_logic;
-SIGNAL \Receptor|uart|baud_cont[10]~41_combout\ : std_logic;
+SIGNAL \Receptor|uart|baud_cont[0]~41_combout\ : std_logic;
 SIGNAL \Receptor|uart|baud_cont[11]~36\ : std_logic;
 SIGNAL \Receptor|uart|baud_cont[12]~37_combout\ : std_logic;
 SIGNAL \Receptor|uart|Equal0~2_combout\ : std_logic;
@@ -611,8 +612,8 @@ SIGNAL \Receptor|uart|state.start~q\ : std_logic;
 SIGNAL \Receptor|uart|Selector18~0_combout\ : std_logic;
 SIGNAL \Receptor|uart|Selector16~0_combout\ : std_logic;
 SIGNAL \Receptor|uart|state.idle~q\ : std_logic;
-SIGNAL \Receptor|uart|baud_cont[10]~39_combout\ : std_logic;
-SIGNAL \Receptor|uart|baud_cont[10]~40_combout\ : std_logic;
+SIGNAL \Receptor|uart|baud_cont[0]~39_combout\ : std_logic;
+SIGNAL \Receptor|uart|baud_cont[0]~40_combout\ : std_logic;
 SIGNAL \Receptor|uart|baud_cont[0]~14\ : std_logic;
 SIGNAL \Receptor|uart|baud_cont[1]~15_combout\ : std_logic;
 SIGNAL \Receptor|uart|baud_cont[1]~16\ : std_logic;
@@ -947,10 +948,10 @@ SIGNAL \antirrebotes:4:antirreb|cont\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \antirrebotes:3:antirreb|cont\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \antirrebotes:1:antirreb|cont\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \Parte_B|Memoria|dato_ok\ : std_logic_vector(10 DOWNTO 0);
+SIGNAL \Clock|count_0\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \Receptor|uart|baud_cont\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \antirrebotes:2:antirreb|cont\ : std_logic_vector(3 DOWNTO 0);
 SIGNAL \Receptor|seg|clkdiv\ : std_logic_vector(19 DOWNTO 0);
-SIGNAL \Receptor|uart|baud_cont\ : std_logic_vector(12 DOWNTO 0);
-SIGNAL \Clock|count_0\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \Clock|count_1\ : std_logic_vector(11 DOWNTO 0);
 SIGNAL \Parte_B|Contador|cont\ : std_logic_vector(5 DOWNTO 0);
 SIGNAL \Receptor|uart|bit_cont\ : std_logic_vector(2 DOWNTO 0);
@@ -3556,9 +3557,9 @@ PORT MAP (
 	q => \antirrebotes:4:antirreb|cont\(0));
 
 -- Location: LCCOMB_X3_Y9_N10
-\antirrebotes:4:antirreb|cont[3]~2\ : cycloneive_lcell_comb
+\antirrebotes:4:antirreb|cont[1]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:4:antirreb|cont[3]~2_combout\ = (!\antirrebotes:4:antirreb|y~0_combout\ & (\entry[4]~input_o\ $ (\antirrebotes:4:antirreb|y~q\)))
+-- \antirrebotes:4:antirreb|cont[1]~2_combout\ = (!\antirrebotes:4:antirreb|y~0_combout\ & (\entry[4]~input_o\ $ (\antirrebotes:4:antirreb|y~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3569,12 +3570,12 @@ PORT MAP (
 	datab => \antirrebotes:4:antirreb|y~0_combout\,
 	datac => \entry[4]~input_o\,
 	datad => \antirrebotes:4:antirreb|y~q\,
-	combout => \antirrebotes:4:antirreb|cont[3]~2_combout\);
+	combout => \antirrebotes:4:antirreb|cont[1]~2_combout\);
 
 -- Location: LCCOMB_X3_Y9_N8
 \antirrebotes:4:antirreb|cont~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:4:antirreb|cont~4_combout\ = (\antirrebotes:4:antirreb|cont[3]~2_combout\ & (\antirrebotes:4:antirreb|cont\(0) $ (\antirrebotes:4:antirreb|cont\(1))))
+-- \antirrebotes:4:antirreb|cont~4_combout\ = (\antirrebotes:4:antirreb|cont[1]~2_combout\ & (\antirrebotes:4:antirreb|cont\(0) $ (\antirrebotes:4:antirreb|cont\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3584,7 +3585,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \antirrebotes:4:antirreb|cont\(0),
 	datac => \antirrebotes:4:antirreb|cont\(1),
-	datad => \antirrebotes:4:antirreb|cont[3]~2_combout\,
+	datad => \antirrebotes:4:antirreb|cont[1]~2_combout\,
 	combout => \antirrebotes:4:antirreb|cont~4_combout\);
 
 -- Location: FF_X3_Y9_N9
@@ -3604,7 +3605,7 @@ PORT MAP (
 -- Location: LCCOMB_X3_Y9_N6
 \antirrebotes:4:antirreb|cont~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:4:antirreb|cont~3_combout\ = (\antirrebotes:4:antirreb|cont[3]~2_combout\ & (\antirrebotes:4:antirreb|cont\(2) $ (((\antirrebotes:4:antirreb|cont\(0) & \antirrebotes:4:antirreb|cont\(1))))))
+-- \antirrebotes:4:antirreb|cont~3_combout\ = (\antirrebotes:4:antirreb|cont[1]~2_combout\ & (\antirrebotes:4:antirreb|cont\(2) $ (((\antirrebotes:4:antirreb|cont\(0) & \antirrebotes:4:antirreb|cont\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3615,7 +3616,7 @@ PORT MAP (
 	dataa => \antirrebotes:4:antirreb|cont\(0),
 	datab => \antirrebotes:4:antirreb|cont\(1),
 	datac => \antirrebotes:4:antirreb|cont\(2),
-	datad => \antirrebotes:4:antirreb|cont[3]~2_combout\,
+	datad => \antirrebotes:4:antirreb|cont[1]~2_combout\,
 	combout => \antirrebotes:4:antirreb|cont~3_combout\);
 
 -- Location: FF_X3_Y9_N7
@@ -3815,9 +3816,9 @@ PORT MAP (
 	q => \antirrebotes:3:antirreb|cont\(0));
 
 -- Location: LCCOMB_X26_Y12_N18
-\antirrebotes:3:antirreb|cont[2]~2\ : cycloneive_lcell_comb
+\antirrebotes:3:antirreb|cont[0]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:3:antirreb|cont[2]~2_combout\ = (!\antirrebotes:3:antirreb|y~0_combout\ & (\entry[3]~input_o\ $ (\antirrebotes:3:antirreb|y~q\)))
+-- \antirrebotes:3:antirreb|cont[0]~2_combout\ = (!\antirrebotes:3:antirreb|y~0_combout\ & (\entry[3]~input_o\ $ (\antirrebotes:3:antirreb|y~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3828,12 +3829,12 @@ PORT MAP (
 	dataa => \entry[3]~input_o\,
 	datac => \antirrebotes:3:antirreb|y~0_combout\,
 	datad => \antirrebotes:3:antirreb|y~q\,
-	combout => \antirrebotes:3:antirreb|cont[2]~2_combout\);
+	combout => \antirrebotes:3:antirreb|cont[0]~2_combout\);
 
 -- Location: LCCOMB_X26_Y12_N4
 \antirrebotes:3:antirreb|cont~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:3:antirreb|cont~4_combout\ = (\antirrebotes:3:antirreb|cont[2]~2_combout\ & (\antirrebotes:3:antirreb|cont\(0) $ (\antirrebotes:3:antirreb|cont\(1))))
+-- \antirrebotes:3:antirreb|cont~4_combout\ = (\antirrebotes:3:antirreb|cont[0]~2_combout\ & (\antirrebotes:3:antirreb|cont\(0) $ (\antirrebotes:3:antirreb|cont\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3843,7 +3844,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \antirrebotes:3:antirreb|cont\(0),
 	datac => \antirrebotes:3:antirreb|cont\(1),
-	datad => \antirrebotes:3:antirreb|cont[2]~2_combout\,
+	datad => \antirrebotes:3:antirreb|cont[0]~2_combout\,
 	combout => \antirrebotes:3:antirreb|cont~4_combout\);
 
 -- Location: FF_X26_Y12_N5
@@ -3863,7 +3864,7 @@ PORT MAP (
 -- Location: LCCOMB_X26_Y12_N10
 \antirrebotes:3:antirreb|cont~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:3:antirreb|cont~3_combout\ = (\antirrebotes:3:antirreb|cont[2]~2_combout\ & (\antirrebotes:3:antirreb|cont\(2) $ (((\antirrebotes:3:antirreb|cont\(0) & \antirrebotes:3:antirreb|cont\(1))))))
+-- \antirrebotes:3:antirreb|cont~3_combout\ = (\antirrebotes:3:antirreb|cont[0]~2_combout\ & (\antirrebotes:3:antirreb|cont\(2) $ (((\antirrebotes:3:antirreb|cont\(0) & \antirrebotes:3:antirreb|cont\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3874,7 +3875,7 @@ PORT MAP (
 	dataa => \antirrebotes:3:antirreb|cont\(0),
 	datab => \antirrebotes:3:antirreb|cont\(1),
 	datac => \antirrebotes:3:antirreb|cont\(2),
-	datad => \antirrebotes:3:antirreb|cont[2]~2_combout\,
+	datad => \antirrebotes:3:antirreb|cont[0]~2_combout\,
 	combout => \antirrebotes:3:antirreb|cont~3_combout\);
 
 -- Location: FF_X26_Y12_N11
@@ -4087,9 +4088,9 @@ PORT MAP (
 	q => \antirrebotes:1:antirreb|cont\(0));
 
 -- Location: LCCOMB_X24_Y12_N18
-\antirrebotes:1:antirreb|cont[3]~2\ : cycloneive_lcell_comb
+\antirrebotes:1:antirreb|cont[0]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:1:antirreb|cont[3]~2_combout\ = (!\antirrebotes:1:antirreb|y~0_combout\ & (\entry[1]~input_o\ $ (\antirrebotes:1:antirreb|y~q\)))
+-- \antirrebotes:1:antirreb|cont[0]~2_combout\ = (!\antirrebotes:1:antirreb|y~0_combout\ & (\entry[1]~input_o\ $ (\antirrebotes:1:antirreb|y~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4100,12 +4101,12 @@ PORT MAP (
 	dataa => \antirrebotes:1:antirreb|y~0_combout\,
 	datac => \entry[1]~input_o\,
 	datad => \antirrebotes:1:antirreb|y~q\,
-	combout => \antirrebotes:1:antirreb|cont[3]~2_combout\);
+	combout => \antirrebotes:1:antirreb|cont[0]~2_combout\);
 
 -- Location: LCCOMB_X24_Y12_N12
 \antirrebotes:1:antirreb|cont~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:1:antirreb|cont~4_combout\ = (\antirrebotes:1:antirreb|cont[3]~2_combout\ & (\antirrebotes:1:antirreb|cont\(0) $ (\antirrebotes:1:antirreb|cont\(1))))
+-- \antirrebotes:1:antirreb|cont~4_combout\ = (\antirrebotes:1:antirreb|cont[0]~2_combout\ & (\antirrebotes:1:antirreb|cont\(0) $ (\antirrebotes:1:antirreb|cont\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4115,7 +4116,7 @@ GENERIC MAP (
 PORT MAP (
 	datab => \antirrebotes:1:antirreb|cont\(0),
 	datac => \antirrebotes:1:antirreb|cont\(1),
-	datad => \antirrebotes:1:antirreb|cont[3]~2_combout\,
+	datad => \antirrebotes:1:antirreb|cont[0]~2_combout\,
 	combout => \antirrebotes:1:antirreb|cont~4_combout\);
 
 -- Location: FF_X24_Y12_N13
@@ -4135,7 +4136,7 @@ PORT MAP (
 -- Location: LCCOMB_X24_Y12_N6
 \antirrebotes:1:antirreb|cont~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:1:antirreb|cont~3_combout\ = (\antirrebotes:1:antirreb|cont[3]~2_combout\ & (\antirrebotes:1:antirreb|cont\(2) $ (((\antirrebotes:1:antirreb|cont\(1) & \antirrebotes:1:antirreb|cont\(0))))))
+-- \antirrebotes:1:antirreb|cont~3_combout\ = (\antirrebotes:1:antirreb|cont[0]~2_combout\ & (\antirrebotes:1:antirreb|cont\(2) $ (((\antirrebotes:1:antirreb|cont\(1) & \antirrebotes:1:antirreb|cont\(0))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4146,7 +4147,7 @@ PORT MAP (
 	dataa => \antirrebotes:1:antirreb|cont\(1),
 	datab => \antirrebotes:1:antirreb|cont\(0),
 	datac => \antirrebotes:1:antirreb|cont\(2),
-	datad => \antirrebotes:1:antirreb|cont[3]~2_combout\,
+	datad => \antirrebotes:1:antirreb|cont[0]~2_combout\,
 	combout => \antirrebotes:1:antirreb|cont~3_combout\);
 
 -- Location: FF_X24_Y12_N7
@@ -4359,9 +4360,9 @@ PORT MAP (
 	q => \antirrebotes:0:antirreb|cont\(0));
 
 -- Location: LCCOMB_X22_Y12_N18
-\antirrebotes:0:antirreb|cont[2]~2\ : cycloneive_lcell_comb
+\antirrebotes:0:antirreb|cont[3]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:0:antirreb|cont[2]~2_combout\ = (!\antirrebotes:0:antirreb|y~0_combout\ & (\antirrebotes:0:antirreb|y~q\ $ (\entry[0]~input_o\)))
+-- \antirrebotes:0:antirreb|cont[3]~2_combout\ = (!\antirrebotes:0:antirreb|y~0_combout\ & (\antirrebotes:0:antirreb|y~q\ $ (\entry[0]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4372,12 +4373,12 @@ PORT MAP (
 	dataa => \antirrebotes:0:antirreb|y~q\,
 	datac => \entry[0]~input_o\,
 	datad => \antirrebotes:0:antirreb|y~0_combout\,
-	combout => \antirrebotes:0:antirreb|cont[2]~2_combout\);
+	combout => \antirrebotes:0:antirreb|cont[3]~2_combout\);
 
 -- Location: LCCOMB_X22_Y12_N4
 \antirrebotes:0:antirreb|cont~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:0:antirreb|cont~4_combout\ = (\antirrebotes:0:antirreb|cont[2]~2_combout\ & (\antirrebotes:0:antirreb|cont\(0) $ (\antirrebotes:0:antirreb|cont\(1))))
+-- \antirrebotes:0:antirreb|cont~4_combout\ = (\antirrebotes:0:antirreb|cont[3]~2_combout\ & (\antirrebotes:0:antirreb|cont\(0) $ (\antirrebotes:0:antirreb|cont\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4387,7 +4388,7 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \antirrebotes:0:antirreb|cont\(0),
 	datac => \antirrebotes:0:antirreb|cont\(1),
-	datad => \antirrebotes:0:antirreb|cont[2]~2_combout\,
+	datad => \antirrebotes:0:antirreb|cont[3]~2_combout\,
 	combout => \antirrebotes:0:antirreb|cont~4_combout\);
 
 -- Location: FF_X22_Y12_N5
@@ -4407,7 +4408,7 @@ PORT MAP (
 -- Location: LCCOMB_X22_Y12_N26
 \antirrebotes:0:antirreb|cont~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:0:antirreb|cont~3_combout\ = (\antirrebotes:0:antirreb|cont[2]~2_combout\ & (\antirrebotes:0:antirreb|cont\(2) $ (((\antirrebotes:0:antirreb|cont\(0) & \antirrebotes:0:antirreb|cont\(1))))))
+-- \antirrebotes:0:antirreb|cont~3_combout\ = (\antirrebotes:0:antirreb|cont[3]~2_combout\ & (\antirrebotes:0:antirreb|cont\(2) $ (((\antirrebotes:0:antirreb|cont\(0) & \antirrebotes:0:antirreb|cont\(1))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4418,7 +4419,7 @@ PORT MAP (
 	dataa => \antirrebotes:0:antirreb|cont\(0),
 	datab => \antirrebotes:0:antirreb|cont\(1),
 	datac => \antirrebotes:0:antirreb|cont\(2),
-	datad => \antirrebotes:0:antirreb|cont[2]~2_combout\,
+	datad => \antirrebotes:0:antirreb|cont[3]~2_combout\,
 	combout => \antirrebotes:0:antirreb|cont~3_combout\);
 
 -- Location: FF_X22_Y12_N27
@@ -4618,9 +4619,9 @@ PORT MAP (
 	q => \antirrebotes:2:antirreb|cont\(0));
 
 -- Location: LCCOMB_X23_Y12_N28
-\antirrebotes:2:antirreb|cont[0]~2\ : cycloneive_lcell_comb
+\antirrebotes:2:antirreb|cont[1]~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:2:antirreb|cont[0]~2_combout\ = (!\antirrebotes:2:antirreb|y~0_combout\ & (\antirrebotes:2:antirreb|y~q\ $ (\entry[2]~input_o\)))
+-- \antirrebotes:2:antirreb|cont[1]~2_combout\ = (!\antirrebotes:2:antirreb|y~0_combout\ & (\antirrebotes:2:antirreb|y~q\ $ (\entry[2]~input_o\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4631,12 +4632,12 @@ PORT MAP (
 	datab => \antirrebotes:2:antirreb|y~0_combout\,
 	datac => \antirrebotes:2:antirreb|y~q\,
 	datad => \entry[2]~input_o\,
-	combout => \antirrebotes:2:antirreb|cont[0]~2_combout\);
+	combout => \antirrebotes:2:antirreb|cont[1]~2_combout\);
 
 -- Location: LCCOMB_X23_Y12_N22
 \antirrebotes:2:antirreb|cont~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:2:antirreb|cont~4_combout\ = (\antirrebotes:2:antirreb|cont[0]~2_combout\ & (\antirrebotes:2:antirreb|cont\(0) $ (\antirrebotes:2:antirreb|cont\(1))))
+-- \antirrebotes:2:antirreb|cont~4_combout\ = (\antirrebotes:2:antirreb|cont[1]~2_combout\ & (\antirrebotes:2:antirreb|cont\(0) $ (\antirrebotes:2:antirreb|cont\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4646,7 +4647,7 @@ GENERIC MAP (
 PORT MAP (
 	datab => \antirrebotes:2:antirreb|cont\(0),
 	datac => \antirrebotes:2:antirreb|cont\(1),
-	datad => \antirrebotes:2:antirreb|cont[0]~2_combout\,
+	datad => \antirrebotes:2:antirreb|cont[1]~2_combout\,
 	combout => \antirrebotes:2:antirreb|cont~4_combout\);
 
 -- Location: FF_X23_Y12_N23
@@ -4666,7 +4667,7 @@ PORT MAP (
 -- Location: LCCOMB_X23_Y12_N12
 \antirrebotes:2:antirreb|cont~3\ : cycloneive_lcell_comb
 -- Equation(s):
--- \antirrebotes:2:antirreb|cont~3_combout\ = (\antirrebotes:2:antirreb|cont[0]~2_combout\ & (\antirrebotes:2:antirreb|cont\(2) $ (((\antirrebotes:2:antirreb|cont\(1) & \antirrebotes:2:antirreb|cont\(0))))))
+-- \antirrebotes:2:antirreb|cont~3_combout\ = (\antirrebotes:2:antirreb|cont[1]~2_combout\ & (\antirrebotes:2:antirreb|cont\(2) $ (((\antirrebotes:2:antirreb|cont\(1) & \antirrebotes:2:antirreb|cont\(0))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -4677,7 +4678,7 @@ PORT MAP (
 	dataa => \antirrebotes:2:antirreb|cont\(1),
 	datab => \antirrebotes:2:antirreb|cont\(0),
 	datac => \antirrebotes:2:antirreb|cont\(2),
-	datad => \antirrebotes:2:antirreb|cont[0]~2_combout\,
+	datad => \antirrebotes:2:antirreb|cont[1]~2_combout\,
 	combout => \antirrebotes:2:antirreb|cont~3_combout\);
 
 -- Location: FF_X23_Y12_N13
@@ -5368,9 +5369,9 @@ PORT MAP (
 	combout => \Parte_B|Contador|Mux3~0_combout\);
 
 -- Location: LCCOMB_X17_Y13_N30
-\Parte_B|Contador|cont[3]~6\ : cycloneive_lcell_comb
+\Parte_B|Contador|cont[0]~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|cont[3]~6_combout\ = (!\Parte_B|Contador|Mux1~0_combout\ & (!\Parte_B|Contador|Mux3~0_combout\ & ((!\Parte_B|Contador|opcion\(4)) # (!\Parte_B|Contador|Mux0~1_combout\))))
+-- \Parte_B|Contador|cont[0]~6_combout\ = (!\Parte_B|Contador|Mux1~0_combout\ & (!\Parte_B|Contador|Mux3~0_combout\ & ((!\Parte_B|Contador|opcion\(4)) # (!\Parte_B|Contador|Mux0~1_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5382,12 +5383,12 @@ PORT MAP (
 	datab => \Parte_B|Contador|Mux0~1_combout\,
 	datac => \Parte_B|Contador|opcion\(4),
 	datad => \Parte_B|Contador|Mux3~0_combout\,
-	combout => \Parte_B|Contador|cont[3]~6_combout\);
+	combout => \Parte_B|Contador|cont[0]~6_combout\);
 
 -- Location: LCCOMB_X18_Y13_N10
-\Parte_B|Contador|cont[3]~13\ : cycloneive_lcell_comb
+\Parte_B|Contador|cont[0]~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|cont[3]~13_combout\ = (!\Parte_B|Contador|contador~11_combout\ & ((\Parte_B|Contador|Mux2~1_combout\) # ((!\Parte_B|Contador|cont[3]~6_combout\) # (!\Parte_B|Contador|Mux4~0_combout\))))
+-- \Parte_B|Contador|cont[0]~13_combout\ = (!\Parte_B|Contador|contador~11_combout\ & ((\Parte_B|Contador|Mux2~1_combout\) # ((!\Parte_B|Contador|cont[0]~6_combout\) # (!\Parte_B|Contador|Mux4~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5398,8 +5399,8 @@ PORT MAP (
 	dataa => \Parte_B|Contador|Mux2~1_combout\,
 	datab => \Parte_B|Contador|Mux4~0_combout\,
 	datac => \Parte_B|Contador|contador~11_combout\,
-	datad => \Parte_B|Contador|cont[3]~6_combout\,
-	combout => \Parte_B|Contador|cont[3]~13_combout\);
+	datad => \Parte_B|Contador|cont[0]~6_combout\,
+	combout => \Parte_B|Contador|cont[0]~13_combout\);
 
 -- Location: FF_X19_Y13_N13
 \Parte_B|Contador|cont[0]\ : dffeas
@@ -5413,7 +5414,7 @@ PORT MAP (
 	asdata => \Parte_B|Contador|cont[0]~7_combout\,
 	clrn => \Parte_B|FSM|ALT_INV_current_state.ready~q\,
 	sload => VCC,
-	ena => \Parte_B|Contador|cont[3]~13_combout\,
+	ena => \Parte_B|Contador|cont[0]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Parte_B|Contador|cont\(0));
@@ -5481,7 +5482,7 @@ PORT MAP (
 	clk => \Parte_B|FSM|current_state.contador~clkctrl_outclk\,
 	d => \Parte_B|Contador|cont[1]~9_combout\,
 	clrn => \Parte_B|FSM|ALT_INV_current_state.ready~q\,
-	ena => \Parte_B|Contador|cont[3]~13_combout\,
+	ena => \Parte_B|Contador|cont[0]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Parte_B|Contador|cont\(1));
@@ -5515,7 +5516,7 @@ PORT MAP (
 	clk => \Parte_B|FSM|current_state.contador~clkctrl_outclk\,
 	d => \Parte_B|Contador|cont[2]~11_combout\,
 	clrn => \Parte_B|FSM|ALT_INV_current_state.ready~q\,
-	ena => \Parte_B|Contador|cont[3]~13_combout\,
+	ena => \Parte_B|Contador|cont[0]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Parte_B|Contador|cont\(2));
@@ -5549,7 +5550,7 @@ PORT MAP (
 	clk => \Parte_B|FSM|current_state.contador~clkctrl_outclk\,
 	d => \Parte_B|Contador|cont[3]~14_combout\,
 	clrn => \Parte_B|FSM|ALT_INV_current_state.ready~q\,
-	ena => \Parte_B|Contador|cont[3]~13_combout\,
+	ena => \Parte_B|Contador|cont[0]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Parte_B|Contador|cont\(3));
@@ -5583,7 +5584,7 @@ PORT MAP (
 	clk => \Parte_B|FSM|current_state.contador~clkctrl_outclk\,
 	d => \Parte_B|Contador|cont[4]~16_combout\,
 	clrn => \Parte_B|FSM|ALT_INV_current_state.ready~q\,
-	ena => \Parte_B|Contador|cont[3]~13_combout\,
+	ena => \Parte_B|Contador|cont[0]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Parte_B|Contador|cont\(4));
@@ -5648,7 +5649,7 @@ PORT MAP (
 	clk => \Parte_B|FSM|current_state.contador~clkctrl_outclk\,
 	d => \Parte_B|Contador|cont[5]~18_combout\,
 	clrn => \Parte_B|FSM|ALT_INV_current_state.ready~q\,
-	ena => \Parte_B|Contador|cont[3]~13_combout\,
+	ena => \Parte_B|Contador|cont[0]~13_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Parte_B|Contador|cont\(5));
@@ -5954,9 +5955,9 @@ PORT MAP (
 	outclk => \Parte_B|FSM|current_state.memoria~clkctrl_outclk\);
 
 -- Location: LCCOMB_X19_Y13_N10
-\Parte_B|Contador|contToaddress_out[3]~5\ : cycloneive_lcell_comb
+\Parte_B|Contador|contToaddress_out[5]~5\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[3]~5_combout\ = (!\Parte_B|Contador|Mux1~0_combout\ & ((\Parte_B|Contador|opcion\(2)) # ((!\Parte_B|Contador|opcion\(1)) # (!\Parte_B|Contador|Mux2~0_combout\))))
+-- \Parte_B|Contador|contToaddress_out[5]~5_combout\ = (!\Parte_B|Contador|Mux1~0_combout\ & ((\Parte_B|Contador|opcion\(2)) # ((!\Parte_B|Contador|opcion\(1)) # (!\Parte_B|Contador|Mux2~0_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5968,12 +5969,12 @@ PORT MAP (
 	datab => \Parte_B|Contador|Mux2~0_combout\,
 	datac => \Parte_B|Contador|opcion\(1),
 	datad => \Parte_B|Contador|Mux1~0_combout\,
-	combout => \Parte_B|Contador|contToaddress_out[3]~5_combout\);
+	combout => \Parte_B|Contador|contToaddress_out[5]~5_combout\);
 
 -- Location: LCCOMB_X19_Y13_N28
-\Parte_B|Contador|contToaddress_out[3]~4\ : cycloneive_lcell_comb
+\Parte_B|Contador|contToaddress_out[5]~4\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[3]~4_combout\ = (\Parte_B|Contador|Mux2~0_combout\ & (!\Parte_B|Contador|Mux1~0_combout\ & (\Parte_B|Contador|opcion\(2) $ (\Parte_B|Contador|opcion\(1)))))
+-- \Parte_B|Contador|contToaddress_out[5]~4_combout\ = (\Parte_B|Contador|Mux2~0_combout\ & (!\Parte_B|Contador|Mux1~0_combout\ & (\Parte_B|Contador|opcion\(2) $ (\Parte_B|Contador|opcion\(1)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -5985,7 +5986,7 @@ PORT MAP (
 	datab => \Parte_B|Contador|Mux2~0_combout\,
 	datac => \Parte_B|Contador|opcion\(1),
 	datad => \Parte_B|Contador|Mux1~0_combout\,
-	combout => \Parte_B|Contador|contToaddress_out[3]~4_combout\);
+	combout => \Parte_B|Contador|contToaddress_out[5]~4_combout\);
 
 -- Location: LCCOMB_X19_Y13_N14
 \Parte_B|Contador|Add1~0\ : cycloneive_lcell_comb
@@ -6094,8 +6095,8 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y12_N18
 \Parte_B|Contador|contToaddress_out[5]~11\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[5]~11_combout\ = (\Parte_B|Contador|contToaddress_out[3]~5_combout\ & ((\Parte_B|Contador|contToaddress_out[3]~4_combout\ & ((\Parte_B|Contador|Add1~10_combout\))) # (!\Parte_B|Contador|contToaddress_out[3]~4_combout\ & 
--- (\Parte_B|Contador|cont\(5))))) # (!\Parte_B|Contador|contToaddress_out[3]~5_combout\ & (\Parte_B|Contador|contToaddress_out[3]~4_combout\ & (\Parte_B|Contador|cont\(5))))
+-- \Parte_B|Contador|contToaddress_out[5]~11_combout\ = (\Parte_B|Contador|contToaddress_out[5]~5_combout\ & ((\Parte_B|Contador|contToaddress_out[5]~4_combout\ & ((\Parte_B|Contador|Add1~10_combout\))) # (!\Parte_B|Contador|contToaddress_out[5]~4_combout\ & 
+-- (\Parte_B|Contador|cont\(5))))) # (!\Parte_B|Contador|contToaddress_out[5]~5_combout\ & (\Parte_B|Contador|contToaddress_out[5]~4_combout\ & (\Parte_B|Contador|cont\(5))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6103,8 +6104,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Parte_B|Contador|contToaddress_out[3]~5_combout\,
-	datab => \Parte_B|Contador|contToaddress_out[3]~4_combout\,
+	dataa => \Parte_B|Contador|contToaddress_out[5]~5_combout\,
+	datab => \Parte_B|Contador|contToaddress_out[5]~4_combout\,
 	datac => \Parte_B|Contador|cont\(5),
 	datad => \Parte_B|Contador|Add1~10_combout\,
 	combout => \Parte_B|Contador|contToaddress_out[5]~11_combout\);
@@ -6198,7 +6199,7 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y12_N16
 \Parte_B|Contador|contToaddress_out[5]~10\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[5]~10_combout\ = (\Parte_B|Contador|contToaddress_out[3]~4_combout\ & ((\Parte_B|Contador|cont\(4)) # ((\Parte_B|Contador|cont\(3))))) # (!\Parte_B|Contador|contToaddress_out[3]~4_combout\ & 
+-- \Parte_B|Contador|contToaddress_out[5]~10_combout\ = (\Parte_B|Contador|contToaddress_out[5]~4_combout\ & ((\Parte_B|Contador|cont\(4)) # ((\Parte_B|Contador|cont\(3))))) # (!\Parte_B|Contador|contToaddress_out[5]~4_combout\ & 
 -- (((\Parte_B|Contador|Add2~8_combout\))))
 
 -- pragma translate_off
@@ -6210,13 +6211,13 @@ PORT MAP (
 	dataa => \Parte_B|Contador|cont\(4),
 	datab => \Parte_B|Contador|Add2~8_combout\,
 	datac => \Parte_B|Contador|cont\(3),
-	datad => \Parte_B|Contador|contToaddress_out[3]~4_combout\,
+	datad => \Parte_B|Contador|contToaddress_out[5]~4_combout\,
 	combout => \Parte_B|Contador|contToaddress_out[5]~10_combout\);
 
 -- Location: LCCOMB_X19_Y12_N26
 \Parte_B|Contador|contToaddress_out[5]~12\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[5]~12_combout\ = (!\Parte_B|Contador|contador~11_combout\ & (\Parte_B|Contador|contToaddress_out[5]~11_combout\ $ (((\Parte_B|Contador|contToaddress_out[3]~5_combout\) # 
+-- \Parte_B|Contador|contToaddress_out[5]~12_combout\ = (!\Parte_B|Contador|contador~11_combout\ & (\Parte_B|Contador|contToaddress_out[5]~11_combout\ $ (((\Parte_B|Contador|contToaddress_out[5]~5_combout\) # 
 -- (!\Parte_B|Contador|contToaddress_out[5]~10_combout\)))))
 
 -- pragma translate_off
@@ -6225,7 +6226,7 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Parte_B|Contador|contToaddress_out[3]~5_combout\,
+	dataa => \Parte_B|Contador|contToaddress_out[5]~5_combout\,
 	datab => \Parte_B|Contador|contToaddress_out[5]~11_combout\,
 	datac => \Parte_B|Contador|contador~11_combout\,
 	datad => \Parte_B|Contador|contToaddress_out[5]~10_combout\,
@@ -6347,7 +6348,7 @@ PORT MAP (
 -- Location: LCCOMB_X18_Y13_N16
 \Parte_B|Contador|Mux7~0\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|Mux7~0_combout\ = (\Parte_B|Contador|cont\(0) & (((!\Parte_B|Contador|Mux2~1_combout\ & !\Parte_B|Contador|Mux4~0_combout\)) # (!\Parte_B|Contador|cont[3]~6_combout\)))
+-- \Parte_B|Contador|Mux7~0_combout\ = (\Parte_B|Contador|cont\(0) & (((!\Parte_B|Contador|Mux2~1_combout\ & !\Parte_B|Contador|Mux4~0_combout\)) # (!\Parte_B|Contador|cont[0]~6_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6358,7 +6359,7 @@ PORT MAP (
 	dataa => \Parte_B|Contador|Mux2~1_combout\,
 	datab => \Parte_B|Contador|Mux4~0_combout\,
 	datac => \Parte_B|Contador|cont\(0),
-	datad => \Parte_B|Contador|cont[3]~6_combout\,
+	datad => \Parte_B|Contador|cont[0]~6_combout\,
 	combout => \Parte_B|Contador|Mux7~0_combout\);
 
 -- Location: LCCOMB_X19_Y13_N30
@@ -6381,7 +6382,7 @@ PORT MAP (
 -- Location: LCCOMB_X17_Y12_N30
 \Parte_B|Contador|Mux7~2\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|Mux7~2_combout\ = (\Parte_B|Contador|contador~11_combout\) # ((!\Parte_B|Contador|Mux7~0_combout\ & ((!\Parte_B|Contador|Mux7~1_combout\) # (!\Parte_B|Contador|cont[3]~6_combout\))))
+-- \Parte_B|Contador|Mux7~2_combout\ = (\Parte_B|Contador|contador~11_combout\) # ((!\Parte_B|Contador|Mux7~0_combout\ & ((!\Parte_B|Contador|Mux7~1_combout\) # (!\Parte_B|Contador|cont[0]~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6390,7 +6391,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Parte_B|Contador|Mux7~0_combout\,
-	datab => \Parte_B|Contador|cont[3]~6_combout\,
+	datab => \Parte_B|Contador|cont[0]~6_combout\,
 	datac => \Parte_B|Contador|Mux7~1_combout\,
 	datad => \Parte_B|Contador|contador~11_combout\,
 	combout => \Parte_B|Contador|Mux7~2_combout\);
@@ -6413,7 +6414,7 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y12_N22
 \Parte_B|Contador|contToaddress_out[3]~7\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[3]~7_combout\ = (!\Parte_B|Contador|contToaddress_out[3]~5_combout\ & ((\Parte_B|Contador|contToaddress_out[3]~4_combout\ & (!\Parte_B|Contador|cont\(3))) # (!\Parte_B|Contador|contToaddress_out[3]~4_combout\ & 
+-- \Parte_B|Contador|contToaddress_out[3]~7_combout\ = (!\Parte_B|Contador|contToaddress_out[5]~5_combout\ & ((\Parte_B|Contador|contToaddress_out[5]~4_combout\ & (!\Parte_B|Contador|cont\(3))) # (!\Parte_B|Contador|contToaddress_out[5]~4_combout\ & 
 -- ((\Parte_B|Contador|Add2~4_combout\)))))
 
 -- pragma translate_off
@@ -6422,8 +6423,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Parte_B|Contador|contToaddress_out[3]~5_combout\,
-	datab => \Parte_B|Contador|contToaddress_out[3]~4_combout\,
+	dataa => \Parte_B|Contador|contToaddress_out[5]~5_combout\,
+	datab => \Parte_B|Contador|contToaddress_out[5]~4_combout\,
 	datac => \Parte_B|Contador|cont\(3),
 	datad => \Parte_B|Contador|Add2~4_combout\,
 	combout => \Parte_B|Contador|contToaddress_out[3]~7_combout\);
@@ -6450,7 +6451,7 @@ PORT MAP (
 \Parte_B|Contador|contToaddress_out[3]~9\ : cycloneive_lcell_comb
 -- Equation(s):
 -- \Parte_B|Contador|contToaddress_out[3]~9_combout\ = (\Parte_B|Contador|contador~11_combout\) # ((!\Parte_B|Contador|contToaddress_out[3]~7_combout\ & ((!\Parte_B|Contador|contToaddress_out[3]~8_combout\) # 
--- (!\Parte_B|Contador|contToaddress_out[3]~5_combout\))))
+-- (!\Parte_B|Contador|contToaddress_out[5]~5_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6459,7 +6460,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Parte_B|Contador|contToaddress_out[3]~7_combout\,
-	datab => \Parte_B|Contador|contToaddress_out[3]~5_combout\,
+	datab => \Parte_B|Contador|contToaddress_out[5]~5_combout\,
 	datac => \Parte_B|Contador|contador~11_combout\,
 	datad => \Parte_B|Contador|contToaddress_out[3]~8_combout\,
 	combout => \Parte_B|Contador|contToaddress_out[3]~9_combout\);
@@ -6500,8 +6501,8 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y12_N24
 \Parte_B|Contador|contToaddress_out[4]~6\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[4]~6_combout\ = (\Parte_B|Contador|contToaddress_out[3]~5_combout\ & ((\Parte_B|Contador|contToaddress_out[3]~4_combout\) # ((\Parte_B|Contador|cont\(4))))) # (!\Parte_B|Contador|contToaddress_out[3]~5_combout\ & 
--- (!\Parte_B|Contador|contToaddress_out[3]~4_combout\ & ((\Parte_B|Contador|Add2~6_combout\))))
+-- \Parte_B|Contador|contToaddress_out[4]~6_combout\ = (\Parte_B|Contador|contToaddress_out[5]~5_combout\ & ((\Parte_B|Contador|contToaddress_out[5]~4_combout\) # ((\Parte_B|Contador|cont\(4))))) # (!\Parte_B|Contador|contToaddress_out[5]~5_combout\ & 
+-- (!\Parte_B|Contador|contToaddress_out[5]~4_combout\ & ((\Parte_B|Contador|Add2~6_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6509,8 +6510,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Parte_B|Contador|contToaddress_out[3]~5_combout\,
-	datab => \Parte_B|Contador|contToaddress_out[3]~4_combout\,
+	dataa => \Parte_B|Contador|contToaddress_out[5]~5_combout\,
+	datab => \Parte_B|Contador|contToaddress_out[5]~4_combout\,
 	datac => \Parte_B|Contador|cont\(4),
 	datad => \Parte_B|Contador|Add2~6_combout\,
 	combout => \Parte_B|Contador|contToaddress_out[4]~6_combout\);
@@ -6518,8 +6519,8 @@ PORT MAP (
 -- Location: LCCOMB_X19_Y12_N20
 \Parte_B|Contador|contToaddress_out[4]~13\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Parte_B|Contador|contToaddress_out[4]~13_combout\ = (!\Parte_B|Contador|contador~11_combout\ & ((\Parte_B|Contador|contToaddress_out[3]~4_combout\ & ((\Parte_B|Contador|Add1~8_combout\) # (!\Parte_B|Contador|contToaddress_out[4]~6_combout\))) # 
--- (!\Parte_B|Contador|contToaddress_out[3]~4_combout\ & ((\Parte_B|Contador|contToaddress_out[4]~6_combout\)))))
+-- \Parte_B|Contador|contToaddress_out[4]~13_combout\ = (!\Parte_B|Contador|contador~11_combout\ & ((\Parte_B|Contador|contToaddress_out[5]~4_combout\ & ((\Parte_B|Contador|Add1~8_combout\) # (!\Parte_B|Contador|contToaddress_out[4]~6_combout\))) # 
+-- (!\Parte_B|Contador|contToaddress_out[5]~4_combout\ & ((\Parte_B|Contador|contToaddress_out[4]~6_combout\)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6528,7 +6529,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Parte_B|Contador|Add1~8_combout\,
-	datab => \Parte_B|Contador|contToaddress_out[3]~4_combout\,
+	datab => \Parte_B|Contador|contToaddress_out[5]~4_combout\,
 	datac => \Parte_B|Contador|contador~11_combout\,
 	datad => \Parte_B|Contador|contToaddress_out[4]~6_combout\,
 	combout => \Parte_B|Contador|contToaddress_out[4]~13_combout\);
@@ -8727,9 +8728,9 @@ PORT MAP (
 	q => \Receptor|uart|state.espera~q\);
 
 -- Location: LCCOMB_X23_Y20_N26
-\Receptor|uart|baud_cont[10]~41\ : cycloneive_lcell_comb
+\Receptor|uart|baud_cont[0]~41\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Receptor|uart|baud_cont[10]~41_combout\ = (!\Receptor|uart|state.espera~q\ & (((!\Receptor|uart|Equal0~3_combout\) # (!\rx_serial~input_o\)) # (!\Receptor|uart|state.start~q\)))
+-- \Receptor|uart|baud_cont[0]~41_combout\ = (!\Receptor|uart|state.espera~q\ & (((!\Receptor|uart|Equal0~3_combout\) # (!\rx_serial~input_o\)) # (!\Receptor|uart|state.start~q\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8741,7 +8742,7 @@ PORT MAP (
 	datab => \rx_serial~input_o\,
 	datac => \Receptor|uart|state.espera~q\,
 	datad => \Receptor|uart|Equal0~3_combout\,
-	combout => \Receptor|uart|baud_cont[10]~41_combout\);
+	combout => \Receptor|uart|baud_cont[0]~41_combout\);
 
 -- Location: FF_X23_Y20_N23
 \Receptor|uart|baud_cont[11]\ : dffeas
@@ -8753,8 +8754,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[11]~35_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(11));
@@ -8784,8 +8785,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[12]~37_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(12));
@@ -8920,9 +8921,9 @@ PORT MAP (
 	q => \Receptor|uart|state.idle~q\);
 
 -- Location: LCCOMB_X19_Y20_N24
-\Receptor|uart|baud_cont[10]~39\ : cycloneive_lcell_comb
+\Receptor|uart|baud_cont[0]~39\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Receptor|uart|baud_cont[10]~39_combout\ = (\Receptor|uart|state.stop~q\) # (\Receptor|uart|state.data_bit~q\)
+-- \Receptor|uart|baud_cont[0]~39_combout\ = (\Receptor|uart|state.stop~q\) # (\Receptor|uart|state.data_bit~q\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8932,12 +8933,12 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \Receptor|uart|state.stop~q\,
 	datad => \Receptor|uart|state.data_bit~q\,
-	combout => \Receptor|uart|baud_cont[10]~39_combout\);
+	combout => \Receptor|uart|baud_cont[0]~39_combout\);
 
 -- Location: LCCOMB_X23_Y20_N28
-\Receptor|uart|baud_cont[10]~40\ : cycloneive_lcell_comb
+\Receptor|uart|baud_cont[0]~40\ : cycloneive_lcell_comb
 -- Equation(s):
--- \Receptor|uart|baud_cont[10]~40_combout\ = ((\Receptor|uart|Selector18~0_combout\) # ((\Receptor|uart|baud_cont[10]~39_combout\ & \Receptor|uart|LessThan0~2_combout\))) # (!\Receptor|uart|state.idle~q\)
+-- \Receptor|uart|baud_cont[0]~40_combout\ = ((\Receptor|uart|Selector18~0_combout\) # ((\Receptor|uart|baud_cont[0]~39_combout\ & \Receptor|uart|LessThan0~2_combout\))) # (!\Receptor|uart|state.idle~q\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8946,10 +8947,10 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \Receptor|uart|state.idle~q\,
-	datab => \Receptor|uart|baud_cont[10]~39_combout\,
+	datab => \Receptor|uart|baud_cont[0]~39_combout\,
 	datac => \Receptor|uart|Selector18~0_combout\,
 	datad => \Receptor|uart|LessThan0~2_combout\,
-	combout => \Receptor|uart|baud_cont[10]~40_combout\);
+	combout => \Receptor|uart|baud_cont[0]~40_combout\);
 
 -- Location: FF_X23_Y20_N1
 \Receptor|uart|baud_cont[0]\ : dffeas
@@ -8961,8 +8962,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[0]~13_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(0));
@@ -8995,8 +8996,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[1]~15_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(1));
@@ -9029,8 +9030,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[2]~17_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(2));
@@ -9063,8 +9064,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[3]~19_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(3));
@@ -9097,8 +9098,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[4]~21_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(4));
@@ -9131,8 +9132,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[5]~23_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(5));
@@ -9165,8 +9166,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[6]~25_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(6));
@@ -9199,8 +9200,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[7]~27_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(7));
@@ -9233,8 +9234,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[8]~29_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(8));
@@ -9267,8 +9268,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[9]~31_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(9));
@@ -9283,8 +9284,8 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~inputclkctrl_outclk\,
 	d => \Receptor|uart|baud_cont[10]~33_combout\,
-	sclr => \Receptor|uart|baud_cont[10]~40_combout\,
-	ena => \Receptor|uart|baud_cont[10]~41_combout\,
+	sclr => \Receptor|uart|baud_cont[0]~40_combout\,
+	ena => \Receptor|uart|baud_cont[0]~41_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => \Receptor|uart|baud_cont\(10));

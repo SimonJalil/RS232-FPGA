@@ -1,6 +1,6 @@
 Flow report for UART_RX
-Tue Dec 22 17:47:27 2020
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Sun Mar 21 23:34:40 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,22 +33,23 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 22 17:47:27 2020       ;
-; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Flow Status                        ; Successful - Sun Mar 21 23:34:40 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; UART_RX                                     ;
 ; Top-level Entity Name              ; UART_RX                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 49 / 6,272 ( < 1 % )                        ;
-;     Total combinational functions  ; 49 / 6,272 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 24 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 24                                          ;
+; Total logic elements               ; 55 / 6,272 ( < 1 % )                        ;
+;     Total combinational functions  ; 55 / 6,272 ( < 1 % )                        ;
+;     Dedicated logic registers      ; 29 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 29                                          ;
 ; Total pins                         ; 10 / 92 ( 11 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
@@ -64,7 +65,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/22/2020 17:47:06 ;
+; Start date & time ; 03/21/2021 23:34:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; UART_RX             ;
 +-------------------+---------------------+
@@ -75,7 +76,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 190135456950301.160867002618088        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 190135456950301.161638046004542        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; UART_RX_INST                           ; --            ; --          ; UART_RX_TB     ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; UART_RX_TB                             ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -97,12 +98,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 932 MB              ; 00:00:27                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 1217 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 785 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 787 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1022 MB             ; 00:00:01                           ;
-; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:35                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 426 MB              ; 00:00:23                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 690 MB              ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 351 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 437 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 600 MB              ; 00:00:00                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +112,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; Fitter               ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; Assembler            ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; Timing Analyzer      ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; EDA Netlist Writer   ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Analysis & Synthesis ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Fitter               ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Assembler            ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Timing Analyzer      ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 

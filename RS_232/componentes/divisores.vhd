@@ -17,7 +17,7 @@ architecture behav of divisores is
 constant max_count_0: integer := 5208; --4800 baud 
 constant max_count_1: integer := 2604; --9600 baud
 constant max_count_2: integer := 651;  --38400 baud
-constant max_count_3: integer := 217;  --15200 baud
+constant max_count_3: integer := 217;  --115200 baud
 
 
 --Señales de conteo

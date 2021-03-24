@@ -1,5 +1,29 @@
 
-State Machine - |rx|UART_RX:uart|state
+State Machine - |rx|UART_RX:\t:3:uart|state
+Name state.espera state.stop state.data_bit state.start state.idle 
+state.idle 0 0 0 0 0 
+state.start 0 0 0 1 1 
+state.data_bit 0 0 1 0 1 
+state.stop 0 1 0 0 1 
+state.espera 1 0 0 0 1 
+
+State Machine - |rx|UART_RX:\t:2:uart|state
+Name state.espera state.stop state.data_bit state.start state.idle 
+state.idle 0 0 0 0 0 
+state.start 0 0 0 1 1 
+state.data_bit 0 0 1 0 1 
+state.stop 0 1 0 0 1 
+state.espera 1 0 0 0 1 
+
+State Machine - |rx|UART_RX:\t:1:uart|state
+Name state.espera state.stop state.data_bit state.start state.idle 
+state.idle 0 0 0 0 0 
+state.start 0 0 0 1 1 
+state.data_bit 0 0 1 0 1 
+state.stop 0 1 0 0 1 
+state.espera 1 0 0 0 1 
+
+State Machine - |rx|UART_RX:\t:0:uart|state
 Name state.espera state.stop state.data_bit state.start state.idle 
 state.idle 0 0 0 0 0 
 state.start 0 0 0 1 1 

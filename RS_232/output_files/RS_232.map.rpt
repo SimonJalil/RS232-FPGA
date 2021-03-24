@@ -1,6 +1,6 @@
 Analysis & Synthesis report for RS_232
-Thu Dec 24 16:24:47 2020
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Wed Mar 24 00:53:50 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -31,9 +31,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  23. Parameter Settings for User Entity Instance: Punto_A:Parte_A|Reg_Despl:Reg
  24. Parameter Settings for User Entity Instance: Mux:Multiplexer
  25. Parameter Settings for User Entity Instance: LCD:mod_lcd|FSM_LCD:fsm
- 26. Parameter Settings for User Entity Instance: rx:Receptor
- 27. Parameter Settings for User Entity Instance: rx:Receptor|UART_RX:uart
- 28. Port Connectivity Checks: "rx:Receptor|mod_7seg:seg"
+ 26. Parameter Settings for User Entity Instance: rx:Receptor|UART_RX:uart
+ 27. Port Connectivity Checks: "rx:Receptor|mod_7seg:seg"
+ 28. Port Connectivity Checks: "rx:Receptor"
  29. Port Connectivity Checks: "Punto_B:Parte_B"
  30. Port Connectivity Checks: "Punto_A:Parte_A|Reg_Despl:Reg"
  31. Post-Synthesis Netlist Statistics for Top Partition
@@ -45,9 +45,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -57,15 +57,16 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 24 16:24:46 2020       ;
-; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 24 00:53:50 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; RS_232                                      ;
 ; Top-level Entity Name              ; RS_232                                      ;
 ; Family                             ; Cyclone IV E                                ;
@@ -184,33 +185,33 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                              ;
-+--------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                 ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                       ; Library ;
-+--------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ../UART_RX/UART_RX.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd                           ;         ;
-; ../Receptor/rx.vhd                               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd                               ;         ;
-; ../Receptor/mod_7seg.vhd                         ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd                         ;         ;
-; ../Parte_B/Punto_B/Punto_B.vhd                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd                   ;         ;
-; ../Parte_B/Memoria_ROM/pkg_rom.vhd               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd               ;         ;
-; ../Parte_B/Memoria_ROM/Memoria_ROM.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd           ;         ;
-; ../Parte_B/FSM_Memoria/FSM_Memoria.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd           ;         ;
-; ../Parte_B/Contador_memoria/Contador_memoria.vhd ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd ;         ;
-; ../Parte_A/Punto_A/Punto_A.vhd                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd                   ;         ;
-; ../Parte_A/Reg_despl/Reg_Despl.vhd               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd               ;         ;
-; ../Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd       ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd       ;         ;
-; ../Parte_A/FFD/FFD.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd                           ;         ;
-; ../Parte_A/cont_bin/cont_bin.vhd                 ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd                 ;         ;
-; ../LCD/cont_bin_lcd.vhd                          ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd                          ;         ;
-; ../LCD/LCD.vhd                                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd                                   ;         ;
-; ../LCD/FSM_LCD.vhd                               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd                               ;         ;
-; RS_232.vhd                                       ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd                             ;         ;
-; componentes/Mux_habilitacion.vhd                 ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd       ;         ;
-; componentes/sincronizador.vhd                    ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd          ;         ;
-; componentes/divisores.vhd                        ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/divisores.vhd              ;         ;
-; componentes/antirrebote.vhd                      ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd            ;         ;
-+--------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                    ;
++--------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                             ; Library ;
++--------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../UART_RX/UART_RX.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd                           ;         ;
+; ../Receptor/rx.vhd                               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd                               ;         ;
+; ../Receptor/mod_7seg.vhd                         ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd                         ;         ;
+; ../Parte_B/Punto_B/Punto_B.vhd                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd                   ;         ;
+; ../Parte_B/Memoria_ROM/pkg_rom.vhd               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd               ;         ;
+; ../Parte_B/Memoria_ROM/Memoria_ROM.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd           ;         ;
+; ../Parte_B/FSM_Memoria/FSM_Memoria.vhd           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd           ;         ;
+; ../Parte_B/Contador_memoria/Contador_memoria.vhd ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd ;         ;
+; ../Parte_A/Punto_A/Punto_A.vhd                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd                   ;         ;
+; ../Parte_A/Reg_despl/Reg_Despl.vhd               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd               ;         ;
+; ../Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd       ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd       ;         ;
+; ../Parte_A/FFD/FFD.vhd                           ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd                           ;         ;
+; ../Parte_A/cont_bin/cont_bin.vhd                 ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd                 ;         ;
+; ../LCD/cont_bin_lcd.vhd                          ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd                          ;         ;
+; ../LCD/LCD.vhd                                   ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd                                   ;         ;
+; ../LCD/FSM_LCD.vhd                               ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd                               ;         ;
+; RS_232.vhd                                       ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd                             ;         ;
+; componentes/Mux_habilitacion.vhd                 ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd       ;         ;
+; componentes/sincronizador.vhd                    ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd          ;         ;
+; componentes/divisores.vhd                        ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/divisores.vhd              ;         ;
+; componentes/antirrebote.vhd                      ; yes             ; User VHDL File  ; /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd            ;         ;
++--------------------------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -469,15 +470,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:4:antirreb|cont[3]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:3:antirreb|cont[2]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:2:antirreb|cont[0]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:1:antirreb|cont[3]                   ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:0:antirreb|cont[2]                   ;
-; 16:1               ; 6 bits    ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|cont[3]              ;
-; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |RS_232|rx:Receptor|UART_RX:uart|baud_cont[10]                         ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[1] ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[3] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:4:antirreb|cont[1]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:3:antirreb|cont[0]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:2:antirreb|cont[1]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:1:antirreb|cont[0]                   ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|antirrebote:\antirrebotes:0:antirreb|cont[3]                   ;
+; 16:1               ; 6 bits    ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|cont[0]              ;
+; 7:1                ; 13 bits   ; 52 LEs        ; 13 LEs               ; 39 LEs                 ; Yes        ; |RS_232|rx:Receptor|UART_RX:uart|baud_cont[0]                          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[2] ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |RS_232|Punto_B:Parte_B|Contador_memoria:Contador|contToaddress_out[5] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |RS_232|rx:Receptor|UART_RX:uart|bit_cont                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
@@ -577,16 +578,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: rx:Receptor ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; clksxbit       ; 5209  ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: rx:Receptor|UART_RX:uart ;
 +----------------+-------+----------------------------------------------+
@@ -604,6 +595,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; dp   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "rx:Receptor"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; sel[2]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; byte_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -668,135 +669,134 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu Dec 24 16:24:33 2020
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Wed Mar 24 00:53:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RS_232 -c RS_232
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
-    Info (12022): Found design unit 1: UART_RX-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 17
-    Info (12023): Found entity 1: UART_RX File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd
-    Info (12022): Found design unit 1: rx-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 19
-    Info (12023): Found entity 1: rx File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd
-    Info (12022): Found design unit 1: mod_7seg-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 16
-    Info (12023): Found entity 1: mod_7seg File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd
-    Info (12022): Found design unit 1: Punto_B-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 24
-    Info (12023): Found entity 1: Punto_B File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 5
-Info (12021): Found 2 design units, including 0 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
-    Info (12022): Found design unit 1: pkg_rom File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 5
-    Info (12022): Found design unit 2: pkg_rom-body File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 113
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
-    Info (12022): Found design unit 1: Memoria_ROM-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 15
-    Info (12023): Found entity 1: Memoria_ROM File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
-    Info (12022): Found design unit 1: FSM_Memoria-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 21
-    Info (12023): Found entity 1: FSM_Memoria File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd
-    Info (12022): Found design unit 1: Contador_memoria-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 17
-    Info (12023): Found entity 1: Contador_memoria File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd
-    Info (12022): Found design unit 1: Punto_A-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 18
-    Info (12023): Found entity 1: Punto_A File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd
-    Info (12022): Found design unit 1: Reg_Despl-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 17
-    Info (12023): Found entity 1: Reg_Despl File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
-    Info (12022): Found design unit 1: FSM_Reg_Despl-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 17
-    Info (12023): Found entity 1: FSM_Reg_Despl File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd
-    Info (12022): Found design unit 1: FFD-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 16
-    Info (12023): Found entity 1: FFD File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd
-    Info (12022): Found design unit 1: cont_bin-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd Line: 13
-    Info (12023): Found entity 1: cont_bin File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd
-    Info (12022): Found design unit 1: cont_bin_lcd-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd Line: 12
-    Info (12023): Found entity 1: cont_bin_lcd File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
-    Info (12022): Found design unit 1: LCD-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 16
-    Info (12023): Found entity 1: LCD File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
-    Info (12022): Found design unit 1: FSM_LCD-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 19
-    Info (12023): Found entity 1: FSM_LCD File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mux_paralelos.vhd
+    Info (12022): Found design unit 1: mux_paralelos-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mux_paralelos.vhd Line: 16
+    Info (12023): Found entity 1: mux_paralelos File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mux_paralelos.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd
+    Info (12022): Found design unit 1: UART_RX-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 17
+    Info (12023): Found entity 1: UART_RX File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd
+    Info (12022): Found design unit 1: rx-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 18
+    Info (12023): Found entity 1: rx File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd
+    Info (12022): Found design unit 1: mod_7seg-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 16
+    Info (12023): Found entity 1: mod_7seg File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd
+    Info (12022): Found design unit 1: Punto_B-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 24
+    Info (12023): Found entity 1: Punto_B File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 5
+Info (12021): Found 2 design units, including 0 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd
+    Info (12022): Found design unit 1: pkg_rom File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 5
+    Info (12022): Found design unit 2: pkg_rom-body File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd Line: 113
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd
+    Info (12022): Found design unit 1: Memoria_ROM-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 15
+    Info (12023): Found entity 1: Memoria_ROM File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/Memoria_ROM.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd
+    Info (12022): Found design unit 1: FSM_Memoria-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 21
+    Info (12023): Found entity 1: FSM_Memoria File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd
+    Info (12022): Found design unit 1: Contador_memoria-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 17
+    Info (12023): Found entity 1: Contador_memoria File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd
+    Info (12022): Found design unit 1: Punto_A-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 18
+    Info (12023): Found entity 1: Punto_A File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd
+    Info (12022): Found design unit 1: Reg_Despl-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 17
+    Info (12023): Found entity 1: Reg_Despl File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
+    Info (12022): Found design unit 1: FSM_Reg_Despl-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 17
+    Info (12023): Found entity 1: FSM_Reg_Despl File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd
+    Info (12022): Found design unit 1: FFD-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 16
+    Info (12023): Found entity 1: FFD File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd
+    Info (12022): Found design unit 1: cont_bin-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd Line: 13
+    Info (12023): Found entity 1: cont_bin File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/cont_bin/cont_bin.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd
+    Info (12022): Found design unit 1: cont_bin_lcd-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd Line: 12
+    Info (12023): Found entity 1: cont_bin_lcd File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/cont_bin_lcd.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd
+    Info (12022): Found design unit 1: LCD-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 16
+    Info (12023): Found entity 1: LCD File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd
+    Info (12022): Found design unit 1: FSM_LCD-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 19
+    Info (12023): Found entity 1: FSM_LCD File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file RS_232.vhd
-    Info (12022): Found design unit 1: RS_232-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 34
-    Info (12023): Found entity 1: RS_232 File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 5
+    Info (12022): Found design unit 1: RS_232-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 34
+    Info (12023): Found entity 1: RS_232 File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file tb_RS_232.vhd
-    Info (12022): Found design unit 1: tb_RS_232-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd Line: 8
-    Info (12023): Found entity 1: tb_RS_232 File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd Line: 5
-Warning (12090): Entity "Mux" obtained from "componentes/Mux_habilitacion.vhd" instead of from Quartus Prime megafunction library File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 5
+    Info (12022): Found design unit 1: tb_RS_232-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd Line: 8
+    Info (12023): Found entity 1: tb_RS_232 File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/tb_RS_232.vhd Line: 5
+Warning (12090): Entity "Mux" obtained from "componentes/Mux_habilitacion.vhd" instead of from Quartus Prime megafunction library File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/Mux_habilitacion.vhd
-    Info (12022): Found design unit 1: Mux-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 14
-    Info (12023): Found entity 1: Mux File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 5
+    Info (12022): Found design unit 1: Mux-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 14
+    Info (12023): Found entity 1: Mux File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/sincronizador.vhd
-    Info (12022): Found design unit 1: sincronizador-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 13
-    Info (12023): Found entity 1: sincronizador File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 4
+    Info (12022): Found design unit 1: sincronizador-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 13
+    Info (12023): Found entity 1: sincronizador File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/divisores.vhd
-    Info (12022): Found design unit 1: divisores-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/divisores.vhd Line: 14
-    Info (12023): Found entity 1: divisores File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/divisores.vhd Line: 4
+    Info (12022): Found design unit 1: divisores-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/divisores.vhd Line: 14
+    Info (12023): Found entity 1: divisores File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/divisores.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file componentes/antirrebote.vhd
-    Info (12022): Found design unit 1: antirrebote-behav File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd Line: 16
-    Info (12023): Found entity 1: antirrebote File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd Line: 4
+    Info (12022): Found design unit 1: antirrebote-behav File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd Line: 16
+    Info (12023): Found entity 1: antirrebote File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/antirrebote.vhd Line: 4
 Info (12127): Elaborating entity "RS_232" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at RS_232.vhd(165): object "direccion" assigned a value but never read File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 165
-Warning (10036): Verilog HDL or VHDL warning at RS_232.vhd(166): object "enviadoXcont" assigned a value but never read File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 166
-Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:\antirrebotes:0:antirreb" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 178
-Info (12128): Elaborating entity "sincronizador" for hierarchy "sincronizador:\sincronizadores:0:sinc" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 183
-Info (12128): Elaborating entity "Punto_A" for hierarchy "Punto_A:Parte_A" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 186
-Info (12128): Elaborating entity "cont_bin" for hierarchy "Punto_A:Parte_A|cont_bin:Cont" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 68
-Info (12128): Elaborating entity "Reg_Despl" for hierarchy "Punto_A:Parte_A|Reg_Despl:Reg" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 70
-Info (12128): Elaborating entity "FFD" for hierarchy "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 43
-Info (12128): Elaborating entity "FSM_Reg_Despl" for hierarchy "Punto_A:Parte_A|FSM_Reg_Despl:FSM" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 72
-Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd(27) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 27
-Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
-Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
-Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
-Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
-Warning (10336): VHDL Attribute warning in FSM_Reg_Despl.vhd(20): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
-Info (12128): Elaborating entity "Punto_B" for hierarchy "Punto_B:Parte_B" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 189
-Info (12128): Elaborating entity "Memoria_ROM" for hierarchy "Punto_B:Parte_B|Memoria_ROM:Memoria" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 73
-Info (12128): Elaborating entity "FSM_Memoria" for hierarchy "Punto_B:Parte_B|FSM_Memoria:FSM" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 75
-Warning (10306): Invalid value "one_hot" for synthesis attribute "syn_encoding" at ../Parte_B/FSM_Memoria/FSM_Memoria.vhd(30) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 30
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character '_' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Warning (10336): VHDL Attribute warning in FSM_Memoria.vhd(23): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
-Info (12128): Elaborating entity "Contador_memoria" for hierarchy "Punto_B:Parte_B|Contador_memoria:Contador" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 78
-Info (10041): Inferred latch for "opcion[4]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[3]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[2]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[1]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (10041): Inferred latch for "opcion[0]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
-Info (12128): Elaborating entity "divisores" for hierarchy "divisores:Clock" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 192
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Multiplexer" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 194
-Info (12128): Elaborating entity "LCD" for hierarchy "LCD:mod_lcd" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 196
-Info (12128): Elaborating entity "FSM_LCD" for hierarchy "LCD:mod_lcd|FSM_LCD:fsm" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 45
-Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../LCD/FSM_LCD.vhd(33) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 33
-Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
-Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
-Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
-Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
-Warning (10336): VHDL Attribute warning in FSM_LCD.vhd(22): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
-Warning (10492): VHDL Process Statement warning at FSM_LCD.vhd(53): signal "reset_low" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 53
-Warning (10631): VHDL Process Statement warning at FSM_LCD.vhd(61): inferring latch(es) for signal or variable "flag", which holds its previous value in one or more paths through the process File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 61
-Info (10041): Inferred latch for "nx_proc:flag" at FSM_LCD.vhd(61) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 61
-Info (12128): Elaborating entity "cont_bin_lcd" for hierarchy "LCD:mod_lcd|cont_bin_lcd:cont" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 47
-Info (12128): Elaborating entity "rx" for hierarchy "rx:Receptor" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 198
-Info (12128): Elaborating entity "UART_RX" for hierarchy "rx:Receptor|UART_RX:uart" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 46
-Warning (10306): Invalid value "one hot" for synthesis attribute "syn_encoding" at ../UART_RX/UART_RX.vhd(23) File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 23
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Warning (10336): VHDL Attribute warning in UART_RX.vhd(19): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
-Info (12128): Elaborating entity "mod_7seg" for hierarchy "rx:Receptor|mod_7seg:seg" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 48
+Warning (10036): Verilog HDL or VHDL warning at RS_232.vhd(164): object "direccion" assigned a value but never read File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 164
+Warning (10036): Verilog HDL or VHDL warning at RS_232.vhd(165): object "enviadoXcont" assigned a value but never read File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 165
+Info (12128): Elaborating entity "antirrebote" for hierarchy "antirrebote:\antirrebotes:0:antirreb" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 177
+Info (12128): Elaborating entity "sincronizador" for hierarchy "sincronizador:\sincronizadores:0:sinc" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 182
+Info (12128): Elaborating entity "Punto_A" for hierarchy "Punto_A:Parte_A" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 185
+Info (12128): Elaborating entity "cont_bin" for hierarchy "Punto_A:Parte_A|cont_bin:Cont" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 68
+Info (12128): Elaborating entity "Reg_Despl" for hierarchy "Punto_A:Parte_A|Reg_Despl:Reg" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 70
+Info (12128): Elaborating entity "FFD" for hierarchy "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Reg_despl/Reg_Despl.vhd Line: 43
+Info (12128): Elaborating entity "FSM_Reg_Despl" for hierarchy "Punto_A:Parte_A|FSM_Reg_Despl:FSM" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/Punto_A/Punto_A.vhd Line: 72
+Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
+Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
+Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
+Warning (10524): VHDL warning at FSM_Reg_Despl.vhd(20): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
+Warning (10336): VHDL Attribute warning in FSM_Reg_Despl.vhd(20): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd Line: 20
+Info (12128): Elaborating entity "Punto_B" for hierarchy "Punto_B:Parte_B" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 188
+Info (12128): Elaborating entity "Memoria_ROM" for hierarchy "Punto_B:Parte_B|Memoria_ROM:Memoria" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 73
+Info (12128): Elaborating entity "FSM_Memoria" for hierarchy "Punto_B:Parte_B|FSM_Memoria:FSM" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 75
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character '_' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10524): VHDL warning at FSM_Memoria.vhd(23): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Warning (10336): VHDL Attribute warning in FSM_Memoria.vhd(23): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd Line: 23
+Info (12128): Elaborating entity "Contador_memoria" for hierarchy "Punto_B:Parte_B|Contador_memoria:Contador" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Punto_B/Punto_B.vhd Line: 78
+Info (10041): Inferred latch for "opcion[4]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[3]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[2]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[1]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (10041): Inferred latch for "opcion[0]" at Contador_memoria.vhd(35) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 35
+Info (12128): Elaborating entity "divisores" for hierarchy "divisores:Clock" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 191
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:Multiplexer" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 193
+Info (12128): Elaborating entity "LCD" for hierarchy "LCD:mod_lcd" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 195
+Info (12128): Elaborating entity "FSM_LCD" for hierarchy "LCD:mod_lcd|FSM_LCD:fsm" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 45
+Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
+Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
+Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
+Warning (10524): VHDL warning at FSM_LCD.vhd(22): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
+Warning (10336): VHDL Attribute warning in FSM_LCD.vhd(22): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 22
+Warning (10492): VHDL Process Statement warning at FSM_LCD.vhd(53): signal "reset_low" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 53
+Warning (10631): VHDL Process Statement warning at FSM_LCD.vhd(61): inferring latch(es) for signal or variable "flag", which holds its previous value in one or more paths through the process File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 61
+Info (10041): Inferred latch for "nx_proc:flag" at FSM_LCD.vhd(61) File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/FSM_LCD.vhd Line: 61
+Info (12128): Elaborating entity "cont_bin_lcd" for hierarchy "LCD:mod_lcd|cont_bin_lcd:cont" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/LCD/LCD.vhd Line: 47
+Info (12128): Elaborating entity "rx" for hierarchy "rx:Receptor" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 197
+Info (12128): Elaborating entity "UART_RX" for hierarchy "rx:Receptor|UART_RX:uart" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 58
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'o' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'n' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 'e' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10524): VHDL warning at UART_RX.vhd(19): used 'X' for unrecognized character 't' in enumerated type File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Warning (10336): VHDL Attribute warning in UART_RX.vhd(19): ENUM_ENCODING or SYN_ENCODING attribute for enumeration type "FSM_states" does not specify a valid encoding for every enumeration literal -- ignored all encodings File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd Line: 19
+Info (12128): Elaborating entity "mod_7seg" for hierarchy "rx:Receptor|mod_7seg:seg" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd Line: 74
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer Mux:Multiplexer|Mux0 File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 16
+    Warning (19017): Found clock multiplexer Mux:Multiplexer|Mux0 File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/Mux_habilitacion.vhd Line: 16
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "rx:Receptor|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "rx:Receptor|comb~synth" feeding internal logic into a wire
@@ -806,30 +806,30 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "rx:Receptor|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "rx:Receptor|comb~synth" feeding internal logic into a wire
     Warning (13049): Converted tri-state buffer "rx:Receptor|comb~synth" feeding internal logic into a wire
-    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[0]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[1]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[2]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[3]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[4]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
-    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[5]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[0]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[1]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[2]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[3]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[4]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
+    Warning (13049): Converted tri-state buffer "Punto_B:Parte_B|Contador_memoria:Contador|address_out[5]" feeding internal logic into a wire File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 13
 Warning (13012): Latch LCD:mod_lcd|FSM_LCD:fsm|\nx_proc:flag has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sincronizador:\sincronizadores:0:sinc|syncin File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 9
-Info (13000): Registers with preset signals will power-up high File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal sincronizador:\sincronizadores:0:sinc|syncin File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/componentes/sincronizador.vhd Line: 9
+Info (13000): Registers with preset signals will power-up high File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd Line: 56
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
-    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:9:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:8:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:7:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:6:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:5:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:4:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:3:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:2:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:1:medios:medff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
+    Warning (13310): Register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q" is converted into an equivalent circuit using register "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:0:primero:priff|q~_emulated" and latch "Punto_A:Parte_A|Reg_Despl:Reg|FFD:\reg_despl:10:ultimo:ultff|q~1" File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_A/FFD/FFD.vhd Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "rw" is stuck at GND File: /home/simon/Documentos/FACULTAD/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 17
+    Warning (13410): Pin "rw" is stuck at GND File: /home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/RS_232/RS_232.vhd Line: 17
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -838,10 +838,10 @@ Info (21057): Implemented 571 device resources after synthesis - the final resou
     Info (21058): Implemented 10 input pins
     Info (21059): Implemented 23 output pins
     Info (21061): Implemented 538 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 949 megabytes
-    Info: Processing ended: Thu Dec 24 16:24:47 2020
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 428 megabytes
+    Info: Processing ended: Wed Mar 24 00:53:50 2021
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:22
 
 

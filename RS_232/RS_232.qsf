@@ -41,7 +41,7 @@ set_global_assignment -name DEVICE EP4CE6E22C8
 set_global_assignment -name TOP_LEVEL_ENTITY RS_232
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:59:46  APRIL 22, 2020"
-set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
@@ -55,28 +55,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME tb_RS_232 -section_id eda_simula
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME uut -section_id tb_RS_232
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME tb_RS_232 -section_id tb_RS_232
 set_global_assignment -name EDA_TEST_BENCH_FILE tb_RS_232.vhd -section_id tb_RS_232
-set_global_assignment -name VHDL_FILE ../UART_RX/UART_RX.vhd
-set_global_assignment -name VHDL_FILE ../Receptor/rx.vhd
-set_global_assignment -name VHDL_FILE ../Receptor/mod_7seg.vhd
-set_global_assignment -name VHDL_FILE ../Parte_B/Punto_B/Punto_B.vhd
-set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/pkg_rom.vhd
-set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/Memoria_ROM.vhd
-set_global_assignment -name VHDL_FILE ../Parte_B/FSM_Memoria/FSM_Memoria.vhd
-set_global_assignment -name VHDL_FILE ../Parte_B/Contador_memoria/Contador_memoria.vhd
-set_global_assignment -name VHDL_FILE ../Parte_A/Punto_A/Punto_A.vhd
-set_global_assignment -name VHDL_FILE ../Parte_A/Reg_despl/Reg_Despl.vhd
-set_global_assignment -name VHDL_FILE ../Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
-set_global_assignment -name VHDL_FILE ../Parte_A/FFD/FFD.vhd
-set_global_assignment -name VHDL_FILE ../Parte_A/cont_bin/cont_bin.vhd
-set_global_assignment -name VHDL_FILE ../LCD/cont_bin_lcd.vhd
-set_global_assignment -name VHDL_FILE ../LCD/LCD.vhd
-set_global_assignment -name VHDL_FILE ../LCD/FSM_LCD.vhd
-set_global_assignment -name VHDL_FILE RS_232.vhd
-set_global_assignment -name VHDL_FILE tb_RS_232.vhd
-set_global_assignment -name VHDL_FILE componentes/Mux_habilitacion.vhd
-set_global_assignment -name VHDL_FILE componentes/sincronizador.vhd
-set_global_assignment -name VHDL_FILE componentes/divisores.vhd
-set_global_assignment -name VHDL_FILE componentes/antirrebote.vhd
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_location_assignment PIN_23 -to clk
@@ -112,4 +90,29 @@ set_location_assignment PIN_129 -to salida_7seg[3]
 set_location_assignment PIN_132 -to salida_7seg[2]
 set_location_assignment PIN_126 -to salida_7seg[1]
 set_location_assignment PIN_124 -to salida_7seg[0]
+set_global_assignment -name VHDL_FILE ../Receptor/mux_paralelos.vhd
+set_global_assignment -name VHDL_FILE ../UART_RX/UART_RX.vhd
+set_global_assignment -name VHDL_FILE ../Receptor/rx.vhd
+set_global_assignment -name VHDL_FILE ../Receptor/mod_7seg.vhd
+set_global_assignment -name VHDL_FILE ../Parte_B/Punto_B/Punto_B.vhd
+set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/pkg_rom.vhd
+set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/Memoria_ROM.vhd
+set_global_assignment -name VHDL_FILE ../Parte_B/FSM_Memoria/FSM_Memoria.vhd
+set_global_assignment -name VHDL_FILE ../Parte_B/Contador_memoria/Contador_memoria.vhd
+set_global_assignment -name VHDL_FILE ../Parte_A/Punto_A/Punto_A.vhd
+set_global_assignment -name VHDL_FILE ../Parte_A/Reg_despl/Reg_Despl.vhd
+set_global_assignment -name VHDL_FILE ../Parte_A/FSM_Reg_Despl/FSM_Reg_Despl.vhd
+set_global_assignment -name VHDL_FILE ../Parte_A/FFD/FFD.vhd
+set_global_assignment -name VHDL_FILE ../Parte_A/cont_bin/cont_bin.vhd
+set_global_assignment -name VHDL_FILE ../LCD/cont_bin_lcd.vhd
+set_global_assignment -name VHDL_FILE ../LCD/LCD.vhd
+set_global_assignment -name VHDL_FILE ../LCD/FSM_LCD.vhd
+set_global_assignment -name VHDL_FILE RS_232.vhd
+set_global_assignment -name VHDL_FILE tb_RS_232.vhd
+set_global_assignment -name VHDL_FILE componentes/Mux_habilitacion.vhd
+set_global_assignment -name VHDL_FILE componentes/sincronizador.vhd
+set_global_assignment -name VHDL_FILE componentes/divisores.vhd
+set_global_assignment -name VHDL_FILE componentes/antirrebote.vhd
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
