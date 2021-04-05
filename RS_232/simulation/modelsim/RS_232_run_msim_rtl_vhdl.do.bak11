@@ -7,7 +7,6 @@ vmap work rtl_work
 
 vcom -93 -work work {/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/UART_RX/UART_RX.vhd}
 vcom -93 -work work {/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/rx.vhd}
-vcom -93 -work work {/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Receptor/mod_7seg.vhd}
 vcom -93 -work work {/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Memoria_ROM/pkg_rom.vhd}
 vcom -93 -work work {/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/FSM_Memoria/FSM_Memoria.vhd}
 vcom -93 -work work {/home/simon/Documentos/FACULTAD_linux/Sistemas Digitales Avanzados/Laboratorios/RS232-FPGA/Parte_B/Contador_memoria/Contador_memoria.vhd}

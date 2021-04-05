@@ -8,50 +8,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "salida_7seg[0]",
-					"strict" : false
-				},
-				{
-					"name" : "salida_7seg[1]",
-					"strict" : false
-				},
-				{
-					"name" : "salida_7seg[2]",
-					"strict" : false
-				},
-				{
-					"name" : "salida_7seg[3]",
-					"strict" : false
-				},
-				{
-					"name" : "salida_7seg[4]",
-					"strict" : false
-				},
-				{
-					"name" : "salida_7seg[5]",
-					"strict" : false
-				},
-				{
-					"name" : "salida_7seg[6]",
-					"strict" : false
-				},
-				{
-					"name" : "dig_out[0]",
-					"strict" : false
-				},
-				{
-					"name" : "dig_out[1]",
-					"strict" : false
-				},
-				{
-					"name" : "dig_out[2]",
-					"strict" : false
-				},
-				{
-					"name" : "dig_out[3]",
-					"strict" : false
-				},
-				{
 					"name" : "rs",
 					"strict" : false
 				},
@@ -92,15 +48,79 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset_low",
+					"name" : "clk_en_uso",
 					"strict" : false
 				},
 				{
-					"name" : "rx_serial",
+					"name" : "address[0]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "address[1]",
+					"strict" : false
+				},
+				{
+					"name" : "address[2]",
+					"strict" : false
+				},
+				{
+					"name" : "address[3]",
+					"strict" : false
+				},
+				{
+					"name" : "address[4]",
+					"strict" : false
+				},
+				{
+					"name" : "address[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cont_finished",
+					"strict" : false
+				},
+				{
+					"name" : "enviado_MEF1",
+					"strict" : false
+				},
+				{
+					"name" : "enviar",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ASCII[9]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_select[1]",
 					"strict" : false
 				},
 				{
@@ -108,7 +128,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_select[1]",
+					"name" : "reset_low",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rx_serial",
 					"strict" : false
 				},
 				{

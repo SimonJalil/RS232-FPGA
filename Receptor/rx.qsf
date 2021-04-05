@@ -74,7 +74,6 @@ set_location_assignment PIN_124 -to salida[6]
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VHDL_FILE "../../Laboratorio 3/Mx/Mux.vhd"
-set_global_assignment -name VHDL_FILE mod_7seg.vhd
 set_global_assignment -name VHDL_FILE ../UART_RX/UART_RX.vhd
 set_global_assignment -name VHDL_FILE rx.vhd
 set_global_assignment -name VHDL_FILE mux_paralelos.vhd

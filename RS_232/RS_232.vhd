@@ -9,25 +9,24 @@ entity RS_232 is
 			clk			:in std_logic;								--Señal de reloj.
 			clk_select	:in std_logic_vector(1 downto 0);	--Entrada de seleccion de reloj de sistema (baudios).
 			rx_serial 	:in std_logic;								--Entrada serial de datos.
-			salida 		:out std_logic;							--Señal de salida de registro serie.
-			salida_7seg	:out std_logic_vector(6 downto 0);	--Salida para graficar en display 7 segmentos datos recibidos seriales.
-			dig_out 		:out std_logic_vector(3 downto 0);	--Salida de habilitacion de displays.
 			
+			salida 		:out std_logic;							--Señal de salida de registro serie.
+						
 			--Modulo LCD.
 			rw				:out std_logic;							--Escritura/lectura.
 			rs 			:out std_logic;							--Datos/Instrucciones.
 			e				:buffer std_logic;						--Señal de hanilitacion del modulo LCD.
-			db 			:out std_logic_vector(7 downto 0)	--Señales de datos para el modulo LCD.
+			db 			:out std_logic_vector(7 downto 0);	--Señales de datos para el modulo LCD.
 					
 			--Estas señales se añadieron para evaluar de manera mas eficiente el test bench y entender que procesos 
 			--actuaban de por medio, se pueden eliminar a traves de comentarios, haciendolo ademas con las ultimas 
 			--cinco lineas de este codigo.
---			clk_en_uso		:out std_logic;
---			address			:out std_logic_vector(addr_length-1 downto 0);
---			cont_finished	:out std_logic;
---			enviado_MEF1 	:out std_logic;
---			enviar			:out std_logic;
---			ASCII				:out std_logic_vector(10 downto 0)
+			clk_en_uso		:out std_logic;
+			address			:out std_logic_vector(addr_length-1 downto 0);
+			cont_finished	:out std_logic;
+			enviado_MEF1 	:out std_logic;
+			enviar			:out std_logic;
+			ASCII				:out std_logic_vector(10 downto 0)
 			);
 end RS_232;
 
@@ -91,7 +90,9 @@ architecture behav of RS_232 is
 		port (
 				clk 			:in std_logic;								
 				reset_low	:in std_logic;																
-				entradas 	:in std_logic_vector(4 downto 0);	
+				entradas 	:in std_logic_vector(4 downto 0);
+				byte			:in std_logic_vector(7 downto 0);	
+				
 				rw				:out std_logic;							
 				rs 			:out std_logic;														
 				e				:buffer std_logic := '0';												
@@ -124,11 +125,9 @@ architecture behav of RS_232 is
 			clk 			:in std_logic;								--Entrada de clk.
 			clr		 	:in std_logic;								--Entrada de clr.
 			rx 			:in std_logic;								--Entrada del receptor.
-			sel 			:in std_logic_vector(2 downto 0);	--Entrada de seleccion del mux paralelo.
-			salida		:out std_logic_vector(6 downto 0);	--Salida de byte recibido.
-			byte_out 	:out std_logic_vector(7 downto 0);	--Extraccion del byte para LCD
-			dig 			:out std_logic_vector(3 downto 0)
-			--led			:out std_logic								--led indicador de transmision (cuando esta apagado esta recibiendo).
+			sel 			:in std_logic_vector(1 downto 0);	--Entrada de seleccion del mux paralelo.
+
+			byte_out 	:out std_logic_vector(7 downto 0)	--Extraccion del byte para LCD
 			);
 	end component;
 	
@@ -169,6 +168,7 @@ architecture behav of RS_232 is
 	signal clk_RS_232		:std_logic;												--Señal de clock para RS232.
 	signal antirrebTosinc:std_logic_vector(4 downto 0);					--Señales de antirebotes a sincronizadores.
 	signal sincToRS232	:std_logic_vector(4 downto 0);					--Señales de sincronizadores a RS232 y LCD.
+	signal byte_for_lcd	:std_logic_vector(7 downto 0);					--Señal que conecta el rx con LCD para entrega del byte recibido.
 	
 begin 
 	
@@ -192,17 +192,17 @@ begin
 	
 	Multiplexer: Mux port map(mux_input => clocks, mux_sel => clk_select, mux_out => clk_RS_232);
 	
-	mod_lcd: LCD port map(clk => clk, reset_low => reset_low, entradas => sincToRS232, rw => rw, rs => rs, e => e, db => db);
+	mod_lcd: LCD port map(clk => clk, reset_low => reset_low, entradas => sincToRS232, byte => byte_for_lcd, rw => rw, rs => rs, e => e, db => db);
 	
-	Receptor: rx port map(clk => clk, clr => reset_low, rx => rx_serial, sel(2) => '0', sel(1 downto 0) => clk_select, salida => salida_7seg, dig => dig_out);
+	Receptor: rx port map(clk => clk, clr => reset_low, rx => rx_serial, sel => clk_select, byte_out => byte_for_lcd);
 	
 	Salida <= reg_out;
 	
 	--Señales extras para test bench. 
---	clk_en_uso <= clk_RS_232;
---	address <= direccion;
---	cont_finished <= enviadoXcont;
---	enviado_MEF1 <= enviado;
---	enviar <= enviar_dato;
---	ASCII <= dato;
+	clk_en_uso <= clk_RS_232;
+	address <= direccion;
+	cont_finished <= enviadoXcont;
+	enviado_MEF1 <= enviado;
+	enviar <= enviar_dato;
+	ASCII <= dato;
 end behav;

@@ -44,6 +44,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "byte[0]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[1]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[2]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[3]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[4]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[5]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[6]",
+					"strict" : false
+				},
+				{
+					"name" : "byte[7]",
+					"strict" : false
+				},
+				{
 					"name" : "reset_low",
 					"strict" : false
 				},

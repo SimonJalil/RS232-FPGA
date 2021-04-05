@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FSM_lcd2 is 
+	generic (clk_divisor: integer := 100000);	--50Mhz a 500Hz
+	port(
+		clk 			:in std_logic;								--Reloj del sistema.
+		reset_low	:in std_logic;								--Reinicio activo en bajo.
+		cont_ok		:in std_logic;								--Entrada del contador binario.
+		entradas 	:in std_logic_vector(4 downto 0);	--Entradas de seleccion de oraciones.
+		byte 			:in std_logic_vector(7 downto 0);	--Byte recibido para graficar.
+		
+		rw				:out std_logic;							--Escritura/lectura.
+		rs 			:out std_logic;							--Datos/Instrucciones.
+		reset_cont 	:out std_logic;							--Reset en bajo del contador binario.
+		e				:buffer std_logic := '0';				--Señal de habilitacion del modulo LCD.								
+		db			 	:out std_logic_vector(7 downto 0)	--Señales de datos para el LCD.
+	);
+end entity FSM_lcd2;
+	
+architecture behav of FSM_lcd2 is
+
+	--Estados de la FSM
+	type FSM_states is (FunctionSet1, FunctionSet2, FunctionSet3, FunctionSet4,DisplayControl,EntryMode,SetAddress,
+								ClearDisplay1,ClearDisplay2,ClearDisplay3,ClearDisplay4, ClearDisplay5,
+								ReturnHome1, ReturnHome2, ReturnHome3, ReturnHome4,
+								
+								
+								);
+	--Estilo de codificacion.
+	attribute syn_encoding :string;
+	attribute syn_encoding of FSM_states :type is "one hot";
+							
+begin 
+
+
+end architecture behav;

@@ -1,6 +1,6 @@
 Flow report for LCD
-Sun Dec 13 17:40:34 2020
-Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Thu Apr  1 19:10:24 2021
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -21,9 +21,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
@@ -33,25 +33,26 @@ the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
 Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details.
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Dec 13 17:40:34 2020       ;
-; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Flow Status                        ; Successful - Thu Apr  1 19:10:24 2021       ;
+; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; LCD                                         ;
 ; Top-level Entity Name              ; LCD                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
 ; Total logic elements               ; 151 / 6,272 ( 2 % )                         ;
-;     Total combinational functions  ; 136 / 6,272 ( 2 % )                         ;
-;     Dedicated logic registers      ; 99 / 6,272 ( 2 % )                          ;
-; Total registers                    ; 99                                          ;
-; Total pins                         ; 18 / 92 ( 20 % )                            ;
+;     Total combinational functions  ; 140 / 6,272 ( 2 % )                         ;
+;     Dedicated logic registers      ; 93 / 6,272 ( 1 % )                          ;
+; Total registers                    ; 93                                          ;
+; Total pins                         ; 26 / 92 ( 28 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -64,7 +65,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/13/2020 17:40:12 ;
+; Start date & time ; 04/01/2021 19:10:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; LCD                 ;
 +-------------------+---------------------+
@@ -75,7 +76,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 93328249748543.160789201218387         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 190135456950301.161731500205552        ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; tb_LCD         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_LCD                                 ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Vhdl                                   ; --            ; --          ; eda_simulation ;
@@ -101,12 +102,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 931 MB              ; 00:00:27                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 1207 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 786 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 770 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1024 MB             ; 00:00:01                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:35                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 427 MB              ; 00:00:22                           ;
+; Fitter               ; 00:00:05     ; 1.0                     ; 674 MB              ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 353 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 417 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 602 MB              ; 00:00:01                           ;
+; Total                ; 00:00:18     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -115,11 +116,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; Fitter               ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; Assembler            ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; Timing Analyzer      ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
-; EDA Netlist Writer   ; simon            ; Ubuntu 20.04.1 ; 20         ; x86_64         ;
+; Analysis & Synthesis ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Fitter               ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Assembler            ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; Timing Analyzer      ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
+; EDA Netlist Writer   ; simon            ; Ubuntu 20.04.2 ; 20         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 

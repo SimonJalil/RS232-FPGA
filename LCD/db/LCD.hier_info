@@ -7,6 +7,14 @@ entradas[1] => FSM_LCD:fsm.entradas[1]
 entradas[2] => FSM_LCD:fsm.entradas[2]
 entradas[3] => FSM_LCD:fsm.entradas[3]
 entradas[4] => FSM_LCD:fsm.entradas[4]
+byte[0] => FSM_LCD:fsm.byte[0]
+byte[1] => FSM_LCD:fsm.byte[1]
+byte[2] => FSM_LCD:fsm.byte[2]
+byte[3] => FSM_LCD:fsm.byte[3]
+byte[4] => FSM_LCD:fsm.byte[4]
+byte[5] => FSM_LCD:fsm.byte[5]
+byte[6] => FSM_LCD:fsm.byte[6]
+byte[7] => FSM_LCD:fsm.byte[7]
 rw << FSM_LCD:fsm.rw
 rs << FSM_LCD:fsm.rs
 e << FSM_LCD:fsm.e
@@ -82,18 +90,26 @@ entradas[4] => Mux3.IN32
 entradas[4] => Mux4.IN32
 entradas[4] => Mux6.IN32
 entradas[4] => Mux5.IN32
+byte[0] => Selector17.IN4
+byte[1] => Selector16.IN4
+byte[2] => Selector15.IN4
+byte[3] => Selector14.IN4
+byte[4] => Selector13.IN4
+byte[5] => Selector12.IN4
+byte[6] => Selector11.IN4
+byte[7] => Selector10.IN4
 rw <= <GND>
-rs <= WideOr17.DB_MAX_OUTPUT_PORT_TYPE
-reset_cont <= WideOr18.DB_MAX_OUTPUT_PORT_TYPE
+rs <= WideOr25.DB_MAX_OUTPUT_PORT_TYPE
+reset_cont <= WideOr26.DB_MAX_OUTPUT_PORT_TYPE
 e <= e~reg0.DB_MAX_OUTPUT_PORT_TYPE
-db[0] <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
-db[1] <= WideOr15.DB_MAX_OUTPUT_PORT_TYPE
-db[2] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
-db[3] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
-db[4] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
-db[5] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
-db[6] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
-db[7] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+db[0] <= Selector17.DB_MAX_OUTPUT_PORT_TYPE
+db[1] <= Selector16.DB_MAX_OUTPUT_PORT_TYPE
+db[2] <= Selector15.DB_MAX_OUTPUT_PORT_TYPE
+db[3] <= Selector14.DB_MAX_OUTPUT_PORT_TYPE
+db[4] <= Selector13.DB_MAX_OUTPUT_PORT_TYPE
+db[5] <= Selector12.DB_MAX_OUTPUT_PORT_TYPE
+db[6] <= Selector11.DB_MAX_OUTPUT_PORT_TYPE
+db[7] <= Selector10.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |LCD|cont_bin_lcd:cont

@@ -8,6 +8,8 @@ entity FSM_LCD is
 			reset_low	:in std_logic;								--Reinicio activo en bajo.
 			cont_ok		:in std_logic;								--Entrada del contador binario.
 			entradas 	:in std_logic_vector(4 downto 0);	--Entradas de seleccion de oraciones.
+			byte			:in std_logic_vector(7 downto 0);	--Byte recibido del receptor. 
+			
 			rw				:out std_logic;							--Escritura/lectura.
 			rs 			:out std_logic;							--Datos/Instrucciones.
 			reset_cont 	:out std_logic;							--Reset en bajo del contador binario.
@@ -19,12 +21,14 @@ end FSM_LCD;
 architecture behav of FSM_LCD is 
 
 	--Estados de la FSM y sus respectivas señales.
-	type FSM_states is (	FunctionSet1, FunctionSet2, FunctionSet3, FunctionSet4,DisplayControl,EntryMode,SetAddress,
+	type FSM_states is (	FunctionSet1, FunctionSet2, FunctionSet3, FunctionSet4,DisplayControl,EntryMode,
 								ClearDisplay1,ClearDisplay2,ClearDisplay3,ClearDisplay4, ClearDisplay5,
+								rx1, rx2, rx3, rx4, SetAddress,
 								ReturnHome1, ReturnHome2, ReturnHome3, ReturnHome4,
-								Write1, Write2, Write3, Write4, Write5, Write6, Write7, Write8, Write9, Write10, Write11, Write12, Write13, Write14, Write15, 
-								Write16, Write17, Write18, Write19, Write20, Write21, Write22, Write23, Write24, Write25, Write26, Write27, Write28, Write29,
-								Write30, Write31, Write32, Write33, Write34, Write35, Write36, Write37);
+								Write1, Write2, Write3, Write4, Write5, Write6, Write7, Write8, Write9, Write10, Write11, Write12, Write13,
+								Write24, Write25, Write26, Write27, Write28, 
+								Write29, Write30, Write31, Write32, Write33,
+								Write34, Write35, Write36, Write37);
 	
 	signal current_state, next_state : FSM_states;
 	
@@ -78,6 +82,16 @@ begin
 				when EntryMode => 
 					next_state <= ClearDisplay2;
 				when ClearDisplay2 => 
+					next_state <= rx1;
+				when rx1 => 
+					next_state <= rx2;
+				when rx2 => 
+					next_state <= rx3;
+				when rx3 => 
+					next_state <= rx4;
+				when rx4 => 
+					next_state <= SetAddress;
+				when SetAddress => 
 					case entradas is 
 						when "00001" => 
 							next_state <= Write1;
@@ -118,28 +132,6 @@ begin
 				when Write12 => 
 					next_state <= Write13;
 				when Write13 => 
-					next_state <= SetAddress;
-				when SetAddress =>
-					next_state <= Write14;
-				when Write14 => 
-					next_state <= Write15;
-				when Write15 =>
-					next_state <= Write16;
-				when Write16 => 
-					next_state <= Write17;
-				when Write17 =>
-					next_state <= Write18;
-				when Write18 =>
-					next_state <= Write19;
-				when Write19 => 
-					next_state <= Write20;
-				when Write20 =>
-					next_state <= Write21;
-				when Write21 =>
-					next_state <= Write22;
-				when Write22 => 
-					next_state <= Write23;
-				when Write23 => 
 					next_state <= ReturnHome1;
 				when ReturnHome1 => 
 					if (cont_ok = '1') then 
@@ -241,6 +233,20 @@ begin
 					db <= x"06";
 				when ClearDisplay2 => 
 					db <= x"01";
+				when rx1 => 
+					rs <= '1';
+					db <= x"52";	--R
+				when rx2 => 
+					rs <= '1';
+					db <= x"78";	--x
+				when rx3 =>
+					rs <= '1';
+					db <= x"3A";	--:
+				when rx4 =>
+					rs <= '1';
+					db <= byte;
+				when SetAddress => 
+					db <= x"C0";	--Me posiciono en la segunda fila 
 				when Write1 =>
 					rs <= '1';
 					db <= x"4c";
@@ -280,38 +286,6 @@ begin
 				when Write13 =>
 					rs <= '1';
 					db <= x"34";
-				when SetAddress => 
-					db <= x"c0";
-				when Write14 => 
-					rs <= '1';
-					db <= x"43";
-				when Write15 => 
-					rs <= '1';
-					db <= x"6f";
-				when Write16 => 
-					rs <= '1';
-					db <= x"6d";
-				when Write17 => 
-					rs <= '1';
-					db <= x"70";
-				when Write18 => 
-					rs <= '1';
-					db <= x"6c";
-				when Write19 => 
-					rs <= '1';
-					db <= x"65";
-				when Write20 => 
-					rs <= '1';
-					db <= x"74";
-				when Write21 => 
-					rs <= '1';
-					db <= x"61";
-				when Write22 => 
-					rs <= '1';
-					db <= x"64";
-				when Write23 => 
-					rs <= '1';
-					db <= x"6f";
 				when ReturnHome1 => 	
 					reset_cont <= '1';
 					db <= x"80";

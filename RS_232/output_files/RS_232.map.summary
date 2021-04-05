@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Mar 24 00:53:50 2021
+Analysis & Synthesis Status : Successful - Sat Apr  3 18:13:36 2021
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : RS_232
 Top-level Entity Name : RS_232
 Family : Cyclone IV E
-Total logic elements : 519
-    Total combinational functions : 466
-    Dedicated logic registers : 282
-Total registers : 282
-Total pins : 33
+Total logic elements : 656
+    Total combinational functions : 609
+    Dedicated logic registers : 338
+Total registers : 338
+Total pins : 43
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

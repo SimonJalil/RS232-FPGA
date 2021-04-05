@@ -93,7 +93,6 @@ set_location_assignment PIN_124 -to salida_7seg[0]
 set_global_assignment -name VHDL_FILE ../Receptor/mux_paralelos.vhd
 set_global_assignment -name VHDL_FILE ../UART_RX/UART_RX.vhd
 set_global_assignment -name VHDL_FILE ../Receptor/rx.vhd
-set_global_assignment -name VHDL_FILE ../Receptor/mod_7seg.vhd
 set_global_assignment -name VHDL_FILE ../Parte_B/Punto_B/Punto_B.vhd
 set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/pkg_rom.vhd
 set_global_assignment -name VHDL_FILE ../Parte_B/Memoria_ROM/Memoria_ROM.vhd
